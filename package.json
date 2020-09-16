@@ -5,6 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^1.5.4",
+    "vuepress-plugin-autobar": "boboidream/vuepress-bar",
     "vuepress-plugin-mathjax": "^1.2.8",
     "vuepress-plugin-mermaidjs": "^1.8.0"
   },
