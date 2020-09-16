@@ -3,8 +3,8 @@ module.exports = {
   description: ' 李建忠---可复用的软件设计',
   base: '/design-patterns/',
   plugins: [
-      ['autobar'],
-   [
+    ['autobar'],
+    [
       'vuepress-plugin-mathjax',
       {
         target: 'svg',
@@ -13,8 +13,8 @@ module.exports = {
         },
       },
     ],
-[
-        'vuepress-plugin-mermaidjs'
+    [
+      'vuepress-plugin-mermaidjs'
     ],
     [
       'vuepress-plugin-medium-zoom',
@@ -28,7 +28,7 @@ module.exports = {
         },
       },
     ],
-[
+    [
       'vuepress-plugin-typescript',
       {
         tsLoaderOptions: {
@@ -51,6 +51,9 @@ module.exports = {
         text: '规范',
         link: '/Standard/'
       }
+    ],
+    sidebar: [
+
     ]
   }
 }
