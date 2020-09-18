@@ -2,7 +2,7 @@ module.exports = {
   title: ' 设计模式',
   description: ' 李建忠---可复用的软件设计',
   base: '/design-patterns/',
-  dest: 'public',
+//  dest: 'public',
   plugins: [
     ['autobar'],
     [
