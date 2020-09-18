@@ -8,8 +8,8 @@ pages:
  script:
  - yarn install # npm install
  - yarn docs:build # npm run docs:build
- artifacts:
-   paths:
-   - public
+# artifacts:
+#   paths:
+#   - public
  only:
  - master
