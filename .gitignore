@@ -1,3 +1,5 @@
 */*.xcodeproj
 *.xcworkspace
+xcuserdata
+project.pbxproj
 
