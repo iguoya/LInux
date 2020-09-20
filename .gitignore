@@ -1,5 +1,2 @@
-*/*.xcodeproj
-*.xcworkspace
-xcuserdata
-project.pbxproj
-
+build*
+.gitignore
