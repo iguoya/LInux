@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+int Point::Sum = 0;
+
 Point::Point()
 {
 
@@ -10,6 +12,7 @@ Point::Point()
 
 Point::Point(int m, int n):x(m), y(n)
 {
+    ++Sum;
 
 }
 
@@ -17,6 +20,7 @@ Point::Point(const Point & p)
 {
     x = p.x + 10000;
     y = p.y + 10000;
+    ++Sum;
 }
 
 void Point::add_point(Point &p)
@@ -27,6 +31,7 @@ void Point::add_point(Point &p)
 
 void Point::show()
 {
+    cout<<"总共"<<Sum<<"个对象"<<endl;
     cout<<"Point("<<x<<","<<y<<")"<<endl;
 }
 

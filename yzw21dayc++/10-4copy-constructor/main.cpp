@@ -20,5 +20,15 @@ int main()
     Point c = Point::generate_point();
     c.show();
 
+    Point d;
+    d.show();
+    d = c;
+    d.show();
+
+    Point e(d);
+
+    e.show();
+
+
     return 0;
 }

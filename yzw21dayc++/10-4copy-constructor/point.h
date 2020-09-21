@@ -16,7 +16,10 @@ public:
     void add_point(Point &p);
 
     void show();
+
+
     static Point generate_point();
+    static int Sum;
 
 };
 
