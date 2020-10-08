@@ -1,3 +1,0 @@
-/home/tiger/language/build-24-signal-Desktop-Debug/CMakeFiles/rebuild_cache.dir
-/home/tiger/language/build-24-signal-Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/tiger/language/build-24-signal-Desktop-Debug/CMakeFiles/24-signal.dir

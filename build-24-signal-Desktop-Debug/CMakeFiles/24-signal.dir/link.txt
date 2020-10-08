@@ -1,1 +1,0 @@
-/usr/bin/g++  -g   CMakeFiles/24-signal.dir/main.cpp.o  -o 24-signal 
