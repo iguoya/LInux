@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/pthread_join.dir/main.cpp.o  -o pthread_join  -lpthread 

@@ -1,0 +1,3 @@
+/home/tiger/language/25-thread/build-pthread_args-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/tiger/language/25-thread/build-pthread_args-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/tiger/language/25-thread/build-pthread_args-Desktop-Debug/CMakeFiles/pthread_args.dir
