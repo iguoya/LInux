@@ -8,6 +8,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 }
 
+void MainWindow::createChart()
+{
+//    QChart
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;
