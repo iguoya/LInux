@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>soft.ico</file>
+        <file>myApp.png</file>
+    </qresource>
+</RCC>
