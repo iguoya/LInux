@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ 1-compile_hello - Debug ]----------"
-	@cd "1-compile_hello" && "$(MAKE)" -f  "1-compile_hello.mk"
+	@echo "----------Building project:[ 2-memory_layout - Debug ]----------"
+	@cd "2-memory_layout" && "$(MAKE)" -f  "2-memory_layout.mk"
 clean:
-	@echo "----------Cleaning project:[ 1-compile_hello - Debug ]----------"
-	@cd "1-compile_hello" && "$(MAKE)" -f  "1-compile_hello.mk" clean
+	@echo "----------Cleaning project:[ 2-memory_layout - Debug ]----------"
+	@cd "2-memory_layout" && "$(MAKE)" -f  "2-memory_layout.mk" clean
