@@ -1,6 +1,8 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
+    0-CommandCompile2 \
+    0-CommandCompile3 \
     1-Hello \
     2-MuitiWindow \
     3-Login \
@@ -15,4 +17,8 @@ SUBDIRS += \
     91-DebugRelease \
     91-QtChartsBasic \
     92-CallApp \
+    93-QSystemTray \
+    94-QProcess \
+    95-QProcessList \
+    96-DropFile \
     chart
