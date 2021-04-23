@@ -34,19 +34,18 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_pushButton_2_clicked()
 {
 //    tigerProcess.start("gedit");
-    QString program = "gnome-terminal";
+//    QString program = "gnome-terminal";
     QStringList arguments;
-    arguments<<"-c 'ls -l /home/tiger'";
-    tigerProcess.start(program, arguments);
+//    arguments<<"-c 'ls -l /home/tiger'";
+    tigerProcess.start("gedit", arguments);
 }
 
 void MainWindow::showResult() {
-    QTextCodec *codec = QTextCodec::codecForLocale();
-    qDebug()<<"show result: "<<endl
-           << codec->toUnicode(tigerProcess.readAll());
-}
-
-void MainWindow::showState(QProcess::ProcessState state) {
+//    QTextCodec *codec = QTextCodec::codecForLocale();
+//    qDebug()<<"show result: "<<endl
+//           << codec->toUnicode(tigerProcess.readAll());
+    qDebug()<<tigerProcess.readAll();
+}void MainWindow::showState(QProcess::ProcessState state) {
     qDebug()<< "show state:\n";
     if(state == QProcess::NotRunning) {
         qDebug()<<"not running";
