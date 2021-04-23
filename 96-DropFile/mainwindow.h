@@ -20,6 +20,10 @@ private:
     void mousePressEvent(QMouseEvent *e);
     void mouseMoveEvent(QMouseEvent *e);
 
+
+    void dragEnterEvent(QDragEnterEvent *e);
+    void dropEvent(QDropEvent *e);
+
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

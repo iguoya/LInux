@@ -17,10 +17,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>100</y>
-      <width>291</width>
-      <height>71</height>
+      <x>60</x>
+      <y>50</y>
+      <width>131</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -30,9 +30,9 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>240</y>
-      <width>321</width>
+      <x>210</x>
+      <y>50</y>
+      <width>581</width>
       <height>71</height>
      </rect>
     </property>
@@ -40,8 +40,8 @@
    <widget class="QLabel" name="statusLabel">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>390</y>
+      <x>20</x>
+      <y>510</y>
       <width>76</width>
       <height>24</height>
      </rect>
@@ -53,14 +53,24 @@
    <widget class="QLabel" name="mousePosLabel">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>390</y>
+      <x>700</x>
+      <y>500</y>
       <width>76</width>
       <height>24</height>
      </rect>
     </property>
     <property name="text">
      <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>150</y>
+      <width>741</width>
+      <height>331</height>
+     </rect>
     </property>
    </widget>
   </widget>

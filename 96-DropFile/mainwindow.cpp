@@ -1,6 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QMimeData>
+#include <QDragEnterEvent>
+#include <QFile>
+#include <QUrl>
+
+#include <QDebug>
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -17,7 +24,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->statusbar->addPermanentWidget(ui->mousePosLabel);
 
     setMouseTracking(true);
-    resize(600, 300);
+
+    ui->lineEdit->setAcceptDrops(false);
+    ui->textEdit->setAcceptDrops(true);
+//    resize(600, 300);
 }
 
 MainWindow::~MainWindow()
@@ -51,4 +61,23 @@ void MainWindow::mouseMoveEvent(QMouseEvent *e)
 {
     ui->mousePosLabel->setText(QString("<%1, %2>").arg(e->x()).arg(e->y()));
 }
+
+void MainWindow::dragEnterEvent(QDragEnterEvent *e)
+{
+//    if(e->mimeData()->hasFormat("text/uri-list")) {
+        e->acceptProposedAction();
+        qDebug()<<"发生了抓取事件";
+//    }
+}
+
+void MainWindow::dropEvent(QDropEvent *e)
+{
+    QString fileName = e->mimeData()->urls().first().toLocalFile();
+    ui->lineEdit->setText(fileName);
+
+    QFile file(fileName);
+    ui->textEdit->setText(file.readAll());
+}
+
+
 
