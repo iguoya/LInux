@@ -14,6 +14,7 @@ SUBDIRS += \
     5-TextEditor \
     51-ImageProcessor \
     52-QtDateType/2-QtDateType.pro \
+    61-HelloWorldQML \
     91-DebugRelease \
     91-QtChartsBasic \
     92-CallApp \
@@ -21,4 +22,5 @@ SUBDIRS += \
     94-QProcess \
     95-QProcessList \
     96-DropFile \
+    PyQt5 \
     chart
