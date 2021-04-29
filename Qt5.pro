@@ -15,12 +15,14 @@ SUBDIRS += \
     51-ImageProcessor \
     52-QtDateType/2-QtDateType.pro \
     61-HelloWorldQML \
+    81-NetWorkInformation \
+    82-NetworkInformation \
     91-DebugRelease \
-    91-QtChartsBasic \
+#    91-QtChartsBasic \
     92-CallApp \
     93-QSystemTray \
     94-QProcess \
     95-QProcessList \
     96-DropFile \
-    PyQt5 \
-    chart
+    Examples \
+    PyQt5
