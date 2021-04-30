@@ -40,6 +40,7 @@ void NetworkInformation::slotDetail()
                                                                 //(a)
     for(int i=0;i<list.count();i++)
     {
+        qDebug()<<"-----";
         QNetworkInterface interface=list.at(i);
         detail=detail+tr("设备：")+interface.name()+"\n";
                                                                 //(b)

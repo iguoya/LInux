@@ -17,6 +17,7 @@ SUBDIRS += \
     61-HelloWorldQML \
     81-NetWorkInformation \
     82-NetworkInformation \
+    83-NetworkInterface \
     91-DebugRelease \
 #    91-QtChartsBasic \
     92-CallApp \
