@@ -26,4 +26,8 @@ SUBDIRS += \
     chap09Charts/samp9_1SimpleChart/samp9_1.pro \
     chap09Charts/samp9_2ChartConfig/samp9_2.pro \
     chap09Charts/samp9_3AllCharts/samp9_3.pro \
-    chap09Charts/samp9_4RectZoom/samp9_4.pro
+    chap09Charts/samp9_4RectZoom/samp9_4.pro \
+    chap10DataVisualization/samp10_1bar3D/samp10_1.pro \
+    chap10DataVisualization/samp10_2scatter/samp10_2.pro \
+    chap10DataVisualization/samp10_3surface/samp10_3.pro \
+    chap10DataVisualization/samp10_4map/samp10_4.pro
