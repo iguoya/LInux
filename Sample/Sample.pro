@@ -19,4 +19,7 @@ SUBDIRS += \
     chap05ModelView/samp5_2StringList/samp5_2.pro \
     chap05ModelView/samp5_3StandardModel/samp5_3.pro \
     chap05ModelView/samp5_4Delegate/samp5_4.pro \
-    chap06Forms/samp6_1StandardDialogs/samp6_1.pro
+    chap06Forms/samp6_1StandardDialogs/samp6_1.pro \
+    chap06Forms/samp6_2CustomDialogs/samp6_2.pro \
+    chap06Forms/samp6_3MultiWindow/samp6_3.pro \
+    chap06Forms/samp6_4MDI/samp6_4.pro
