@@ -22,4 +22,8 @@ SUBDIRS += \
     chap06Forms/samp6_1StandardDialogs/samp6_1.pro \
     chap06Forms/samp6_2CustomDialogs/samp6_2.pro \
     chap06Forms/samp6_3MultiWindow/samp6_3.pro \
-    chap06Forms/samp6_4MDI/samp6_4.pro
+    chap06Forms/samp6_4MDI/samp6_4.pro \
+    chap09Charts/samp9_1SimpleChart/samp9_1.pro \
+    chap09Charts/samp9_2ChartConfig/samp9_2.pro \
+    chap09Charts/samp9_3AllCharts/samp9_3.pro \
+    chap09Charts/samp9_4RectZoom/samp9_4.pro
