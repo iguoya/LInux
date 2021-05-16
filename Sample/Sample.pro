@@ -34,4 +34,10 @@ SUBDIRS += \
     chap11Database/samp11_1Table/samp11_1.pro \
     chap11Database/samp11_2QueryReadonly/samp11_2.pro \
     chap11Database/samp11_3QueryEdit/samp11_3.pro \
-    chap11Database/samp11_4Relational/samp11_4.pro
+    chap11Database/samp11_4Relational/samp11_4.pro \
+    chap14Network/samp14_1HostInfo/samp14_1.pro \
+    chap14Network/samp14_2TCP/TCPClient \
+    chap14Network/samp14_2TCP/TCPServer \
+    chap14Network/samp14_3UDP/samp14_3UDPTrans.pro \
+    chap14Network/samp14_4UDPMulticast \
+    chap14Network/samp14_5HTTP/samp14_5.pro
