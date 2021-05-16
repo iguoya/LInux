@@ -30,4 +30,8 @@ SUBDIRS += \
     chap10DataVisualization/samp10_1bar3D/samp10_1.pro \
     chap10DataVisualization/samp10_2scatter/samp10_2.pro \
     chap10DataVisualization/samp10_3surface/samp10_3.pro \
-    chap10DataVisualization/samp10_4map/samp10_4.pro
+    chap10DataVisualization/samp10_4map/samp10_4.pro \
+    chap11Database/samp11_1Table/samp11_1.pro \
+    chap11Database/samp11_2QueryReadonly/samp11_2.pro \
+    chap11Database/samp11_3QueryEdit/samp11_3.pro \
+    chap11Database/samp11_4Relational/samp11_4.pro
