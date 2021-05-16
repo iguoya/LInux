@@ -14,4 +14,9 @@ SUBDIRS += \
     chap04Widgets/samp4_6ComboBox/samp4_6.pro \
     chap04Widgets/samp4_7ListWidget/samp4_7.pro \
     chap04Widgets/samp4_8TreeDock/samp4_8.pro \
-    chap04Widgets/samp4_9TableWidget/samp4_9.pro
+    chap04Widgets/samp4_9TableWidget/samp4_9.pro \
+    chap05ModelView/samp5_1FileSys/samp5_1.pro \
+    chap05ModelView/samp5_2StringList/samp5_2.pro \
+    chap05ModelView/samp5_3StandardModel/samp5_3.pro \
+    chap05ModelView/samp5_4Delegate/samp5_4.pro \
+    chap06Forms/samp6_1StandardDialogs/samp6_1.pro
