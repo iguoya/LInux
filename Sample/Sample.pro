@@ -40,4 +40,11 @@ SUBDIRS += \
     chap14Network/samp14_2TCP/TCPServer \
     chap14Network/samp14_3UDP/samp14_3UDPTrans.pro \
     chap14Network/samp14_4UDPMulticast \
-    chap14Network/samp14_5HTTP/samp14_5.pro
+    chap14Network/samp14_5HTTP/samp14_5.pro \
+    chap15Multimedia/samp15_1AudioPlayer \
+    chap15Multimedia/samp15_2Sound \
+    chap15Multimedia/samp15_3Recorder \
+    chap15Multimedia/samp15_4AudioInput \
+    chap15Multimedia/samp15_5VideoPlayer \
+    chap15Multimedia/samp15_6VideoItem \
+    chap15Multimedia/samp15_7CameraUbuntu/samp15_7Camera.pro

@@ -4,6 +4,8 @@ SUBDIRS += \
     0-CommandCompile2 \
     0-CommandCompile3 \
     1-Hello \
+#    11-TestWidget/test.pro \
+    13-EmbedWidget \
     2-MuitiWindow \
     3-Login \
     3-QtWidgets \
