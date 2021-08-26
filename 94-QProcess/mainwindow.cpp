@@ -23,7 +23,7 @@ void MainWindow::on_pushButton_clicked()
     qstrList<<"Android" << "Qt Creator" << "Java" << "C++";
     QStringListIterator strIterator(qstrList);
     while (strIterator.hasNext())
-          qDebug() << strIterator.next() << endl;
+          qDebug() << strIterator.next();
 
     QProcess::startDetached("shutdown", argument);
 }
@@ -34,7 +34,7 @@ void MainWindow::on_pushButton_2_clicked()
     argument<<"-i" << "cheese" ;
     QStringListIterator strIterator(argument);
     while (strIterator.hasNext())
-          qDebug() << strIterator.next() << endl;
+          qDebug() << strIterator.next();
 
     QProcess::startDetached("killall", argument);
 
@@ -44,6 +44,8 @@ void MainWindow::on_pushButton_3_clicked()
 {
 //    QStringList  argument;
 //    argument<<"-i" << "gedit" ;
+    QStringList qstrList;
+    qstrList<<"Android" << "Qt Creator" << "Java" << "C++";
     QProcess tigerProcess;
-    tigerProcess.start("cheese");
+    tigerProcess.start("cheese", qstrList, 0);
 }

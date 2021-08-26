@@ -28,5 +28,5 @@ SUBDIRS += \
     95-QProcessList \
     96-DropFile \
     Examples \
-    PyQt5 \
-    Sample
+    PyQt5
+#    Sample
