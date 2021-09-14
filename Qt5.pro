@@ -7,6 +7,8 @@ SUBDIRS += \
 #    11-TestWidget/test.pro \
     13-EmbedWidget \
     2-MuitiWindow \
+    20-SignalAndSlot \
+    21-TwoWindow \
     3-Login \
     3-QtWidgets \
     31-Splitter \
