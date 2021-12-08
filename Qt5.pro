@@ -20,7 +20,9 @@ SUBDIRS += \
     5-TextEditor \
     51-ImageProcessor \
     52-QtDateType/2-QtDateType.pro \
+    6-HelloQML \
     61-HelloWorldQML \
+    7-background \
     81-NetWorkInformation \
     82-NetworkInformation \
     83-NetworkInterface \
@@ -30,7 +32,4 @@ SUBDIRS += \
     93-QSystemTray \
     94-QProcess \
     95-QProcessList \
-    96-DropFile \
-    Examples \
-    PyQt5
-#    Sample
+    96-DropFile
