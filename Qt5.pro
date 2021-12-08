@@ -3,6 +3,8 @@ TEMPLATE = subdirs
 SUBDIRS += \
     0-CommandCompile2 \
     0-CommandCompile3 \
+    01-SignalSlot \
+    02-NormalUI \
     1-Hello \
 #    11-TestWidget/test.pro \
     13-EmbedWidget \
