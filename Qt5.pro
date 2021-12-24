@@ -7,6 +7,8 @@ SUBDIRS += \
     02-NormalUI \
     1-Hello \
 #    11-TestWidget/test.pro \
+    10-JS \
+    11-HelloWorld \
     13-EmbedWidget \
     2-MuitiWindow \
     20-SignalAndSlot \
@@ -23,9 +25,11 @@ SUBDIRS += \
     6-HelloQML \
     61-HelloWorldQML \
     7-background \
+    8-QMLSignal \
     81-NetWorkInformation \
     82-NetworkInformation \
     83-NetworkInterface \
+    9-AutoLarge \
     91-DebugRelease \
 #    91-QtChartsBasic \
     92-CallApp \
