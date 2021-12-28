@@ -9,6 +9,7 @@ SUBDIRS += \
 #    11-TestWidget/test.pro \
     10-JS \
     11-HelloWorld \
+    12-Syntax \
     13-EmbedWidget \
     2-MuitiWindow \
     20-SignalAndSlot \
