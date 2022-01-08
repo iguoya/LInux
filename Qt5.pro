@@ -11,6 +11,10 @@ SUBDIRS += \
     11-HelloWorld \
     12-Syntax \
     13-EmbedWidget \
+    14-Quick \
+    14-QuickHello \
+    15-Quick \
+    16-JS \
     2-MuitiWindow \
     20-SignalAndSlot \
     21-TwoWindow \
