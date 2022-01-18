@@ -15,9 +15,18 @@ SUBDIRS += \
     14-QuickHello \
     15-Quick \
     16-JS \
+    17-DateTime \
+    18-Item \
+    19-QML \
     2-MuitiWindow \
+    20-Layout \
     20-SignalAndSlot \
+    21-LayoutBinding \
     21-TwoWindow \
+    22-LayoutArchors \
+    23-LayoutColumn \
+    24-LayoutGrid \
+    25-LayoutFlow \
     3-Login \
     3-QtWidgets \
     31-Splitter \
