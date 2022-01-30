@@ -10,8 +10,8 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -35,7 +35,8 @@ extensions = [
     'sphinx_markdown_tables',
     'sphinx.ext.graphviz',
     'sphinxcontrib.mermaid',
-    'sphinxcontrib.plantuml'
+    'sphinxcontrib.plantuml',
+    'sphinxcontrib.needs'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -72,4 +73,12 @@ source_parsers = {
 }
 
 source_suffix = ['.rst', '.md']
-plantuml = 'java -jar ../utils/plantum.jar'
+
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+if on_rtd:
+    plantuml = 'java -Djava.awt.headless=true -jar /usr/share/plantuml/plantuml.jar'
+else:
+    plantuml = 'java -jar /usr/share/plantuml/plantuml.jar'
+    # plantuml = 'java -jar %s' % os.path.join(os.path.dirname(__file__), "utils", "plantuml.jar")
+
+# plantuml_output_format = 'png'
