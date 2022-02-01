@@ -73,7 +73,7 @@ source_parsers = {
     '.md': 'recommonmark.parser.CommonMarkParser',
 }
 
-source_suffix = ['.rst', '.md']
+source_suffix = ['.rst']
 
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 if on_rtd:
