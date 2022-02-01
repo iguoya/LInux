@@ -104,7 +104,6 @@
 
 
 
-### uml: class diagram
 
 .. uml::
 
