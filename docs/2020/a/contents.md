@@ -14,16 +14,55 @@
 
 春季
 ========
-
+```mermaid
+classDiagram
+      Animal <|-- Duck
+      Animal <|-- Fish
+      Animal <|-- Zebra
+      Animal : +int age
+      Animal : +String gender
+      Animal: +isMammal()
+      Animal: +mate()
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }
+```
 ## uml: state diagram
+```mermaid
+
+   graph TB
+     A --- B & C
+     B --- D & E
+     C --- F & G
+     D -- left --- H
+     D -- right --- J
+     E -- left --- K
+     E -- right --- L
+     F -- left --- M
+     F -- right --- N
+     G -- left --- O
+     G -- right --- P
+```
+
+春眠不觉晓，处处闻啼鸟。
 
 
+```plantuml 
 
-
-```plantuml source="basic.puml"
     '' This code is appended to the contents of basic.puml
     Goofy ->  MickeyMouse: calls
     Goofy <-- MickeyMouse: responds
+
 ```
 
 @startuml component
@@ -40,6 +79,7 @@ app -> client
 
 
 .. uml::
+
     Obj1 -> Obj2: Hello, world
     activate Obj2
     Obj2 --> Obj1: Goodbye, cruel world
