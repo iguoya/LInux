@@ -31,7 +31,7 @@ Here's my admonition content
 
 春季
 ========
-```mermaid
+```{mermaid}
 classDiagram
       Animal <|-- Duck
       Animal <|-- Fish
@@ -55,7 +55,7 @@ classDiagram
       }
 ```
 ## uml: state diagram
-```mermaid
+```{mermaid}
 
    graph TB
      A --- B & C
@@ -74,7 +74,7 @@ classDiagram
 春眠不觉晓，处处闻啼鸟。
 
 
-```plantuml 
+```{uml} 
 
     '' This code is appended to the contents of basic.puml
     Goofy ->  MickeyMouse: calls
@@ -82,16 +82,18 @@ classDiagram
 
 ```
 
-@startuml component
-actor client
-node app
-database db
+```{uml} 
 
-db -> app
-app -> client
-@enduml
+    @startuml component
+    actor client
+    node app
+    database db
 
+    db -> app
+    app -> client
+    @enduml
 
+```
 
 
 
