@@ -36,7 +36,8 @@ extensions = [
     'sphinx.ext.graphviz',
     'sphinxcontrib.mermaid',
     'sphinxcontrib.plantuml',
-    'sphinxcontrib.needs'
+    'sphinxcontrib.needs',
+    'myst_parser'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

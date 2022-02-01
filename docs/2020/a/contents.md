@@ -2,8 +2,25 @@
 
 秋风吹不尽，总是玉关情。
 
+# My nifty title
+
+Some **text**!
+
+```{admonition} Here's my title
+:class: warning
+
+Here's my admonition content
+```
+
 ## 二级标题
 
+```{mermaid}
+
+    sequenceDiagram
+      participant Alice
+      participant Bob
+      Alice->John: Hello John, how are you?
+```
 
 
 ### 三级标题
