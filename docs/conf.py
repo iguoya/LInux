@@ -37,7 +37,6 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.graphviz',
     'sphinxcontrib.mermaid',
-    'sphinxcontrib.plantuml',
     'sphinxcontrib.needs',
     'myst_parser',
     'sphinx_charts.charts',
