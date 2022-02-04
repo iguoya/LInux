@@ -7,3 +7,4 @@ sphinxcontrib_mermaid==0.7.1
 sphinxcontrib_needs==0.7.5
 sphinx-charts==0.0.4
 sphinx-gallery==0.10.1
+pandas==1.4.0
