@@ -1,12 +1,8 @@
 # 类图
 
 
-
-## 楔子
-
-
-
-```mermaid
+## 开始
+```{mermaid}
  classDiagram
       Animal <|-- Duck
       Animal <|-- Fish
@@ -34,7 +30,7 @@
 
 ## 基本元素
 
-```mermaid
+```{mermaid}
 classDiagram
     class BankAccount
     BankAccount : +String owner
@@ -61,18 +57,43 @@ class BankAccount3{
 
 ```
 
-```mermaid
+```{mermaid}
 classDiagram
 class Animal
     Vehicle <|-- Car
   
 ```
 
+## 传参和返参
 
+```{mermaid}
+classDiagram
+class BankAccount{
+    +String owner
+    +BigDecimal balance
+    +deposit(amount) bool
+    +withdrawl(amount) int
+}
+```
+
+## 泛型
+```{mermaid}
+classDiagram
+class Square~Shape~{
+    int id
+    List~int~ position
+    setPoints(List~int~ points)
+    getPoints() List~int~
+}
+
+Square : -List~string~ messages
+Square : +setMessages(List~string~ messages)
+Square : +getMessages() List~string~
+```
 
 ## 类关系
 
-```mermaid
+```{mermaid}
 classDiagram
 classA --|> classB : Inheritance
 classC --* classD : Composition
@@ -84,7 +105,7 @@ classM ..|> classN : Realization
 classO .. classP : Link(Dashed)
 ```
 
-```mermaid
+```{mermaid}
 classDiagram
 classA <|-- classB : implements
 classC *-- classD : composition
@@ -93,7 +114,7 @@ classE o-- classF : association
 
 
 
-```mermaid
+```{mermaid}
 classDiagram
 Class01 <|-- AveryLongClass : Cool
 Class03 *-- Class04
@@ -108,4 +129,25 @@ Class01 : size()
 Class01 : int chimp
 Class01 : int gorilla
 Class08 <--> C2: Cool label
+```
+
+
+## 总结
+
+```{mermaid}
+classDiagram
+  direction RL
+  class Student {
+    -idCard : IdCard
+  }
+  class IdCard{
+    -id : int
+    -name : string
+  }
+  class Bike{
+    -id : int
+    -name : string
+  }
+  Student "1" --o "1" IdCard : carries
+  Student "1" --o "1" Bike : rides
 ```

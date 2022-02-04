@@ -1,4 +1,4 @@
-## 顺序图
+# 顺序图
 
 ```{mermaid}
 sequenceDiagram

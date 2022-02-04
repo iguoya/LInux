@@ -4,11 +4,11 @@
 .. toctree::
    :maxdepth: 2
 
-   1-flow-chart
-   2-sequence-diagram
-   class_diagram
-   effects
-   flow_chart
-   
-   vue
+   1-flow
+   2-sequence
+   3-class
+   4-state
+   5-myst
+   6-maths
+   7-extend
    

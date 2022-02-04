@@ -1,10 +1,12 @@
 
-# 其他图表
-## 数学公式
+# 数学公式
 
-### 行内
+Since Pythagoras, we know that {math}`a^2 + b^2 = c^2`
+
+
+## 行内
 Euler's identity $e^{i\pi}+1=0$ is a beautiful formula in $\mathbb{R}^2$.
-### 段落
+## 段落
 
 假设 $y >= 0$ , 而 $[\log x]$ 表示 $\log x$ 的整数部分, 设:
 
@@ -14,70 +16,24 @@ $$\Phi (y) = \frac {1} {2 \pi i} \int_{2 - i \infty}^{2 + i \infty} \frac {y^{\o
 
 当 $\log x>= 10^4$ 及 $y>= e^{2{(\log x)}^{-0.1}}$ 时， 则有:
 
-$$1 - x^{- 0.1} <= \Phi (y) <= 1
+$$1 - x^{- 0.1} <= \Phi (y) <= 1$$
 
+## 其他
 
+$$
+   \begin{eqnarray}
+      y    & = & ax^2 + bx + c \\
+      f(x) & = & x^2 + 2xy + y^2
+   \end{eqnarray}
+$$
 
-
-
-
-## 普通图表
-
-
-
-```{mermaid}
-pie title NETFLIX
-         "Time spent looking for movie" : 90
-         "Time spent watching it" : 10
-         
-
+```{math}
+   \begin{eqnarray}
+      y    & = & ax^2 + bx + c \\
+      f(x) & = & x^2 + 2xy + y^2
+   \end{eqnarray}
 ```
 
-```mermaid
-         pie title What Voldemort doesn't have?
-         "FRIENDS" : 2
-         "FAMILY" : 3
-         "NOSE" : 45
-```
-
-
-
-
-
-
-
-## 序列图
-
-```sequence
-战士->领导: 首长好
-Note right of 领导: 首长复杂的内心活动
-领导-->战士: 同志们好
-战士->>领导: 为人民服务
-```
-
-## 类图
-
-``` mermaid
-classDiagram
-Class01 <|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-Class08 <--> C2: Cool label
-```
-
-```mermaid
-graph lR
-Documentation-->cccc[is Awesome]
-```
 
 
 
