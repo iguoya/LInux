@@ -40,7 +40,6 @@ extensions = [
     'sphinxcontrib.plantuml',
     'sphinxcontrib.needs',
     'myst_parser',
-    'sphinx_charts.charts',
     'sphinx_gallery.gen_gallery',
     'sphinx.ext.intersphinx',
 ]
