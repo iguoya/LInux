@@ -11,6 +11,8 @@
    
 
    0-diagrams/index
+   auto_gallery-1/index
+   auto_gallery-2/index
    1-principle/index
    2020/index
 
