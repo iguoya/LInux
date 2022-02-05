@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="DesignPattern" Database="" Version="10.0.0">
+  <Project Name="TemplateMethod" Path="TemplateMethod/TemplateMethod.project" Active="No"/>
+  <Project Name="Strategy" Path="Strategy/Strategy.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="TemplateMethod" ConfigName="Debug"/>
+      <Project Name="Strategy" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="TemplateMethod" ConfigName="Release"/>
+      <Project Name="Strategy" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

@@ -1,0 +1,16 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.4",
+    "vuepress-plugin-autobar": "boboidream/vuepress-bar",
+    "vuepress-plugin-mathjax": "^1.2.8",
+    "vuepress-plugin-mermaidjs": "^1.8.0"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
