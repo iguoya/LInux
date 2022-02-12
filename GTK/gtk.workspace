@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="gtk" Database="" Version="10.0.0">
+  <Project Name="01-HelloGTK" Path="01-HelloGTK/01-HelloGTK.project" Active="No"/>
+  <Project Name="03-GTK_Button" Path="03-GTK_Button/03-GTK_Button.project" Active="No"/>
+  <Project Name="04-GtkBox" Path="04-GtkBox/04-GtkBox.project" Active="No"/>
+  <Project Name="04-GTK_Glade" Path="04-GTK_Glade/04-GTK_Glade.project" Active="No"/>
+  <Project Name="05-Point" Path="05-Point/05-Point.project" Active="No"/>
+  <Project Name="06-Array" Path="06-Array/06-Array.project" Active="No"/>
+  <Project Name="07-DataType" Path="07-DataType/07-DataType.project" Active="No"/>
+  <Project Name="08-Point" Path="08-Point/08-Point.project" Active="No"/>
+  <Project Name="10-glade" Path="10-glade/10-glade.project" Active="No"/>
+  <Project Name="11-glade" Path="11-glade/11-glade.project" Active="No"/>
+  <Project Name="12-compile_hello" Path="12-compile_hello/12-compile_hello.project" Active="No"/>
+  <Project Name="13-memory_layout" Path="13-memory_layout/13-memory_layout.project" Active="No"/>
+  <Project Name="14-gtkbox" Path="14-glade_only_window/14-glade_only_window.project" Active="No"/>
+  <Project Name="15-gtkgrid" Path="15-gtkgrid/15-gtkgrid.project" Active="No"/>
+  <Project Name="16-window" Path="16-window/16-window.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="01-HelloGTK" ConfigName="Debug"/>
+      <Project Name="03-GTK_Button" ConfigName="Debug"/>
+      <Project Name="04-GtkBox" ConfigName="Debug"/>
+      <Project Name="04-GTK_Glade" ConfigName="Debug"/>
+      <Project Name="05-Point" ConfigName="Debug"/>
+      <Project Name="06-Array" ConfigName="Debug"/>
+      <Project Name="07-DataType" ConfigName="Debug"/>
+      <Project Name="08-Point" ConfigName="Debug"/>
+      <Project Name="10-glade" ConfigName="Debug"/>
+      <Project Name="11-glade" ConfigName="Debug"/>
+      <Project Name="1-compile_hello" ConfigName="Debug"/>
+      <Project Name="13-memory_layout" ConfigName="Debug"/>
+      <Project Name="14-gtkbox" ConfigName="Debug"/>
+      <Project Name="15-gtkgrid" ConfigName="Debug"/>
+      <Project Name="16-window" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="01-HelloGTK" ConfigName="Release"/>
+      <Project Name="03-GTK_Button" ConfigName="Release"/>
+      <Project Name="04-GtkBox" ConfigName="Release"/>
+      <Project Name="04-GTK_Glade" ConfigName="Release"/>
+      <Project Name="05-Point" ConfigName="Release"/>
+      <Project Name="06-Array" ConfigName="Release"/>
+      <Project Name="07-DataType" ConfigName="Release"/>
+      <Project Name="08-Point" ConfigName="Release"/>
+      <Project Name="10-glade" ConfigName="Release"/>
+      <Project Name="11-glade" ConfigName="Release"/>
+      <Project Name="1-compile_hello" ConfigName="Release"/>
+      <Project Name="13-memory_layout" ConfigName="Release"/>
+      <Project Name="14-gtkbox" ConfigName="Release"/>
+      <Project Name="15-gtkgrid" ConfigName="Release"/>
+      <Project Name="16-window" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

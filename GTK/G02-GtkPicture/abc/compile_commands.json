@@ -1,0 +1,26 @@
+[
+  {
+    "directory": "/home/tiger/Projects/G02-GtkPicture/abc",
+    "command": "cc -Isrc/g02-gtkpicture.p -Isrc -I../src -I/usr/include/gtk-4.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/x86_64-linux-gnu -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/home/tiger/Projects/G02-GtkPicture/abc -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu11 -g -mfpmath=sse -msse -msse2 -pthread -MD -MQ src/g02-gtkpicture.p/meson-generated_.._g02_gtkpicture-resources.c.o -MF src/g02-gtkpicture.p/meson-generated_.._g02_gtkpicture-resources.c.o.d -o src/g02-gtkpicture.p/meson-generated_.._g02_gtkpicture-resources.c.o -c src/g02_gtkpicture-resources.c",
+    "file": "src/g02_gtkpicture-resources.c",
+    "output": "src/g02-gtkpicture.p/meson-generated_.._g02_gtkpicture-resources.c.o"
+  },
+  {
+    "directory": "/home/tiger/Projects/G02-GtkPicture/abc",
+    "command": "cc -Isrc/g02-gtkpicture.p -Isrc -I../src -I/usr/include/gtk-4.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/x86_64-linux-gnu -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/home/tiger/Projects/G02-GtkPicture/abc -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu11 -g -mfpmath=sse -msse -msse2 -pthread -MD -MQ src/g02-gtkpicture.p/main.c.o -MF src/g02-gtkpicture.p/main.c.o.d -o src/g02-gtkpicture.p/main.c.o -c ../src/main.c",
+    "file": "../src/main.c",
+    "output": "src/g02-gtkpicture.p/main.c.o"
+  },
+  {
+    "directory": "/home/tiger/Projects/G02-GtkPicture/abc",
+    "command": "cc -Isrc/g02-gtkpicture.p -Isrc -I../src -I/usr/include/gtk-4.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/x86_64-linux-gnu -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/home/tiger/Projects/G02-GtkPicture/abc -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu11 -g -mfpmath=sse -msse -msse2 -pthread -MD -MQ src/g02-gtkpicture.p/g02_gtkpicture-window.c.o -MF src/g02-gtkpicture.p/g02_gtkpicture-window.c.o.d -o src/g02-gtkpicture.p/g02_gtkpicture-window.c.o -c ../src/g02_gtkpicture-window.c",
+    "file": "../src/g02_gtkpicture-window.c",
+    "output": "src/g02-gtkpicture.p/g02_gtkpicture-window.c.o"
+  },
+  {
+    "directory": "/home/tiger/Projects/G02-GtkPicture/abc",
+    "command": "cc -Isrc/g02-gtkpicture.p -Isrc -I../src -I/usr/include/gtk-4.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/x86_64-linux-gnu -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/home/tiger/Projects/G02-GtkPicture/abc -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu11 -g -mfpmath=sse -msse -msse2 -pthread -MD -MQ src/g02-gtkpicture.p/g02_gtkpicture-application.c.o -MF src/g02-gtkpicture.p/g02_gtkpicture-application.c.o.d -o src/g02-gtkpicture.p/g02_gtkpicture-application.c.o -c ../src/g02_gtkpicture-application.c",
+    "file": "../src/g02_gtkpicture-application.c",
+    "output": "src/g02-gtkpicture.p/g02_gtkpicture-application.c.o"
+  }
+]

@@ -1,0 +1,7 @@
+data/cn.yatiger.gtk.desktop.in
+data/cn.yatiger.gtk.appdata.xml.in
+data/cn.yatiger.gtk.gschema.xml
+src/g01_helloworld-window.ui
+src/main.c
+src/g01_helloworld-window.c
+
