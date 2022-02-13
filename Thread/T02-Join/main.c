@@ -34,7 +34,7 @@ int main()
     printf("thread 1 exit code: %s\n", (char *)result);
 
     pthread_join(tid2, &result);
-    Student *s = (Student *)result;
+    Student *s = (Student *)result;//返回结构体指针
     printf("thread 2 exit code: qq :%d, name :%s\n", s->qq, s->name);
     return 0;
 }
