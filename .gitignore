@@ -1,3 +1,4 @@
+build-*
 .codelite
 cmake-build-Debug
 Debug

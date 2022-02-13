@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=g02-gtkpicture
-Exec=g02-gtkpicture
-Icon=cn.yatiger.gtk
-Terminal=false
-Type=Application
-Categories=GTK;
-StartupNotify=true
