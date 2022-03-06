@@ -27,6 +27,10 @@ SUBDIRS += \
     23-LayoutColumn \
     24-LayoutGrid \
     25-LayoutFlow \
+    26-LayoutColumn \
+    27-LayoutStack \
+    28-TextInput \
+    29-QtAwesome \
     3-Login \
     3-QtWidgets \
     31-Splitter \

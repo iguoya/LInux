@@ -1,0 +1,4 @@
+/home/tiger/qt5/build-30-cmake-unknown-Debug/CMakeFiles/30-cmake.dir
+/home/tiger/qt5/build-30-cmake-unknown-Debug/CMakeFiles/edit_cache.dir
+/home/tiger/qt5/build-30-cmake-unknown-Debug/CMakeFiles/rebuild_cache.dir
+/home/tiger/qt5/build-30-cmake-unknown-Debug/CMakeFiles/30-cmake_autogen.dir
