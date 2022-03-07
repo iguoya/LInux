@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <pthread.h>
 #include <unistd.h>
+
 void print_thread_info(const char *s) {
     pid_t p_id = getpid();
     pthread_t t_id = pthread_self();
@@ -9,6 +10,7 @@ void print_thread_info(const char *s) {
 
 void *thread_new_run(void *arg) {
     print_thread_info(arg);
+    return NULL;
 }
 
 int main()

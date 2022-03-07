@@ -14,7 +14,10 @@
   <Project Name="13-memory_layout" Path="13-memory_layout/13-memory_layout.project" Active="No"/>
   <Project Name="14-gtkbox" Path="14-glade_only_window/14-glade_only_window.project" Active="No"/>
   <Project Name="15-gtkgrid" Path="15-gtkgrid/15-gtkgrid.project" Active="No"/>
-  <Project Name="16-window" Path="16-window/16-window.project" Active="Yes"/>
+  <Project Name="16-window" Path="16-window/16-window.project" Active="No"/>
+  <Project Name="17-Frame" Path="17-Frame/17-Frame.project" Active="No"/>
+  <Project Name="18-Message" Path="18-Message/18-Message.project" Active="No"/>
+  <Project Name="19-cmake" Path="19-cmake/19-cmake.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -33,6 +36,9 @@
       <Project Name="14-gtkbox" ConfigName="Debug"/>
       <Project Name="15-gtkgrid" ConfigName="Debug"/>
       <Project Name="16-window" ConfigName="Debug"/>
+      <Project Name="17-Frame" ConfigName="Debug"/>
+      <Project Name="18-Message" ConfigName="Debug"/>
+      <Project Name="19-cmake" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -51,6 +57,9 @@
       <Project Name="14-gtkbox" ConfigName="Release"/>
       <Project Name="15-gtkgrid" ConfigName="Release"/>
       <Project Name="16-window" ConfigName="Release"/>
+      <Project Name="17-Frame" ConfigName="Release"/>
+      <Project Name="18-Message" ConfigName="Release"/>
+      <Project Name="19-cmake" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
