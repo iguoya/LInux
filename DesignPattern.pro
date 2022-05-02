@@ -25,6 +25,10 @@ SOURCES += \
     Strategy/SortAlgorithm.cpp \
     Strategy/Strategy.cpp \
     Strategy/StrategyContext.cpp \
+    TemplateMethod/ConcreteClassA.cpp \
+    TemplateMethod/ConcreteClassB.cpp \
+    TemplateMethod/M1A1.cpp \
+    TemplateMethod/T90.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -42,6 +46,12 @@ HEADERS += \
     Strategy/SortAlgorithm.h \
     Strategy/Strategy.h \
     Strategy/StrategyContext.h \
+    TemplateMethod/AbstractClass.h \
+    TemplateMethod/ConcreteClassA.h \
+    TemplateMethod/ConcreteClassB.h \
+    TemplateMethod/M1A1.h \
+    TemplateMethod/T90.h \
+    TemplateMethod/Tank.h \
     mainwindow.h
 
 FORMS += \

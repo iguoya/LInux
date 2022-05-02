@@ -20,7 +20,7 @@
       <item>
        <widget class="QToolBox" name="toolBox">
         <property name="currentIndex">
-         <number>0</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="page">
          <property name="geometry">
@@ -32,7 +32,7 @@
           </rect>
          </property>
          <attribute name="label">
-          <string>Page 1</string>
+          <string>Creational</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="0" column="0">
@@ -86,7 +86,7 @@
           </rect>
          </property>
          <attribute name="label">
-          <string>Page 2</string>
+          <string>Structural</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout">
           <item row="0" column="0">
@@ -145,8 +145,16 @@
          </layout>
         </widget>
         <widget class="QWidget" name="page_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>152</width>
+           <height>447</height>
+          </rect>
+         </property>
          <attribute name="label">
-          <string>页</string>
+          <string>behavioral</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
@@ -161,7 +169,7 @@
             <item>
              <widget class="QPushButton" name="pushButton_14">
               <property name="text">
-               <string>PushButton</string>
+               <string>模板方法</string>
               </property>
              </widget>
             </item>
