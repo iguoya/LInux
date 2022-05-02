@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>strategy.svg</file>
+        <file>facade.svg</file>
+    </qresource>
+</RCC>
