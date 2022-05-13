@@ -17,7 +17,11 @@
   <Project Name="16-window" Path="16-window/16-window.project" Active="No"/>
   <Project Name="17-Frame" Path="17-Frame/17-Frame.project" Active="No"/>
   <Project Name="18-Message" Path="18-Message/18-Message.project" Active="No"/>
-  <Project Name="19-cmake" Path="19-cmake/19-cmake.project" Active="Yes"/>
+  <Project Name="19-cmake" Path="19-cmake/19-cmake.project" Active="No"/>
+  <Project Name="21-GTKHello" Path="21-GTKHello/21-GTKHello.project" Active="No"/>
+  <Project Name="22-GBox" Path="22-GBox/22-GBox.project" Active="No"/>
+  <Project Name="23-CallBack" Path="23-CallBack/23-CallBack.project" Active="No"/>
+  <Project Name="24-Glade" Path="24-Glade/24-Glade.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -39,6 +43,10 @@
       <Project Name="17-Frame" ConfigName="Debug"/>
       <Project Name="18-Message" ConfigName="Debug"/>
       <Project Name="19-cmake" ConfigName="Debug"/>
+      <Project Name="21-GTKHello" ConfigName="Debug"/>
+      <Project Name="22-GBox" ConfigName="Debug"/>
+      <Project Name="23-CallBack" ConfigName="Debug"/>
+      <Project Name="24-Glade" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -60,6 +68,10 @@
       <Project Name="17-Frame" ConfigName="Release"/>
       <Project Name="18-Message" ConfigName="Release"/>
       <Project Name="19-cmake" ConfigName="Release"/>
+      <Project Name="21-GTKHello" ConfigName="Release"/>
+      <Project Name="22-GBox" ConfigName="Release"/>
+      <Project Name="23-CallBack" ConfigName="Release"/>
+      <Project Name="24-Glade" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
