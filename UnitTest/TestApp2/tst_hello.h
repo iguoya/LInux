@@ -11,14 +11,13 @@ TEST(AppTest, Hello)
     EXPECT_EQ(1, 1);
     Hello h;
     EXPECT_EQ(h.add(4, 5), 900);
-    EXPECT_EQ(h.add(4, 5), 800);
     ASSERT_THAT(0, Eq(0));
 }
 
 TEST(AppTest, add)
 {
     Hello h;
-    EXPECT_EQ(h.add(5, 5), 900);
+    EXPECT_EQ(h.add(5, 5), 1000);
     ASSERT_THAT(0, Eq(0));
 }
 

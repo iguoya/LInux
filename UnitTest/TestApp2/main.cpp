@@ -1,5 +1,5 @@
 #include "tst_hello.h"
-
+#include "tst_factorial.h"
 #include <gtest/gtest.h>
 
 int main(int argc, char *argv[])

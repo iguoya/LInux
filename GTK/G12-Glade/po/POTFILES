@@ -1,0 +1,7 @@
+data/org.gnome.tiger.desktop.in
+data/org.gnome.tiger.appdata.xml.in
+data/org.gnome.tiger.gschema.xml
+src/g12_glade-window.ui
+src/main.c
+src/g12_glade-window.c
+

@@ -1,0 +1,7 @@
+data/gtk.yatiger.cn.desktop.in
+data/gtk.yatiger.cn.appdata.xml.in
+data/gtk.yatiger.cn.gschema.xml
+src/g09_gtk4-window.ui
+src/main.c
+src/g09_gtk4-window.c
+

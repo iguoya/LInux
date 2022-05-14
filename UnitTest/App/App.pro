@@ -5,7 +5,9 @@ CONFIG -= qt
 
 SOURCES += \
         hello.cpp \
+        sample1.cc \
         main.cpp
 
 HEADERS += \
+    sample1.h \
     hello.h

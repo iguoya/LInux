@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/Builder">
+    <file>g11_glade-window.ui</file>
+  </gresource>
+</gresources>

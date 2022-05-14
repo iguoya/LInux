@@ -1,0 +1,7 @@
+data/org.gnome.Builder.desktop.in
+data/org.gnome.Builder.appdata.xml.in
+data/org.gnome.Builder.gschema.xml
+src/g10_glade-window.ui
+src/main.c
+src/g10_glade-window.c
+
