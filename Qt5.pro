@@ -34,8 +34,17 @@ SUBDIRS += \
     3-Login \
     3-QtWidgets \
     31-Splitter \
+    32-HelloQuick \
+    33-QuickStack \
+    34-HelloQtQuick \
+    35-QML \
+    36-Button \
+    37-Quick \
+    38-Designer \
+    39-Rectangle \
     4-QMenu \
     4-QWidget \
+    40-MultiFile \
     5-QWidget \
     5-TextEditor \
     51-ImageProcessor \
