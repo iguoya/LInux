@@ -45,6 +45,14 @@ SUBDIRS += \
     4-QMenu \
     4-QWidget \
     40-MultiFile \
+    41-QuickControls \
+    42-ControlButton \
+    43-CheckBox \
+    44-Label \
+    45-Panel \
+    46-Frame \
+    47-Page \
+    48-Backend \
     5-QWidget \
     5-TextEditor \
     51-ImageProcessor \
