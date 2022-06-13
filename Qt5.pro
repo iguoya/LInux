@@ -57,6 +57,14 @@ SUBDIRS += \
     5-TextEditor \
     51-ImageProcessor \
     52-QtDateType/2-QtDateType.pro \
+    52-slider \
+    53-Canvas \
+    54-Layout \
+    54-StudentInfo \
+    55-Layout \
+    56-MultiPage \
+    57-MaterialStyle \
+    58-Material \
     6-HelloQML \
     61-HelloWorldQML \
     7-background \
