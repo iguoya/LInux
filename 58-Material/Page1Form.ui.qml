@@ -4,6 +4,8 @@ import QtQuick.Controls 2.5
 Page {
     width: 600
     height: 400
+    property alias button: button
+    property alias label: label
 
     header: Label {
         text: qsTr("Page 1")
@@ -30,5 +32,14 @@ Page {
         width: 237
         height: 49
         placeholderText: qsTr("Text Field")
+    }
+
+    Label {
+        id: label
+        x: 83
+        y: 173
+        width: 103
+        height: 34
+        text: qsTr("Label")
     }
 }

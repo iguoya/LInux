@@ -4,6 +4,8 @@ import QtQuick.Controls 2.5
 Page {
     width: 600
     height: 400
+    property alias button: button
+     property alias button: button
 
     header: Label {
         text: qsTr("Page 1")

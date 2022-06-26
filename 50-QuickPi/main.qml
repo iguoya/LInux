@@ -13,9 +13,6 @@ ApplicationWindow {
         currentIndex: tabBar.currentIndex
 
         Page1Form {
-            button.onClicked: {
-                Circle.getArea()
-            }
         }
 
         Page2Form {

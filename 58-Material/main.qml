@@ -13,6 +13,9 @@ ApplicationWindow {
         currentIndex: tabBar.currentIndex
 
         Page1Form {
+            button.onClicked: {
+                console.log(label.text)
+            }
         }
 
         Page2Form {

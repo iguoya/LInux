@@ -55,6 +55,7 @@ SUBDIRS += \
     48-Backend \
     5-QWidget \
     5-TextEditor \
+    50-QuickPi \
     51-ImageProcessor \
     52-QtDateType/2-QtDateType.pro \
     52-slider \
@@ -65,8 +66,11 @@ SUBDIRS += \
     56-MultiPage \
     57-MaterialStyle \
     58-Material \
+    59-StackWidget \
     6-HelloQML \
+    60-StackWidget \
     61-HelloWorldQML \
+    62-QuickPi \
     7-background \
     8-QMLSignal \
     81-NetWorkInformation \
