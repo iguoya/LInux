@@ -1,0 +1,3 @@
+/home/tiger/linux/SDL/build-4-line-unknown-Debug/CMakeFiles/4-line.dir
+/home/tiger/linux/SDL/build-4-line-unknown-Debug/CMakeFiles/edit_cache.dir
+/home/tiger/linux/SDL/build-4-line-unknown-Debug/CMakeFiles/rebuild_cache.dir

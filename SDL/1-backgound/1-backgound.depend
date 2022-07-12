@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1646565663 source:/home/tiger/linux/SDL/1-backgound/main.cpp
+	<cstdlib>
+	<stdlib.h>
+	<SDL/SDL.h>
+

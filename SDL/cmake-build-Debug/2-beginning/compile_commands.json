@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/tiger/linux/SDL/cmake-build-Debug/2-beginning",
+  "command": "/usr/bin/cc  -I/home/tiger/linux/SDL/2-beginning/.   -g -O0 -Wall  -g -O0 -Wall -o CMakeFiles/2-beginning.dir/main.c.o -c /home/tiger/linux/SDL/2-beginning/main.c",
+  "file": "/home/tiger/linux/SDL/2-beginning/main.c"
+}
+]

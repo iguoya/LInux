@@ -1,0 +1,3 @@
+/home/tiger/linux/SDL/build-5-image-unknown-Debug/CMakeFiles/5-image.dir
+/home/tiger/linux/SDL/build-5-image-unknown-Debug/CMakeFiles/edit_cache.dir
+/home/tiger/linux/SDL/build-5-image-unknown-Debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tiger/linux/gtkmm/1-Hello/main.cpp
+mainwindow.h
+/home/tiger/linux/gtkmm/1-Hello/mainwindow.h
+gtkmm/application.h
+-
+
+/home/tiger/linux/gtkmm/1-Hello/mainwindow.cpp
+mainwindow.h
+/home/tiger/linux/gtkmm/1-Hello/mainwindow.h
+iostream
+-
+
+/home/tiger/linux/gtkmm/1-Hello/mainwindow.h
+gtkmm/button.h
+-
+gtkmm/window.h
+-
+

@@ -1,0 +1,3 @@
+/home/tiger/linux/SDL/cmake-build-Debug/2-beginning/CMakeFiles/2-beginning.dir
+/home/tiger/linux/SDL/cmake-build-Debug/2-beginning/CMakeFiles/edit_cache.dir
+/home/tiger/linux/SDL/cmake-build-Debug/2-beginning/CMakeFiles/rebuild_cache.dir

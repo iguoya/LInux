@@ -1,0 +1,1 @@
+/usr/bin/gcc -g CMakeFiles/5-image.dir/main.c.o -o 5-image  -lSDL2 

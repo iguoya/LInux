@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/2-beginning.dir/main.c.o -o /home/tiger/linux/SDL/cmake-build-Debug/output/2-beginning 
