@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=g01-helloworld
-Exec=g01-helloworld
-Icon=cn.yatiger.gtk
-Terminal=false
-Type=Application
-Categories=GTK;
-StartupNotify=true

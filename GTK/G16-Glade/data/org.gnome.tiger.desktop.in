@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=g16-glade
-Exec=g16-glade
-Icon=org.gnome.tiger
-Terminal=false
-Type=Application
-Categories=GTK;
-StartupNotify=true

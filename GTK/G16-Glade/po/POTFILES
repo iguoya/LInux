@@ -1,7 +1,0 @@
-data/org.gnome.tiger.desktop.in
-data/org.gnome.tiger.appdata.xml.in
-data/org.gnome.tiger.gschema.xml
-src/g16_glade-window.ui
-src/main.c
-src/g16_glade-window.c
-

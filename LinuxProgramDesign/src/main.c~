@@ -29,6 +29,7 @@ typedef struct _Private Private;
 struct _Private
 {
 	/* ANJUTA: Widgets declaration for linuxprogramdesign.ui - DO NOT REMOVE */
+	GtkWidget* __glade_unnamed_3;
 	GtkWidget* textView;
 };
 
@@ -55,14 +56,6 @@ on_window_destroy (GtkWidget *widget, gpointer data)
 	gtk_main_quit ();
 }
 
-void
-hello (GtkWidget *widget, gpointer data)
-{
-	GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (content));
-	gtk_text_buffer_set_text (buffer, "Hello, this is some text", -1);
-/*	gtk_main_quit ();*/
-	
-}
 
 
 
@@ -95,6 +88,7 @@ create_window (void)
 
 	priv = g_malloc (sizeof (struct _Private));
 	/* ANJUTA: Widgets initialization for linuxprogramdesign.ui - DO NOT REMOVE */
+	priv->__glade_unnamed_3 = GTK_WIDGET (gtk_builder_get_object(builder, "__glade_unnamed_3"));
 	priv->textView = GTK_WIDGET (gtk_builder_get_object(builder, "textView"));
 
 	g_object_unref (builder);

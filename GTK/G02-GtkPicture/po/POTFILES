@@ -1,7 +1,0 @@
-data/cn.yatiger.gtk.desktop.in
-data/cn.yatiger.gtk.appdata.xml.in
-data/cn.yatiger.gtk.gschema.xml
-src/g02_gtkpicture-window.ui
-src/main.c
-src/g02_gtkpicture-window.c
-

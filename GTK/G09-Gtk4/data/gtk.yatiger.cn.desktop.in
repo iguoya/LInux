@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=g09-gtk4
-Exec=g09-gtk4
-Icon=gtk.yatiger.cn
-Terminal=false
-Type=Application
-Categories=GTK;
-StartupNotify=true
