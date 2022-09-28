@@ -11,8 +11,17 @@
 #include <stdio.h>
 #include <gtk/gtk.h>
 
-void hello(GtkWidget *widget, gpointer user_data) {
-	g_print("hello 郭雅");
+#include "system.h"
+
+void hello(GtkButton *button, gpointer textView) {
+	const gchar *content = "hello 郭雅\n";
+
+	GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (textView));
+	GtkTextIter start,end;
+
+	gtk_text_buffer_get_bounds(GTK_TEXT_BUFFER(buffer),&start,&end);/*获得缓冲区开始和结束位置的Iter*/
+	gtk_text_buffer_insert(GTK_TEXT_BUFFER(buffer),&start,content,strlen(content));/*插入文本到缓冲区*/
+
 }
 
 int main(int argc, char *argv[]) {
