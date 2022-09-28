@@ -65,11 +65,11 @@
                                     								
                                 </option>
                                 								
-                                <option id="gnu.c.compiler.option.pthread.1143415764" superClass="gnu.c.compiler.option.pthread" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+                                <option id="gnu.c.compiler.option.pthread.1143415764" name="Support for pthread (-pthread)" superClass="gnu.c.compiler.option.pthread" useByScannerDiscovery="false" value="true" valueType="boolean"/>
                                 								
-                                <option id="gnu.c.compiler.option.dialect.std.1455502159" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+                                <option id="gnu.c.compiler.option.dialect.std.1455502159" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
                                 								
-                                <option id="gnu.c.compiler.option.misc.other.1305663660" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -fmessage-length=0  `pkg-config --cflags gtk+-3.0`" valueType="string"/>
+                                <option id="gnu.c.compiler.option.misc.other.1305663660" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -fmessage-length=0  `pkg-config --cflags gtk+-3.0`" valueType="string"/>
                                 								
                                 <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.725536488" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
                                 							
@@ -82,6 +82,8 @@
                                     <listOptionValue builtIn="false" value="-lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0"/>
                                     								
                                 </option>
+                                								
+                                <option id="gnu.c.link.option.ldflags.1435021251" superClass="gnu.c.link.option.ldflags" useByScannerDiscovery="false" value=" -rdynamic" valueType="string"/>
                                 								
                                 <inputType id="cdt.managedbuild.tool.gnu.c.linker.input.2054796452" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
                                     									
