@@ -6,8 +6,8 @@
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">window</property>
-    <property name="default_width">960</property>
-    <property name="default_height">800</property>
+    <property name="default_width">1920</property>
+    <property name="default_height">1080</property>
     <signal name="destroy" handler="on_window_destroy" swapped="no"/>
     <child>
       <placeholder/>
@@ -144,12 +144,25 @@
           </packing>
         </child>
         <child>
-          <object class="GtkTextView" id="content">
+          <object class="GtkScrolledWindow">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="shadow_type">in</property>
+            <property name="propagate_natural_width">True</property>
+            <property name="propagate_natural_height">True</property>
+            <child>
+              <object class="GtkTextView" id="content">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="hscroll_policy">natural</property>
+                <property name="vscroll_policy">natural</property>
+              </object>
+            </child>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
