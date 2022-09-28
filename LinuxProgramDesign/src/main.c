@@ -23,6 +23,7 @@
 
 #include <glib/gi18n.h>
 #include "hello.h"
+#include "system.h"
 
 
 typedef struct _Private Private;

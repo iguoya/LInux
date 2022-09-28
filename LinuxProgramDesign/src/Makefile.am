@@ -22,7 +22,9 @@ bin_PROGRAMS = linuxprogramdesign
 linuxprogramdesign_SOURCES = \
 	main.c \
 	hello.c \
-	hello.h
+	hello.h \
+	system.c \
+	system.h
 
 
 linuxprogramdesign_LDFLAGS = \

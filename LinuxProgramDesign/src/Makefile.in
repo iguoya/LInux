@@ -102,7 +102,8 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(uidir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_linuxprogramdesign_OBJECTS = main.$(OBJEXT) hello.$(OBJEXT)
+am_linuxprogramdesign_OBJECTS = main.$(OBJEXT) hello.$(OBJEXT) \
+	system.$(OBJEXT)
 linuxprogramdesign_OBJECTS = $(am_linuxprogramdesign_OBJECTS)
 am__DEPENDENCIES_1 =
 linuxprogramdesign_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -129,7 +130,8 @@ am__v_at_1 =
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__maybe_remake_depfiles = depfiles
-am__depfiles_remade = ./$(DEPDIR)/hello.Po ./$(DEPDIR)/main.Po
+am__depfiles_remade = ./$(DEPDIR)/hello.Po ./$(DEPDIR)/main.Po \
+	./$(DEPDIR)/system.Po
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
@@ -371,7 +373,9 @@ AM_CFLAGS = \
 linuxprogramdesign_SOURCES = \
 	main.c \
 	hello.c \
-	hello.h
+	hello.h \
+	system.c \
+	system.h
 
 linuxprogramdesign_LDFLAGS = \
 	-Wl,--export-dynamic
@@ -473,6 +477,7 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hello.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/system.Po@am__quote@ # am--include-marker
 
 $(am__depfiles_remade):
 	@$(MKDIR_P) $(@D)
@@ -657,6 +662,7 @@ clean-am: clean-binPROGRAMS clean-generic clean-libtool mostlyclean-am
 distclean: distclean-am
 		-rm -f ./$(DEPDIR)/hello.Po
 	-rm -f ./$(DEPDIR)/main.Po
+	-rm -f ./$(DEPDIR)/system.Po
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -704,6 +710,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-am
 		-rm -f ./$(DEPDIR)/hello.Po
 	-rm -f ./$(DEPDIR)/main.Po
+	-rm -f ./$(DEPDIR)/system.Po
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
