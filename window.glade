@@ -1,58 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.40.0 -->
 <interface>
-  <requires lib="gtk+" version="3.24"/>
-  <object class="GtkWindow" id="window">
-    <property name="can-focus">False</property>
-    <property name="default-width">1920</property>
-    <property name="default-height">1080</property>
+  <object id="window" class="GtkWindow">
+    <property name="visible">True</property>
+    <property name="title">Grid</property>
+    <property name="border-width">10</property>
     <child>
-      <object class="GtkFixed">
+      <object id="grid" class="GtkGrid">
         <property name="visible">True</property>
-        <property name="can-focus">False</property>
         <child>
-          <object class="GtkButton">
-            <property name="label" translatable="yes">button</property>
-            <property name="width-request">100</property>
-            <property name="height-request">80</property>
+          <object id="button1" class="GtkButton">
             <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="receives-default">True</property>
+            <property name="label">Button 1</property>
           </object>
           <packing>
-            <property name="x">326</property>
-            <property name="y">137</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">0</property>
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
-            <property name="label" translatable="yes">button</property>
-            <property name="width-request">100</property>
-            <property name="height-request">80</property>
+          <object id="button2" class="GtkButton">
             <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="receives-default">True</property>
+            <property name="label">Button 2</property>
           </object>
           <packing>
-            <property name="x">595</property>
-            <property name="y">337</property>
+            <property name="left-attach">1</property>
+            <property name="top-attach">0</property>
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
-            <property name="label" translatable="yes">button</property>
-            <property name="width-request">100</property>
-            <property name="height-request">80</property>
+          <object id="quit" class="GtkButton">
             <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="receives-default">True</property>
+            <property name="label">Quit</property>
           </object>
           <packing>
-            <property name="x">408</property>
-            <property name="y">346</property>
+            <property name="left-attach">0</property>
+            <property name="top-attach">1</property>
+            <property name="width">2</property>
           </packing>
         </child>
       </object>
+      <packing>
+      </packing>
     </child>
   </object>
 </interface>
