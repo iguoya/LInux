@@ -8,7 +8,7 @@
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="border_width">10</property>
-    <property name="title">Grid</property>
+    <property name="title">Linux程序设计</property>
     <child type="titlebar">
       <placeholder/>
     </child>
@@ -19,7 +19,7 @@
         <property name="row_homogeneous">True</property>
         <property name="column_homogeneous">True</property>
         <child>
-          <object class="GtkButton" id="button1">
+          <object class="GtkButton">
             <property name="label">系统函数</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
@@ -48,7 +48,7 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="receives_default">False</property>
-            <signal name="clicked" handler="show_process_window" object="window" swapped="no"/>
+            <signal name="clicked" handler="create_process_dialog" object="window" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">0</property>
@@ -85,6 +85,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
+            <signal name="clicked" handler="create_thread_window" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">2</property>
