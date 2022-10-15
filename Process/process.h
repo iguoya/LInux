@@ -9,7 +9,7 @@
 #define PROCESS_PROCESS_H_
 #include <gtk/gtk.h>
 
-void create_process_dialog(GtkWidget *button, gpointer parent);
+void create_process_dialog(GtkWidget *button, GtkWidget* parent);
 void return_window(GtkWidget *button, gpointer window);
 
 #endif /* PROCESS_PROCESS_H_ */
