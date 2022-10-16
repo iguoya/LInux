@@ -61,7 +61,10 @@
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="receives_default">True</property>
+<<<<<<< HEAD
                             <signal name="clicked" handler="create_task" object="ParentTextView" swapped="no"/>
+=======
+>>>>>>> c36943a770d086e864845d17944f4d97f2a2fbd2
                           </object>
                           <packing>
                             <property name="expand">False</property>
@@ -179,7 +182,11 @@
                   </packing>
                 </child>
                 <child>
+<<<<<<< HEAD
                   <object class="GtkTextView" id="ParentTextView">
+=======
+                  <object class="GtkTextView">
+>>>>>>> c36943a770d086e864845d17944f4d97f2a2fbd2
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="hscroll_policy">natural</property>
@@ -196,7 +203,11 @@
                   </packing>
                 </child>
                 <child>
+<<<<<<< HEAD
                   <object class="GtkTextView" id="ATextView">
+=======
+                  <object class="GtkTextView">
+>>>>>>> c36943a770d086e864845d17944f4d97f2a2fbd2
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="pixels_above_lines">10</property>
@@ -211,7 +222,11 @@
                   </packing>
                 </child>
                 <child>
+<<<<<<< HEAD
                   <object class="GtkTextView" id="BTextView">
+=======
+                  <object class="GtkTextView">
+>>>>>>> c36943a770d086e864845d17944f4d97f2a2fbd2
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="pixels_above_lines">10</property>
