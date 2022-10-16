@@ -6,6 +6,3 @@
  */
 #include "system.h"
 
-void create_system_dialog(GtkWidget *widget, gpointer window) {
-	g_print("world\n");
-}

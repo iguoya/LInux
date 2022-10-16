@@ -31,7 +31,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="button2">
+          <object class="GtkButton" id="io">
             <property name="label">I/O</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
@@ -43,12 +43,11 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="quit">
+          <object class="GtkButton" id="process">
             <property name="label">多任务编程</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="receives_default">False</property>
-            <signal name="clicked" handler="create_process_dialog" object="window" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">0</property>
@@ -68,12 +67,11 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="ipc">
             <property name="label" translatable="yes">进程间通信</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <signal name="clicked" handler="create_ipc_dialog" object="window" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">1</property>
@@ -81,12 +79,11 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="thread">
             <property name="label" translatable="yes">多线程编程</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <signal name="clicked" handler="create_thread_window" object="window" swapped="no"/>
           </object>
           <packing>
             <property name="left_attach">2</property>

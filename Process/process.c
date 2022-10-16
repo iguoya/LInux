@@ -10,15 +10,19 @@ void return_window(GtkWidget *button, gpointer window) {
 	//	gtk_widget_hide(window);
 }
 
-void create_task(GtkButton *button, gpointer textView) {
+void create_task(GtkButton *button, gpointer text_view) {
 
-	GtkTextIter end;
-	GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (textView));
+    GString *content =g_string_new("创建进程.....");
+    text_view_append(text_view, content);
 
-	const gchar *line = gtk_button_get_label (button);
-	gtk_text_buffer_set_text (buffer, line, -1);
-
-	gtk_text_buffer_get_end_iter(buffer, &end);
+//
+//	GtkTextIter end;
+//	GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (textView));
+//
+//	const gchar *line = gtk_button_get_label (button);
+//	gtk_text_buffer_set_text (buffer, line, -1);
+//
+//	gtk_text_buffer_get_end_iter(buffer, &end);
 	//	 GtkTextIter iter;
 	//	gtk_text_buffer_get_iter_at_offset(buffer, &iter, 0);
 
@@ -44,7 +48,7 @@ void create_task(GtkButton *button, gpointer textView) {
 	////		gtk_text_buffer_insert(buffer, &end, msg, -1);
 	////		gtk_text_buffer_insert(buffer, &end, "I am son ", -1);
 	//	}
-	gtk_text_buffer_insert(buffer, &end, "\nI am son \n", -1);
+//	gtk_text_buffer_insert(buffer, &end, "\nI am son \n", -1);
 	//
 	//	gtk_text_buffer_get_end_iter(buffer, &end);
 	//	gtk_text_buffer_insert(buffer, &end, msg, -1);

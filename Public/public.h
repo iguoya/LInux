@@ -11,5 +11,6 @@
 
 void text_view_append(GtkTextView *text_view, GString *content);
 
+void show_dialog(GtkButton *button, gchar* data);
 
 #endif /* PUBLIC_PUBLIC_H_ */

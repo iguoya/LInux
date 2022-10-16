@@ -10,7 +10,5 @@
 
 #include <gtk/gtk.h>
 
-void create_system_dialog(GtkWidget *widget, gpointer window);
-
 
 #endif /* SYSTEM_SYSTEM_H_ */

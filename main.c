@@ -8,6 +8,7 @@
  ============================================================================
  */
 #include <gtk/gtk.h>
+#include "public.h"
 #include "system.h"
 #include "process.h"
 #include "thread.h"
@@ -46,10 +47,10 @@
 int main (int argc, char **argv)
 {
 
-//	GtkApplication *app = gtk_application_new ("org.gtk.example", G_APPLICATION_FLAGS_NONE);
-//	g_signal_connect (app, "activate", G_CALLBACK (activate), NULL);
-//	int status = g_application_run (G_APPLICATION (app), argc, argv);
-//	g_object_unref (app);
+	//	GtkApplication *app = gtk_application_new ("org.gtk.example", G_APPLICATION_FLAGS_NONE);
+	//	g_signal_connect (app, "activate", G_CALLBACK (activate), NULL);
+	//	int status = g_application_run (G_APPLICATION (app), argc, argv);
+	//	g_object_unref (app);
 	GError *error = NULL;
 
 	gtk_init (&argc, &argv);
@@ -64,6 +65,14 @@ int main (int argc, char **argv)
 
 	/* Connect signal handlers to the constructed widgets. */
 	GtkWidget* window = GTK_WIDGET(gtk_builder_get_object (builder, "window"));
+	GtkWidget* process = GTK_WIDGET(gtk_builder_get_object (builder, "process"));
+	GtkWidget* ipc = GTK_WIDGET(gtk_builder_get_object (builder, "ipc"));
+	GtkWidget* thread = GTK_WIDGET(gtk_builder_get_object (builder, "thread"));
+
+	g_signal_connect(G_OBJECT(process), "clicked", G_CALLBACK(show_dialog), "process");;
+	g_signal_connect(G_OBJECT(ipc), "clicked", G_CALLBACK(show_dialog), "ipc");;
+	g_signal_connect(G_OBJECT(thread), "clicked", G_CALLBACK(show_dialog), "thread");;
+
 	//	g_signal_connect (window, "destroy", G_CALLBACK (gtk_main_quit), NULL);
 
 	gtk_builder_connect_signals (builder, NULL);//连接响应事件
