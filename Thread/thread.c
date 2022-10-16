@@ -6,7 +6,13 @@
  */
 #include "thread.h"
 
-void create_thread_window(GtkWidget *widget,gpointer data) {
+void create_thread_window(GtkWidget *widget,gpointer window) {
+	  GtkWidget *dialog = NULL;
+	  dialog = gtk_message_dialog_new (GTK_WINDOW (window), GTK_DIALOG_MODAL, GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE, "Hello World!");
+	  gtk_window_set_position (GTK_WINDOW (dialog), GTK_WIN_POS_CENTER);
+	  gtk_dialog_run (GTK_DIALOG (dialog));
+	  gtk_widget_destroy (dialog);
+
 //	//2.创建GtkBuilder对象，GtkBuilder在<gtk/gtk.h>声明
 //	GtkBuilder *builder = gtk_builder_new();
 //
