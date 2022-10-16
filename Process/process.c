@@ -57,23 +57,23 @@ void create_task(GtkButton *button, gpointer text_view) {
 
 void create_process_dialog(GtkWidget *button, GtkWidget* parent) {
 	//	g_print("hello\n");
-	GError *error = NULL;
-	GtkBuilder* builder = gtk_builder_new ();
-	//	    gtk_builder_add_from_file (builder, "tutorial.glade", NULL);
-	if (gtk_builder_add_from_file (builder, "ui/process_dialog.glade", &error) == 0)
-	{
-		g_printerr ("Error loading file: %s\n", error->message);
-		g_clear_error (&error);
-	}
-	GtkWidget *dialog = GTK_WIDGET(gtk_builder_get_object(builder,"dialog"));
+//	GError *error = NULL;
+//	GtkBuilder* builder = gtk_builder_new ();
+//	//	    gtk_builder_add_from_file (builder, "tutorial.glade", NULL);
+//	if (gtk_builder_add_from_file (builder, "ui/process_dialog.glade", &error) == 0)
+//	{
+//		g_printerr ("Error loading file: %s\n", error->message);
+//		g_clear_error (&error);
+//	}
+//	GtkWidget *dialog = GTK_WIDGET(gtk_builder_get_object(builder,"dialog"));
 	//	GtkWidget* window = GTK_WIDGET(gtk_builder_get_object (builder, "window"));
 	//	GtkButton *return_button = GTK_BUTTON(gtk_builder_get_object(builder, "return"));
 	//	g_signal_connect (return_button, "clicked", G_CALLBACK (return_window), parent);
 	//			    GtkWidget *window = GTK_WIDGET (gtk_builder_get_object (builder, "../window"));
-	gtk_builder_connect_signals (builder, NULL);
-
-	g_object_unref (G_OBJECT (builder));
-	gtk_widget_show_all(dialog);
+//	gtk_builder_connect_signals (builder, NULL);
+//
+//	g_object_unref (G_OBJECT (builder));
+//	gtk_widget_show_all(dialog);
 	//	gtk_widget_hide(parent);
 	//	gtk_window_show();
 
