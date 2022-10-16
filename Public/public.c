@@ -42,6 +42,7 @@ void show_dialog(GtkButton *button, GtkWindow* parent) {
 	gtk_window_set_transient_for (GTK_WINDOW(dialog), parent);
 	gtk_builder_connect_signals (builder, NULL);
 
+	gtk_widget_hide(parent);
 //	gtk_dialog_run();
 //	gtk_widget_show_all(dialog);
 	gtk_dialog_run(GTK_DIALOG(dialog));
