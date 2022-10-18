@@ -1,1 +1,1 @@
-./Debug/main.c.o
+./Debug/public_public.c.o ./Debug/main.c.o ./Debug/basic_basic.c.o
