@@ -7,3 +7,5 @@ cmake-build-debug
 CMakeFiles
 CMakeCache.txt
 build-*
+Debug
+.codelite
