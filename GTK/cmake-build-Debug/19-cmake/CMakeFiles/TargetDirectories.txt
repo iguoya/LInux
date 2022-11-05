@@ -1,3 +1,0 @@
-/home/tiger/linux/GTK/cmake-build-Debug/19-cmake/CMakeFiles/rebuild_cache.dir
-/home/tiger/linux/GTK/cmake-build-Debug/19-cmake/CMakeFiles/19-cmake.dir
-/home/tiger/linux/GTK/cmake-build-Debug/19-cmake/CMakeFiles/edit_cache.dir

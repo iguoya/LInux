@@ -1,3 +1,0 @@
-/home/tiger/linux/gtkmm/cmake-build-Debug/7-box/CMakeFiles/7-box.dir
-/home/tiger/linux/gtkmm/cmake-build-Debug/7-box/CMakeFiles/edit_cache.dir
-/home/tiger/linux/gtkmm/cmake-build-Debug/7-box/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,0 @@
-/home/tiger/linux/GTK/cmake-build-Debug/17-Frame/CMakeFiles/rebuild_cache.dir
-/home/tiger/linux/GTK/cmake-build-Debug/17-Frame/CMakeFiles/17-Frame.dir
-/home/tiger/linux/GTK/cmake-build-Debug/17-Frame/CMakeFiles/edit_cache.dir
