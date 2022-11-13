@@ -11,8 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->LeftLayout->addWidget(&system);
     ui->RightLayout->addWidget(&table_view);
-
-
+//    item_model->setHorizontalHeaderLabels(column);
+    connect(&system, &System::setLabels, table_view.model, &QStandardItemModel::setHorizontalHeaderLabels);
+    connect(&system, &System::setData, &table_view, &TableView::setData);
     //    ui->System->setIcon(QIcon(":/images/systemcall.svg"));
     //    ui->System->setIconSize(QSize(128,128));
     //    ui->Thread->setIcon(QIcon(":/images/thread.svg"));

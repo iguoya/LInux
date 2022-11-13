@@ -14,7 +14,13 @@ class TableView : public QWidget
 
 public:
     explicit TableView(QWidget *parent = nullptr);
+
+    QStandardItemModel *model;
     ~TableView();
+
+public slots:
+    void setModelNames(QStringList names);
+    void setData(QList<QVector<QVariant>> sets);
 
 private:
     Ui::TableView *ui;

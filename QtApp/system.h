@@ -2,6 +2,10 @@
 #define SYSTEM_H
 
 #include <QWidget>
+#include <QStandardItemModel>
+#include <QStringList>
+//#include
+#include <ctype.h>
 
 namespace Ui {
 class System;
@@ -15,6 +19,10 @@ public:
     explicit System(QWidget *parent = nullptr);
     ~System();
 
+signals:
+    void setLabels(QStringList columns);
+
+    void setData(QList<QVector<QVariant>> sets);
 private slots:
     void on_Char_clicked();
 
