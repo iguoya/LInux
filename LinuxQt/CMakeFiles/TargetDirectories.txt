@@ -1,0 +1,4 @@
+/home/tiger/LinuxProgramming/LinuxQt/CMakeFiles/rebuild_cache.dir
+/home/tiger/LinuxProgramming/LinuxQt/CMakeFiles/LinuxQt.dir
+/home/tiger/LinuxProgramming/LinuxQt/CMakeFiles/edit_cache.dir
+/home/tiger/LinuxProgramming/LinuxQt/CMakeFiles/LinuxQt_autogen.dir
