@@ -12,8 +12,8 @@ TableView::TableView(QWidget *parent) :
     ui->tableView->setAlternatingRowColors(true);  // 开启隔行异色
 
 
-    model = new QStandardItemModel();  // 4行4列
-    model->setHorizontalHeaderLabels({"测试名称", "输入", "结果"});
+    model = new QStandardItemModel();
+//    model->setHorizontalHeaderLabels({"测试名称", "输入", "结果"});
     ui->tableView->setModel(model);
     //    for (int i = 0; i < 4; ++i)
     //        for (int j = 0; j < 4; ++j)

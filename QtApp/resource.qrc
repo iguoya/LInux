@@ -21,5 +21,6 @@
         <file>images/thread.svg</file>
         <file>images/thread2.svg</file>
         <file>images/timer.svg</file>
+        <file>images/exit.svg</file>
     </qresource>
 </RCC>

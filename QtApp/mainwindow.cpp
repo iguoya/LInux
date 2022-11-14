@@ -8,10 +8,26 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->toolBar->addAction(ui->action_system);
+    ui->toolBar->addSeparator();
+    ui->toolBar->addAction(ui->action_thread);
+    ui->toolBar->addSeparator();
+    ui->toolBar->addAction(ui->action_thread);
+    ui->toolBar->addSeparator();
+    ui->toolBar->addAction(ui->action_process);
+    ui->toolBar->addSeparator();
+    ui->toolBar->addAction(ui->action_ipc);
+    ui->toolBar->addSeparator();
+    ui->toolBar->addAction(ui->action_driver);
+    ui->toolBar->addSeparator();
+    ui->toolBar->addAction(ui->action_kernel);
+    ui->toolBar->addSeparator();
+    ui->toolBar->addAction(ui->action_exit);
+    ui->toolBar->addSeparator();
 
     ui->LeftLayout->addWidget(&system);
     ui->RightLayout->addWidget(&table_view);
-//    item_model->setHorizontalHeaderLabels(column);
+    //    item_model->setHorizontalHeaderLabels(column);
     connect(&system, &System::setLabels, table_view.model, &QStandardItemModel::setHorizontalHeaderLabels);
     connect(&system, &System::setData, &table_view, &TableView::setData);
     //    ui->System->setIcon(QIcon(":/images/systemcall.svg"));
@@ -33,3 +49,19 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+
+void MainWindow::on_action_system_triggered()
+{
+
+}
+
+void MainWindow::on_action_thread_triggered()
+{
+
+}
+
+void MainWindow::on_action_process_triggered()
+{
+
+}

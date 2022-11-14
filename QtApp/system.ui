@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>289</width>
+    <width>315</width>
     <height>698</height>
    </rect>
   </property>
@@ -14,13 +14,6 @@
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="4" column="0">
-    <widget class="QPushButton" name="DateTime">
-     <property name="text">
-      <string>日期时间</string>
-     </property>
-    </widget>
-   </item>
    <item row="0" column="0">
     <widget class="QPushButton" name="Char">
      <property name="text">
@@ -46,6 +39,13 @@
     <widget class="QPushButton" name="Algorithm">
      <property name="text">
       <string>常用算法</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QPushButton" name="DateTime">
+     <property name="text">
+      <string>日期时间</string>
      </property>
     </widget>
    </item>

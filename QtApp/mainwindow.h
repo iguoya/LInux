@@ -22,6 +22,14 @@ public:
     System system;
     TableView table_view;
 
+private slots:
+
+    void on_action_system_triggered();
+
+    void on_action_thread_triggered();
+
+    void on_action_process_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -4,8 +4,10 @@
 #include <QWidget>
 #include <QStandardItemModel>
 #include <QStringList>
-//#include
+
 #include <ctype.h>
+#include <stdlib.h>
+
 
 namespace Ui {
 class System;
@@ -18,13 +20,15 @@ class System : public QWidget
 public:
     explicit System(QWidget *parent = nullptr);
     ~System();
-
+    QList<QVector<QVariant>> sets;
 signals:
     void setLabels(QStringList columns);
 
     void setData(QList<QVector<QVariant>> sets);
 private slots:
     void on_Char_clicked();
+
+    void on_String_clicked();
 
 private:
     Ui::System *ui;
