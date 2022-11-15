@@ -1,6 +1,8 @@
 #include "thread.h"
 #include "ui_thread.h"
 
+int Thread::index;
+
 Thread::Thread(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Thread)
@@ -10,7 +12,13 @@ Thread::Thread(QWidget *parent) :
     modelA = new QStringListModel;
     modelB = new QStringListModel;
     modelC = new QStringListModel;
-    //    ui->listView
+
+    args[0] = { "线程A", modelA, ui->listView_2};
+    args[1] = { "线程B", modelB, ui->listView_3};
+    args[2] = { "线程C", modelC, ui->listView_4};
+
+//    connect(this, &Thread::setModel, ui->listView, )
+
 }
 
 Thread::~Thread()
@@ -20,8 +28,18 @@ Thread::~Thread()
 
 void* Thread::printThreadID(void* varg)
 {
-    ThreadArg* arg =  ((Thread *)varg)->arg;
-
+    ThreadArg* arg =  &((Thread *)varg)->args[index];
+    switch(index) {
+    case 0:
+        arg->view->setModel(arg->model);
+        break;
+    case 1:
+        arg->view->setModel(arg->model);
+        break;
+    default:
+        arg->view->setModel(arg->model);
+    }
+     ++index;
 
     QStringList data = {
         arg->name,
@@ -31,15 +49,18 @@ void* Thread::printThreadID(void* varg)
         .arg(QString::number(pthread_self(), 16).toUpper()),
     };
 
-    //    for(int i = 1; i < 10; ++i) {
-    //        data<<QString::number(1);
-    //        sleep(rand()%3);
-    //    }
+    for(int i = 1; i < 5; ++i) {
+        data<<QString::number(i);
+        sleep(rand()%3);
+    }
 
     arg->model->setStringList(data);
-    arg->view->setModel(arg->model);
+
+
+
     return NULL;
 }
+
 
 void Thread::on_CreateThread_clicked()
 {
@@ -62,22 +83,11 @@ void Thread::on_CreateThread_clicked()
     arg->view = ui->listView_2;
 
     pthread_create(&thread, NULL, printThreadID, this);
-    sleep(2);
+    sleep(1);
 
-    //    argA = new ThreadArg {
-    //            "线程B",
-    //            modelB,
-    //            ui->listView_3
-    //};
-    arg->name = "线程B";
-    arg->model = modelB;
-    arg->view = ui->listView_3;
     pthread_create(&thread, NULL, printThreadID, this);
-    sleep(2);
+    sleep(1);
 
-    arg->name = "线程C";
-    arg->model = modelC;
-    arg->view = ui->listView_4;
     pthread_create(&thread, NULL, printThreadID, this);
 
 

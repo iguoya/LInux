@@ -32,15 +32,20 @@ public:
     QStringListModel *modelA;
     QStringListModel *modelB;
     QStringListModel *modelC;
+
     ThreadArg *arg;
     ThreadArg *argA;
     ThreadArg *argB;
     ThreadArg *argC;
 
+    ThreadArg args[3];
+
+    static int index;
+
     static void* printThreadID(void*);
 //    typedef void* (*pFUNC)(void *);
 //    void* printThreadID(void* arg);
-
+signals:
 
 private slots:
     void on_CreateThread_clicked();
