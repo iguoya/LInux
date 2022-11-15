@@ -35,6 +35,11 @@ qt5_add_resources(images ${CMAKE_CURRENT_SOURCE_DIR}/resource.qrc)
 #set(QRC_SOURCE_FILES Resources.qrc)
 #SOURCE_GROUP("Resource Files" FILES ${QRC_SOURCE_FILES})
 
+set_target_properties(${TARGET} PROPERTIES
+COMPILE_FLAGS "-pthread"
+LINK_FLAGS "-pthread")
+
+
 set(PROJECT_SOURCES
     main.cpp
     ${themes}
@@ -72,4 +77,4 @@ else()
     endif()
 endif()
 
-target_link_libraries(QtApp PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(QtApp PRIVATE Qt${QT_VERSION_MAJOR}::Widgets pthread)
