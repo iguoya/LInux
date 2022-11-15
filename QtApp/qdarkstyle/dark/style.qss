@@ -1007,6 +1007,7 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qpushbutton
 --------------------------------------------------------------------------- */
 QPushButton {
   background-color: #455364;
+  min-height:35px;
   color: #E0E1E3;
   border-radius: 4px;
   padding: 2px;

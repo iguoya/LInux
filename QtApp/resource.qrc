@@ -22,5 +22,7 @@
         <file>images/thread2.svg</file>
         <file>images/timer.svg</file>
         <file>images/exit.svg</file>
+        <file>images/process5.svg</file>
+        <file>images/ipc3.svg</file>
     </qresource>
 </RCC>

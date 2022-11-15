@@ -4,7 +4,7 @@
 #include <QMainWindow>
 //#include "QtAwesome/QtAwesome.h"
 #include "system.h"
-#include "tableview.h"
+#include "thread.h"
 #include <QLabel>
 
 QT_BEGIN_NAMESPACE
@@ -20,7 +20,10 @@ public:
     ~MainWindow();
 //    QtAwesome* awesome;
     System system;
-    TableView table_view;
+
+    Thread thread;
+
+    QWidget *currentWindow;
 
 private slots:
 

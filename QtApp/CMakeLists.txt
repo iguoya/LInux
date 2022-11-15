@@ -29,7 +29,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 
 #qt5_add_resources(QRC_FILES ${CMAKE_CURRENT_SOURCE_DIR}/qdarkstyle/dark/style.qrc)
-qt5_add_resources(themes ${CMAKE_CURRENT_SOURCE_DIR}/qdarkstyle/light/style.qrc)
+qt5_add_resources(themes ${CMAKE_CURRENT_SOURCE_DIR}/qdarkstyle/dark/style.qrc)
 qt5_add_resources(images ${CMAKE_CURRENT_SOURCE_DIR}/resource.qrc)
 #file(GLOB_RECURSE QRC_SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/qdarkstyle/dark/style.qrc)
 #set(QRC_SOURCE_FILES Resources.qrc)
@@ -49,9 +49,9 @@ set(PROJECT_SOURCES
     system.h
     system.cpp
     system.ui
-    tableview.h
-    tableview.cpp
-    tableview.ui
+    thread.h
+    thread.cpp
+    thread.ui
     )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

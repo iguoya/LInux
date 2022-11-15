@@ -25,11 +25,18 @@ MainWindow::MainWindow(QWidget *parent)
     ui->toolBar->addAction(ui->action_exit);
     ui->toolBar->addSeparator();
 
-    ui->LeftLayout->addWidget(&system);
-    ui->RightLayout->addWidget(&table_view);
+    ui->MainLayout->addWidget(&system);
+    currentWindow = &system;
+    //    ui->LeftLayout->addWidget(&system);
+    //    ui->RightLayout->addWidget(&table_view);
+
+    //    leftWidget = &system;
+    //    rightWidget = &table_view;
     //    item_model->setHorizontalHeaderLabels(column);
-    connect(&system, &System::setLabels, table_view.model, &QStandardItemModel::setHorizontalHeaderLabels);
-    connect(&system, &System::setData, &table_view, &TableView::setData);
+    //    connect(&system, &System::setLabels, table_view.model, &QStandardItemModel::setHorizontalHeaderLabels);
+    //    connect(&system, &System::setData, &table_view, &TableView::setData);
+
+    //    connect(&thread, &Thread::setModel, &multi_task, &MultiTask::setModel);
     //    ui->System->setIcon(QIcon(":/images/systemcall.svg"));
     //    ui->System->setIconSize(QSize(128,128));
     //    ui->Thread->setIcon(QIcon(":/images/thread.svg"));
@@ -53,11 +60,22 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_action_system_triggered()
 {
-
+    if(currentWindow != &system) {
+        currentWindow->hide();
+        ui->MainLayout->replaceWidget(currentWindow, &system);
+        currentWindow = &system;
+        currentWindow->show();
+    }
 }
 
 void MainWindow::on_action_thread_triggered()
 {
+    if(currentWindow != &thread) {
+        currentWindow->hide();
+        ui->MainLayout->replaceWidget(currentWindow, &thread);
+        currentWindow = &thread;
+        currentWindow->show();
+    }
 
 }
 

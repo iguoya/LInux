@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>System</class>
- <widget class="QWidget" name="System">
+ <class>Thread</class>
+ <widget class="QWidget" name="Thread">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1164</width>
-    <height>698</height>
+    <width>1235</width>
+    <height>658</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,9 +22,9 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QGridLayout" name="gridLayout">
+     <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
-       <widget class="QPushButton" name="Char">
+       <widget class="QPushButton" name="CreateThread">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -32,12 +32,12 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>字符</string>
+         <string>创建线程</string>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QPushButton" name="String">
+       <widget class="QPushButton" name="pushButton_2">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -45,12 +45,12 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>字符串</string>
+         <string>PushButton</string>
         </property>
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QPushButton" name="Maths">
+       <widget class="QPushButton" name="pushButton_3">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -58,12 +58,12 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>数学计算</string>
+         <string>PushButton</string>
         </property>
        </widget>
       </item>
       <item row="3" column="0">
-       <widget class="QPushButton" name="Algorithm">
+       <widget class="QPushButton" name="pushButton_4">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -71,20 +71,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>常用算法</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QPushButton" name="DateTime">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>日期时间</string>
+         <string>PushButton</string>
         </property>
        </widget>
       </item>
@@ -99,9 +86,18 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QGridLayout" name="gridLayout_2">
+     <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
-       <widget class="QTableView" name="tableView"/>
+       <widget class="QListView" name="listView"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QListView" name="listView_2"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QListView" name="listView_3"/>
+      </item>
+      <item row="0" column="3">
+       <widget class="QListView" name="listView_4"/>
       </item>
      </layout>
     </widget>
