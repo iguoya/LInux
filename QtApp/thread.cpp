@@ -17,7 +17,11 @@ Thread::Thread(QWidget *parent) :
     args[1] = { "线程B", modelB, ui->listView_3};
     args[2] = { "线程C", modelC, ui->listView_4};
 
-//    connect(this, &Thread::setModel, ui->listView, )
+    //    connect(this, &Thread::setModel, ui->listView, )
+    ui->listView->setModel(model);
+    ui->listView_2->setModel(modelA);
+    ui->listView_3->setModel(modelB);
+    ui->listView_4->setModel(modelC);
 
 }
 
@@ -29,17 +33,8 @@ Thread::~Thread()
 void* Thread::printThreadID(void* varg)
 {
     ThreadArg* arg =  &((Thread *)varg)->args[index];
-    switch(index) {
-    case 0:
-        arg->view->setModel(arg->model);
-        break;
-    case 1:
-        arg->view->setModel(arg->model);
-        break;
-    default:
-        arg->view->setModel(arg->model);
-    }
-     ++index;
+
+    ++index;
 
     QStringList data = {
         arg->name,
@@ -55,14 +50,47 @@ void* Thread::printThreadID(void* varg)
     }
 
     arg->model->setStringList(data);
+    arg->view->setModel(arg->model);
 
 
 
     return NULL;
 }
 
+void *Thread::taskA(void *varg)
+{
+    ThreadArg* arg =  &((Thread *)varg)->args[0];
 
-void Thread::on_CreateThread_clicked()
+    QStringList data = {"线程A返回结果"};
+    for(int i = 0; i < 10; ++i) {
+        data<<QString::number(i);
+        arg->model->setStringList(data);
+        arg->view->setModel(arg->model);
+        sleep(rand()%3);
+    }
+
+    return (void*)100;
+}
+
+void *Thread::taskB(void *varg)
+{
+    ThreadArg* arg =  &((Thread *)varg)->args[1];
+
+    QStringList data = {"线程B返回结果"};
+    for(int i = 0; i < 10; ++i) {
+        data<<QString::number(i);
+        arg->model->setStringList(data);
+        arg->view->setModel(arg->model);
+        sleep(rand()%3);
+    }
+
+    return (void*)10000;
+}
+
+
+
+
+void Thread::on_ThreadCreate_clicked()
 {
     QStringList data {
         "父进程",
@@ -73,10 +101,9 @@ void Thread::on_CreateThread_clicked()
     };
 
     model->setStringList(data);
-    ui->listView->setModel(model);
 
 
-    pthread_t thread;
+
     arg = new ThreadArg;
     arg->name = "线程A";
     arg->model = modelA;
@@ -90,5 +117,24 @@ void Thread::on_CreateThread_clicked()
 
     pthread_create(&thread, NULL, printThreadID, this);
 
+}
 
+void Thread::on_ThreadJoin_clicked()
+{
+    QStringList data;
+    pthread_t threadA, threadB;
+    void* resultA;
+    void* resultB;
+    pthread_create(&threadA, NULL, taskA, this);
+    pthread_create(&threadB, NULL, taskB, this);
+
+    pthread_join(threadA, &resultA);
+    data<<QString::number((long)resultA);
+    model->setStringList(data);
+
+
+
+    pthread_join(threadB, &resultB);
+    data<<QString::number((long)resultB);
+    model->setStringList(data);
 }

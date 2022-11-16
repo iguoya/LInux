@@ -24,7 +24,7 @@
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
-       <widget class="QPushButton" name="CreateThread">
+       <widget class="QPushButton" name="ThreadCreate">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -37,7 +37,7 @@
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="ThreadJoin">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -45,7 +45,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>线程等待</string>
         </property>
        </widget>
       </item>

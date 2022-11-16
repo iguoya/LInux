@@ -40,15 +40,24 @@ public:
 
     ThreadArg args[3];
 
+
+    pthread_t thread;
+
     static int index;
 
     static void* printThreadID(void*);
+    static void* taskA(void* arg);
+    static void* taskB(void* arg);
+
 //    typedef void* (*pFUNC)(void *);
 //    void* printThreadID(void* arg);
 signals:
 
 private slots:
-    void on_CreateThread_clicked();
+
+    void on_ThreadCreate_clicked();
+
+    void on_ThreadJoin_clicked();
 
 private:
     Ui::Thread *ui;

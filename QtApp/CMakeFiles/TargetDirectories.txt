@@ -1,4 +1,0 @@
-/home/tiger/LinuxProgramming/QtApp/CMakeFiles/QtApp.dir
-/home/tiger/LinuxProgramming/QtApp/CMakeFiles/edit_cache.dir
-/home/tiger/LinuxProgramming/QtApp/CMakeFiles/rebuild_cache.dir
-/home/tiger/LinuxProgramming/QtApp/CMakeFiles/QtApp_autogen.dir
