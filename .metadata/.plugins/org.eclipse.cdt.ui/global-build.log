@@ -1,0 +1,10 @@
+20:41:53 **** Incremental Build of configuration Debug for project GtkLinux ****
+make all 
+Building target: GtkLinux
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkLinux"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkLinux
+ 
+20:41:56 **** Incremental Build of configuration Debug for project GtkLinux ****
+make all 
+make: 对“all”无需做任何事。
