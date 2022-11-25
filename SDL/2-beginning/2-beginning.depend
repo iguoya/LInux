@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1646568185 source:/home/tiger/linux/SDL/2-beginning/main.cpp
+	<cstdlib>
+	<stdlib.h>
+	<SDL/SDL.h>
+

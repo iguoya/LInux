@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=g22-begin
+Exec=g22-begin
+Icon=org.gnome.tiger
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="1-basic_principle" Database="" Version="10.0.0">
+  <Project Name="1-compile_hello" Path="1-compile_hello/1-compile_hello.project" Active="No"/>
+  <Project Name="2-memory_layout" Path="2-memory_layout/2-memory_layout.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="1-compile_hello" ConfigName="Debug"/>
+      <Project Name="2-memory_layout" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="1-compile_hello" ConfigName="Release"/>
+      <Project Name="2-memory_layout" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

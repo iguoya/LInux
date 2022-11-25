@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="g09-gtk4">
+	<schema id="gtk.yatiger.cn" path="/gtk/yatiger/cn/">
+	</schema>
+</schemalist>
