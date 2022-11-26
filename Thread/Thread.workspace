@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="Thread" Database="" Version="10.0.0">
+  <Project Name="01-ThreadCreate" Path="01-ThreadCreate/01-ThreadCreate.project" Active="No"/>
+  <Project Name="02-ThreadJoin" Path="02-ThreadJoin/02-ThreadJoin.project" Active="No"/>
+  <Project Name="03-ThreadMutex" Path="03-ThreadMutex/03-ThreadMutex.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="01-ThreadCreate" ConfigName="Debug"/>
+      <Project Name="02-ThreadJoin" ConfigName="Debug"/>
+      <Project Name="03-ThreadMutex" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="01-ThreadCreate" ConfigName="Release"/>
+      <Project Name="02-ThreadJoin" ConfigName="Release"/>
+      <Project Name="03-ThreadMutex" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
