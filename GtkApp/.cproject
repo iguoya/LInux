@@ -81,7 +81,7 @@
 									<listOptionValue builtIn="false" value="glib-2.0"/>
 								</option>
 								<option id="gnu.c.link.option.ldflags.1682740344" name="Linker flags" superClass="gnu.c.link.option.ldflags" useByScannerDiscovery="false" value="-export-dynamic -rdynamic" valueType="string"/>
-								<option id="gnu.c.link.option.pthread.1584311258" superClass="gnu.c.link.option.pthread" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="gnu.c.link.option.pthread.1584311258" name="Support for pthread (-pthread)" superClass="gnu.c.link.option.pthread" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.588406067" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>

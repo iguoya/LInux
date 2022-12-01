@@ -1,8 +1,12 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=loongarch64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:LinuxProgramming,org.eclipse.launchbar.core.descriptorType.default\:ui,org.eclipse.launchbar.core.descriptorType.default\:GtkLinux
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:GtkApp,org.eclipse.launchbar.core.descriptorType.default\:GtkLinux
 eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:GtkApp/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:GtkApp/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:GtkLinux/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:GtkLinux/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:LinuxProgramming/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:LinuxProgramming/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:ui/activeLaunchMode=run

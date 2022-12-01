@@ -1301,3 +1301,84 @@ org.eclipse.team.core.TeamException: Could not instantiate provider org.eclipse.
 
 !ENTRY org.eclipse.launchbar.core 2 0 2022-11-29 16:52:10.570
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2022-11-30 21:02:23.397 -----------------------------------------------
+eclipse.buildId=4.10.0.v20220326
+java.version=1.8.0_332
+java.vendor=Loongnix
+BootLoader constants: OS=linux, ARCH=loongarch64, WS=gtk, NL=zh_CN
+Command-line arguments:  -data /home/tiger/Linux/ -os linux -ws gtk -arch loongarch64
+
+!ENTRY org.eclipse.cdt.core.native 4 0 2022-11-30 21:02:58.783
+!MESSAGE no spawner in java.library.path
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-30 21:03:01.198
+!MESSAGE Indexed 'GtkApp' (1 sources, 50 headers) in 1.11 sec: 957 declarations; 1,747 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 21:03:24.332
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 21:03:24.333
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 21:03:24.333
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2022-11-30 21:29:40.016 -----------------------------------------------
+eclipse.buildId=4.10.0.v20220326
+java.version=1.8.0_332
+java.vendor=Loongnix
+BootLoader constants: OS=linux, ARCH=loongarch64, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch loongarch64
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 21:29:56.039
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 21:29:56.040
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 21:29:56.040
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2022-11-30 21:33:01.944 -----------------------------------------------
+eclipse.buildId=4.10.0.v20220326
+java.version=1.8.0_332
+java.vendor=Loongnix
+BootLoader constants: OS=linux, ARCH=loongarch64, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch loongarch64
+
+!ENTRY org.eclipse.cdt.core.native 4 0 2022-11-30 21:37:54.969
+!MESSAGE no spawner in java.library.path
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-30 21:39:49.907
+!MESSAGE Indexed 'GtkLinux' (6 sources, 793 headers) in 14.5 sec: 61,939 declarations; 100,154 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 21:39:56.915
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 21:39:56.916
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 21:39:56.916
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2022-11-30 22:34:19.782 -----------------------------------------------
+eclipse.buildId=4.10.0.v20220326
+java.version=1.8.0_332
+java.vendor=Loongnix
+BootLoader constants: OS=linux, ARCH=loongarch64, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch loongarch64
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 22:35:50.031
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 22:35:50.031
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-11-30 22:35:50.032
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core.native 4 0 2022-11-30 22:35:50.709
+!MESSAGE no spawner in java.library.path
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-30 22:38:16.502
+!MESSAGE Indexed 'GtkApp' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.ui 4 0 2022-12-01 10:48:35.324
+!MESSAGE Cannot work without definition
