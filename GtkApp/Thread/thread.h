@@ -7,8 +7,8 @@
 
 #ifndef THREAD_THREAD_H_
 #define THREAD_THREAD_H_
-#include <gtk/gtk.h>
-#include <pthread.h>
+//#include <gtk/gtk.h>
+//#include <pthread.h>
 #include "public.h"
 
 

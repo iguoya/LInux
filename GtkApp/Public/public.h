@@ -13,4 +13,9 @@ void text_view_append(GtkTextView *text_view, GString *content);
 
 void show_dialog(GtkButton *button, GtkWindow* parent);
 
+void show_dialogA(GtkButton *button, GtkWindow* parent);
+
+
+void on_thread_clicked(GtkButton *button, gpointer data);
+
 #endif /* PUBLIC_PUBLIC_H_ */
