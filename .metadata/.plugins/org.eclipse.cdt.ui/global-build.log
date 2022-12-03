@@ -1529,3 +1529,2533 @@ make: 对“all”无需做任何事。
 09:43:27 **** Incremental Build of configuration Debug for project GtkApp ****
 make all 
 make: 对“all”无需做任何事。
+10:22:26 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from /home/tiger/Linux/GtkApp/Public/public.h:10,
+                 from ../Thread/thread.h:12,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from /home/tiger/Linux/GtkApp/Public/public.h:10,
+                 from ../Thread/thread.h:12,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from /home/tiger/Linux/GtkApp/Public/public.h:10,
+                 from ../Thread/thread.h:12,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from /home/tiger/Linux/GtkApp/Public/public.h:10,
+                 from ../Thread/thread.h:12,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_click’:
+../Thread/thread.c:16:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(listBox, label);
+                     ^~~~~~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from /home/tiger/Linux/GtkApp/Public/public.h:10,
+                 from ../Thread/thread.h:12,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:22:33 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+10:23:12 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_click’:
+../Thread/thread.c:16:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(listBox, label);
+                     ^~~~~~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:23:15 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+10:23:41 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:23:45 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+10:25:01 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:25:43 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+10:26:28 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_click’:
+../Thread/thread.c:16:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(listBox, label);
+                     ^~~~~~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:26:32 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+10:26:48 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:16:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(listBox, label);
+                     ^~~~~~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:26:52 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+10:27:07 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:17:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(listBox, label);
+                     ^~~~~~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:34:32 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:19:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(row, label);
+                     ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkWidget *’ {aka ‘struct _GtkWidget *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+../Thread/thread.c:20:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(box, row);
+                     ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:34:35 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+10:36:58 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:19:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(row, label);
+                     ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkWidget *’ {aka ‘struct _GtkWidget *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+../Thread/thread.c:20:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(box, row);
+                     ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+../Thread/thread.c:24:19: warning: passing argument 1 of ‘gtk_widget_show’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_widget_show(box);
+                   ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkapplication.h:27,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkwidget.h:626:65: note: expected ‘GtkWidget *’ {aka ‘struct _GtkWidget *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void       gtk_widget_show                (GtkWidget           *widget);
+                                            ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:37:02 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+10:38:50 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:18:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(row, label);
+                     ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkWidget *’ {aka ‘struct _GtkWidget *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+../Thread/thread.c:19:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(box, label);
+                     ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:39:02 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:17:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(row, label);
+                     ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkWidget *’ {aka ‘struct _GtkWidget *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+../Thread/thread.c:18:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(box, label);
+                     ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:39:19 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:17:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(row, label);
+                     ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkWidget *’ {aka ‘struct _GtkWidget *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+../Thread/thread.c:18:21: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+   gtk_container_add(box, row);
+                     ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+10:39:24 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+11:02:10 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:18:6: warning: implicit declaration of function ‘gtk_list_box_append’; did you mean ‘gtk_list_box_prepend’? [-Wimplicit-function-declaration]
+      gtk_list_box_append(box, gtk_label_new("hello"));
+      ^~~~~~~~~~~~~~~~~~~
+      gtk_list_box_prepend
+../Thread/thread.c:13:14: warning: unused variable ‘row’ [-Wunused-variable]
+   GtkWidget* row = gtk_list_box_row_new();
+              ^~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+/usr/bin/ld: ./Thread/thread.o: in function `on_disorder_clicked':
+thread.c:(.text+0x5c): undefined reference to `gtk_list_box_append'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:36：GtkApp] 错误 1
+11:04:47 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:13:14: warning: unused variable ‘row’ [-Wunused-variable]
+   GtkWidget* row = gtk_list_box_row_new();
+              ^~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+11:04:52 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+11:11:51 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:19:20: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+  gtk_container_add(row, label);
+                    ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkWidget *’ {aka ‘struct _GtkWidget *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+../Thread/thread.c:20:20: warning: passing argument 1 of ‘gtk_container_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+  gtk_container_add(box, row);
+                    ^~~
+In file included from /usr/include/gtk-3.0/gtk/gtkbin.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtkwindow.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtkdialog.h:32,
+                 from /usr/include/gtk-3.0/gtk/gtkaboutdialog.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:31,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtkcontainer.h:149:47: note: expected ‘GtkContainer *’ {aka ‘struct _GtkContainer *’} but argument is of type ‘GtkListBox *’ {aka ‘struct _GtkListBox *’}
+ void    gtk_container_add   (GtkContainer    *container,
+                              ~~~~~~~~~~~~~~~~~^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+11:12:28 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+11:12:32 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+11:13:53 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+11:14:10 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+15:24:19 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+16:38:51 **** Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+16:38:55 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+16:39:17 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘number_task’:
+../Thread/thread.c:15:36: warning: implicit declaration of function ‘itoa’; did you mean ‘atol’? [-Wimplicit-function-declaration]
+   GtkWidget* label = gtk_label_new(itoa(i));
+Finished building: ../Thread/thread.c
+                                    ^~~~
+                                    atol
+../Thread/thread.c:15:36: warning: passing argument 1 of ‘gtk_label_new’ makes pointer from integer without a cast [-Wint-conversion]
+   GtkWidget* label = gtk_label_new(itoa(i));
+                                    ^~~~~~~
+In file included from /usr/include/gtk-3.0/gtk/gtkaccellabel.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:33,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtklabel.h:91:23: note: expected ‘const gchar *’ {aka ‘const char *’} but argument is of type ‘int’
+ GtkWidget*            gtk_label_new               (const gchar   *str);
+                       ^~~~~~~~~~~~~
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+/usr/bin/ld: ./Thread/thread.o: in function `.LBB3':
+thread.c:(.text+0x30): undefined reference to `itoa'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:36：GtkApp] 错误 1
+16:40:46 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘number_task’:
+../Thread/thread.c:15:36: warning: implicit declaration of function ‘itoa’; did you mean ‘atol’? [-Wimplicit-function-declaration]
+   GtkWidget* label = gtk_label_new(itoa(i));
+                                    ^~~~
+                                    atol
+../Thread/thread.c:15:36: warning: passing argument 1 of ‘gtk_label_new’ makes pointer from integer without a cast [-Wint-conversion]
+   GtkWidget* label = gtk_label_new(itoa(i));
+                                    ^~~~~~~
+In file included from /usr/include/gtk-3.0/gtk/gtkaccellabel.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:33,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtklabel.h:91:23: note: expected ‘const gchar *’ {aka ‘const char *’} but argument is of type ‘int’
+ GtkWidget*            gtk_label_new               (const gchar   *str);
+                       ^~~~~~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+/usr/bin/ld: ./Thread/thread.o: in function `.LBB3':
+thread.c:(.text+0x30): undefined reference to `itoa'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:36：GtkApp] 错误 1
+16:53:39 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘number_task’:
+../Thread/thread.c:16:36: warning: implicit declaration of function ‘g_strdup_print’; did you mean ‘g_strdup_printf’? [-Wimplicit-function-declaration]
+   GtkWidget* label = gtk_label_new(g_strdup_print("%i", i));
+                                    ^~~~~~~~~~~~~~
+                                    g_strdup_printf
+../Thread/thread.c:16:36: warning: passing argument 1 of ‘gtk_label_new’ makes pointer from integer without a cast [-Wint-conversion]
+   GtkWidget* label = gtk_label_new(g_strdup_print("%i", i));
+                                    ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/gtk-3.0/gtk/gtkaccellabel.h:35,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:33,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gtk-3.0/gtk/gtklabel.h:91:23: note: expected ‘const gchar *’ {aka ‘const char *’} but argument is of type ‘int’
+ GtkWidget*            gtk_label_new               (const gchar   *str);
+                       ^~~~~~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+/usr/bin/ld: ./Thread/thread.o: in function `.LBB3':
+thread.c:(.text+0x38): undefined reference to `g_strdup_print'
+collect2: error: ld returned 1 exit status
+make: *** [makefile:36：GtkApp] 错误 1
+16:53:51 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+16:53:59 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+16:54:19 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+16:54:23 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+16:54:26 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+16:59:01 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+16:59:28 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+16:59:32 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+17:00:00 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+17:00:05 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+17:00:08 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+17:53:21 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+../Thread/thread.c: In function ‘on_disorder_clicked’:
+../Thread/thread.c:33:30: warning: passing argument 2 of ‘text_view_append’ from incompatible pointer type [-Wincompatible-pointer-types]
+  text_view_append(text_view, "线程乱序随机执行");
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../Thread/thread.h:12,
+                 from ../Thread/thread.c:7:
+/home/tiger/Linux/GtkApp/Public/public.h:12:56: note: expected ‘GString *’ {aka ‘struct _GString *’} but argument is of type ‘char *’
+ void text_view_append(GtkTextView *text_view, GString *content);
+                                               ~~~~~~~~~^~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+17:53:28 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+17:53:47 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+17:53:50 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+17:55:39 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+17:55:44 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+17:56:51 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+17:56:55 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+17:57:28 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+17:57:30 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+18:00:19 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+18:00:36 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+18:00:49 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+18:00:52 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+18:01:13 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+18:01:16 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+18:02:25 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../Thread/thread.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"Thread/thread.d" -MT"Thread/thread.o" -o "Thread/thread.o" "../Thread/thread.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../Thread/thread.h:10,
+                 from ../Thread/thread.c:7:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../Thread/thread.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+18:02:28 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+18:03:07 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+18:03:09 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+18:03:34 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+18:03:36 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。

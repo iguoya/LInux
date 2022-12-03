@@ -3,22 +3,25 @@
 #include <gtk/gtkwidget.h>
 
 #include "public.h"
-//#include "system.h"
-//#include "process.h"
-//#include "thread.h"
+#include "system.h"
+#include "process.h"
+#include "thread.h"
+
+
 //
 void on_system_clicked(GtkButton* button, gpointer data) {
+	g_print("hello");
 //	GtkBox* container = GTK_WIDGET(data);
 
-	GtkWidget* buttonA = gtk_button_new_with_label("My button");
+//	GtkWidget* buttonA = gtk_button_new_with_label("My button");
+////
+////	//连接信号，让点击按钮后，便调用 print_msg 函数
+////	g_signal_connect(button , "clicked" , G_CALLBACK( print_msg ) , NULL);
+////
+////	//将按钮放入盒容器中
+//	gtk_container_add(GTK_CONTAINER(data) , buttonA);
 //
-//	//连接信号，让点击按钮后，便调用 print_msg 函数
-//	g_signal_connect(button , "clicked" , G_CALLBACK( print_msg ) , NULL);
-//
-//	//将按钮放入盒容器中
-	gtk_container_add(GTK_CONTAINER(data) , buttonA);
-
-	gtk_widget_show(buttonA);
+//	gtk_widget_show(buttonA);
 }
 
 //static void activate (GtkApplication* app, gpointer user_data)
