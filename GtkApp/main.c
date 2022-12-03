@@ -125,7 +125,7 @@ int main (int argc, char **argv)
 
 	//	GtkBuilder* builder = gtk_builder_new ();
 
-	GtkBuilder* builder = gtk_builder_new_from_file("ui/window.glade");
+	GtkBuilder* builder = gtk_builder_new_from_file("ui/integration.glade");
 	//	if (gtk_builder_add_from_file (builder, "ui/window.glade", &error) == 0)
 	//	{
 	//		g_printerr ("Error loading file: %s\n", error->message);

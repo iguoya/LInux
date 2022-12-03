@@ -14,14 +14,14 @@ void on_thread_clicked(GtkButton *button, gpointer data) {
 void show_dialogA(GtkButton *button, GtkWindow* parent) {
 		g_print("hello\n");
 
-		GtkWidget* buttonA = gtk_button_new_with_label("My button");
-	//
-	//	//连接信号，让点击按钮后，便调用 print_msg 函数
-	//	g_signal_connect(button , "clicked" , G_CALLBACK( print_msg ) , NULL);
-	//
-	//	//将按钮放入盒容器中
-		gtk_container_add(GTK_CONTAINER(parent) , buttonA);
-		gtk_widget_show_all(dialog);
+//		GtkWidget* buttonA = gtk_button_new_with_label("My button");
+//	//
+//	//	//连接信号，让点击按钮后，便调用 print_msg 函数
+//	//	g_signal_connect(button , "clicked" , G_CALLBACK( print_msg ) , NULL);
+//	//
+//	//	//将按钮放入盒容器中
+//		gtk_container_add(GTK_CONTAINER(parent) , buttonA);
+//		gtk_widget_show_all(dialog);
 
 	//	GError *error = NULL;
 //	GtkBuilder* builder = gtk_builder_new ();
@@ -112,14 +112,14 @@ void show_dialog(GtkButton *button, GtkWindow* parent) {
 	gtk_window_set_transient_for (GTK_WINDOW(dialog), parent);
 	gtk_builder_connect_signals (builder, NULL);
 
-	gtk_widget_hide(parent);
+//	gtk_widget_hide(parent);
 //	gtk_dialog_run();
 //	gtk_widget_show_all(dialog);
-	gtk_dialog_run(GTK_DIALOG(dialog));
+//	gtk_dialog_run(GTK_DIALOG(dialog));
 //	gtk_widget_destroy(dialog);
 	g_signal_connect(G_OBJECT(dialog),"response",G_CALLBACK(gtk_widget_destroy), NULL);
 //	g_signal_connect (window, "destroy", G_CALLBACK (gtk_main_quit), NULL);
-	g_object_unref(G_OBJECT(builder));
+//	g_object_unref(G_OBJECT(builder));
 //	GTK_RESPONSE_APPLY
 //	  GTK_RESPONSE_YES          = -8,
 //	  GTK_RESPONSE_NO           = -9,
