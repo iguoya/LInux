@@ -24,19 +24,150 @@ void number_task(GtkListBox* box) {
 	}
 }
 
-void disorder_task(GtkButton* button, GtkListBox* box) {
+void task_disorder(GtkButton* button, GtkListBox* box) {
 	g_thread_new(NULL, (GThreadFunc)number_task, box);
 }
 
-void on_disorder_clicked(GtkButton* button, gpointer text_view) {
-	//	g_print("hello");
-//	text_view_append(text_view, "线程乱序随机执行");
+void on_button_disorder_clicked(GtkButton* button, gpointer text_buffer) {
 
-	GtkTextBuffer* buffer = gtk_text_view_get_buffer (text_view);
-
-	gtk_text_buffer_set_text (buffer, "线程乱序随机执行", -1);
+	//	text_view_append(text_view, "线程乱序随机执行");
+	//	GtkTextBuffer* buffer = gtk_text_view_get_buffer (text_buffer);
+	gtk_text_buffer_set_text (text_buffer, "线程乱序随机执行 !!!", -1);
 }
 
+//enum
+//{
+//	COL_NAME = 0,
+//	COL_AGE,
+//	NUM_COLS
+//} ;
+
+static GtkListStore* store;
+
+void on_button_mutex_clicked(GtkButton* button, gpointer store) {
+	//	store = data;
+	//	GtkTreeIter iter;
+	//	gtk_list_store_set(store, &iter, 0, "hello", -1);
+	//	gtk_list_store_append();
+
+	//	  GtkListStore *store;
+	//
+	//	  GtkTreeIter iter;
+
+
+	//
+	//	  store = GTK_LIST_STORE(gtk_tree_view_get_model
+	//
+	//	      (GTK_TREE_VIEW(list)));
+
+
+
+	//	  gtk_list_store_append(store, &iter);
+	//
+	//	  gtk_list_store_set(store, &iter, 0, 1111, -1);
+	//			g_print("hello");
+
+	//	  GtkWidget *view = gtk_tree_view_new ();
+
+	//	  GtkCellRenderer *renderer;
+
+	/* --- Column #1 --- */
+	//	  renderer = gtk_cell_renderer_text_new ();
+	//	  gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (view),
+	//	                                               -1,
+	//	                                               "Name",
+	//	                                               renderer,
+	//	                                               "text", COL_NAME,
+	//	                                               NULL);
+	//
+	//	  /* --- Column #2 --- */
+	//	  renderer = gtk_cell_renderer_text_new ();
+	//	  gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (view),
+	//	                                               -1,
+	//	                                               "Age",
+	//	                                               renderer,
+	//	                                               "text", COL_AGE,
+	//	                                               NULL);
+
+	//	  GtkTreeModel *model = create_and_fill_model ();
+	//	  GtkTreeModel *model =
+
+	//	  gtk_tree_view_set_model (GTK_TREE_VIEW (view), model);
+
+	/* The tree view has acquired its own reference to the
+	 *  model, so we can drop ours. That way the model will
+	 *  be freed automatically when the tree view is destroyed
+	 */
+	//	  g_object_unref (model);
+//	GtkListStore *store = gtk_list_store_new (NUM_COLS,
+//			G_TYPE_STRING,
+//			G_TYPE_UINT);
+
+	/* Append a row and fill in some data */
+	GtkTreeIter iter;
+	for(int i = 1; i < 50; ++i) {
+		gtk_list_store_append (store, &iter);
+		gtk_list_store_set(store, &iter, 0, i, -1);
+	}
+
+
+//	/* append another row and fill in some data */
+//	gtk_list_store_append (store, &iter);
+//	gtk_list_store_set (store, &iter,
+//			COL_NAME, "Jane Doe",
+//			COL_AGE, 23,
+//			-1);
+//
+//	/* ... and a third row */
+//	gtk_list_store_append (store, &iter);
+//	gtk_list_store_set (store, &iter,
+//			COL_NAME, "Joe Bungop",
+//			COL_AGE, 91,
+//			-1);
+
+
+	//	  GtkWidget *view = gtk_tree_view_new ();
+
+//	GtkCellRenderer *renderer;
+//
+//	/* --- Column #1 --- */
+//	renderer = gtk_cell_renderer_text_new ();
+//	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (view),
+//			-1,
+//			"Name",
+//			renderer,
+//			"text", COL_NAME,
+//			NULL);
+//
+//	/* --- Column #2 --- */
+//	renderer = gtk_cell_renderer_text_new ();
+//	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (view),
+//			-1,
+//			"Age",
+//			renderer,
+//			"text", COL_AGE,
+//			NULL);
+//
+//	GtkTreeModel *model = GTK_TREE_MODEL(store);
+//
+//	gtk_tree_view_set_model (GTK_TREE_VIEW (view), model);
+//
+//	/* The tree view has acquired its own reference to the
+//	 *  model, so we can drop ours. That way the model will
+//	 *  be freed automatically when the tree view is destroyed
+//	 */
+//	g_object_unref (model);
+
+
+}
+void task_mutex(GtkButton* button, gpointer data) {
+
+}
+
+void show_tree(GtkButton* button, gpointer view) {
+	GtkTreeModel *model = GTK_TREE_MODEL(store);
+	gtk_tree_view_set_model (GTK_TREE_VIEW (view), model);
+}
 
 void on_threadA_clicked(GtkButton* button, gpointer data) {
 	//	g_print(gtk_button_get_label(button));

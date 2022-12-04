@@ -14,6 +14,17 @@
 #include <glib.h>
 
 
+enum {
+
+  LIST_ITEM = 0,
+
+  N_COLUMNS
+
+};
+
+
+
+
 typedef struct TMessage {
 	GtkTextView* text_view;
 	GString *content;
@@ -22,11 +33,15 @@ typedef struct TMessage {
 void *task(void *message);
 void create_thread(GtkButton *button, GtkTextView* text_view);
 
-void on_disorder_clicked(GtkButton* button, gpointer text_view);
-
+void on_button_disorder_clicked(GtkButton* button, gpointer text_view);
 void number_task(GtkListBox* box);
+void task_disorder(GtkButton* button, GtkListBox* box);
 
-void disorder_task(GtkButton* button, GtkListBox* box);
+
+void on_button_mutex_clicked(GtkButton* button, gpointer data);
+void task_mutex(GtkButton* button, gpointer data);
+void show_tree(GtkButton* button, gpointer data);
+
 
 void on_threadA_click(GtkButton* button, gpointer data);
 void on_thread_click(GtkButton* button, gpointer data);
