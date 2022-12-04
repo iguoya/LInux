@@ -9,6 +9,11 @@
 #define PUBLIC_PUBLIC_H_
 #include <gtk/gtk.h>
 
+
+
+pthread_mutex_t lock;
+
+
 void text_view_append(GtkTextView *text_view, GString *content);
 
 void show_dialog(GtkButton *button, GtkWindow* parent);

@@ -43,11 +43,11 @@ void on_button_disorder_clicked(GtkButton* button, gpointer text_buffer) {
 //} ;
 
 guint count = 0;
-pthread_mutex_t lock;
+
 
 void on_button_mutex_clicked(GtkButton* button, gpointer store) {
 
-	pthread_mutex_init(&lock, NULL);
+
 	//	store = data;
 	//	GtkTreeIter iter;
 	//	gtk_list_store_set(store, &iter, 0, "hello", -1);
@@ -108,10 +108,17 @@ void on_button_mutex_clicked(GtkButton* button, gpointer store) {
 
 	/* Append a row and fill in some data */
 	GtkTreeIter iter;
+	static int index = 0;
+
 	for(int i = 1; i <= 20; ++i) {
 		gtk_list_store_append (store, &iter);
-		gtk_list_store_set(store, &iter, 0, i, -1);
+		gtk_list_store_set(store, &iter, 0, i+index, -1);
+
 	}
+	index += 20;
+
+//	sleep(10);
+
 
 
 	//	/* append another row and fill in some data */

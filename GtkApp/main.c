@@ -115,6 +115,13 @@ void on_system_clicked(GtkButton* button, gpointer data) {
 ////	//	gtk_main();
 ////}
 //
+
+void app_exit() {
+
+	pthread_mutex_destroy(&lock);
+	gtk_main_quit();
+}
+
 int main (int argc, char **argv)
 {
 
@@ -125,6 +132,8 @@ int main (int argc, char **argv)
 	//	GError *error = NULL;
 
 	gtk_init (&argc, &argv);
+
+	pthread_mutex_init(&lock, NULL);
 
 	//	GtkBuilder* builder = gtk_builder_new ();
 
@@ -138,13 +147,14 @@ int main (int argc, char **argv)
 
 	/* Connect signal handlers to the constructed widgets. */
 	GtkWidget* window = GTK_WIDGET(gtk_builder_get_object (builder, "window"));
-	g_signal_connect (window, "destroy", G_CALLBACK (gtk_main_quit), NULL);
+	g_signal_connect (window, "destroy", G_CALLBACK (app_exit), NULL);
 
 	gtk_builder_connect_signals (builder, NULL);//连接响应事件
 	g_object_unref(G_OBJECT(builder));
 
 	gtk_widget_show_all(window);
 	gtk_main ();
+
 
 	return 0;
 }
