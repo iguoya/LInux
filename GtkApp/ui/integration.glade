@@ -28,8 +28,18 @@
       <column type="guint"/>
     </columns>
   </object>
-  <object class="GtkListStore" id="list_store_mutex_a"/>
-  <object class="GtkListStore" id="list_store_mutex_b"/>
+  <object class="GtkListStore" id="list_store_mutex_a">
+    <columns>
+      <!-- column-name count -->
+      <column type="guint"/>
+    </columns>
+  </object>
+  <object class="GtkListStore" id="list_store_mutex_b">
+    <columns>
+      <!-- column-name count -->
+      <column type="guint"/>
+    </columns>
+  </object>
   <object class="GtkTextBuffer" id="text_buffer"/>
   <object class="GtkWindow" id="window">
     <property name="can-focus">False</property>
@@ -337,7 +347,8 @@
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">True</property>
                                 <signal name="clicked" handler="on_button_mutex_clicked" object="list_store_mutex" swapped="no"/>
-                                <signal name="clicked" handler="task_mutex" object="list_store_mutex_b" swapped="no"/>
+                                <signal name="clicked" handler="thread_mutex" object="list_store_mutex_a" swapped="no"/>
+                                <signal name="clicked" handler="thread_mutex" object="list_store_mutex_b" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="left-attach">0</property>
@@ -374,6 +385,17 @@
                                 <child internal-child="selection">
                                   <object class="GtkTreeSelection"/>
                                 </child>
+                                <child>
+                                  <object class="GtkTreeViewColumn" id="tr2_count">
+                                    <property name="title" translatable="yes">共享变量</property>
+                                    <child>
+                                      <object class="GtkCellRendererText" id="cr2_count"/>
+                                      <attributes>
+                                        <attribute name="text">0</attribute>
+                                      </attributes>
+                                    </child>
+                                  </object>
+                                </child>
                               </object>
                               <packing>
                                 <property name="left-attach">2</property>
@@ -388,6 +410,17 @@
                                 <property name="search-column">0</property>
                                 <child internal-child="selection">
                                   <object class="GtkTreeSelection"/>
+                                </child>
+                                <child>
+                                  <object class="GtkTreeViewColumn">
+                                    <property name="title" translatable="yes">共享变量</property>
+                                    <child>
+                                      <object class="GtkCellRendererText"/>
+                                      <attributes>
+                                        <attribute name="text">0</attribute>
+                                      </attributes>
+                                    </child>
+                                  </object>
                                 </child>
                               </object>
                               <packing>
@@ -404,10 +437,10 @@
                                   <object class="GtkTreeSelection"/>
                                 </child>
                                 <child>
-                                  <object class="GtkTreeViewColumn">
-                                    <property name="title" translatable="yes">共享变量</property>
+                                  <object class="GtkTreeViewColumn" id="tc_count">
+                                    <property name="title" translatable="yes">序号</property>
                                     <child>
-                                      <object class="GtkCellRendererText"/>
+                                      <object class="GtkCellRendererText" id="cr_count"/>
                                       <attributes>
                                         <attribute name="text">0</attribute>
                                       </attributes>

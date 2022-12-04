@@ -42,9 +42,12 @@ void on_button_disorder_clicked(GtkButton* button, gpointer text_buffer) {
 //	NUM_COLS
 //} ;
 
-static GtkListStore* store;
+guint count = 0;
+pthread_mutex_t lock;
 
 void on_button_mutex_clicked(GtkButton* button, gpointer store) {
+
+	pthread_mutex_init(&lock, NULL);
 	//	store = data;
 	//	GtkTreeIter iter;
 	//	gtk_list_store_set(store, &iter, 0, "hello", -1);
@@ -99,74 +102,89 @@ void on_button_mutex_clicked(GtkButton* button, gpointer store) {
 	 *  be freed automatically when the tree view is destroyed
 	 */
 	//	  g_object_unref (model);
-//	GtkListStore *store = gtk_list_store_new (NUM_COLS,
-//			G_TYPE_STRING,
-//			G_TYPE_UINT);
+	//	GtkListStore *store = gtk_list_store_new (NUM_COLS,
+	//			G_TYPE_STRING,
+	//			G_TYPE_UINT);
 
 	/* Append a row and fill in some data */
 	GtkTreeIter iter;
-	for(int i = 1; i < 50; ++i) {
+	for(int i = 1; i <= 20; ++i) {
 		gtk_list_store_append (store, &iter);
 		gtk_list_store_set(store, &iter, 0, i, -1);
 	}
 
 
-//	/* append another row and fill in some data */
-//	gtk_list_store_append (store, &iter);
-//	gtk_list_store_set (store, &iter,
-//			COL_NAME, "Jane Doe",
-//			COL_AGE, 23,
-//			-1);
-//
-//	/* ... and a third row */
-//	gtk_list_store_append (store, &iter);
-//	gtk_list_store_set (store, &iter,
-//			COL_NAME, "Joe Bungop",
-//			COL_AGE, 91,
-//			-1);
+	//	/* append another row and fill in some data */
+	//	gtk_list_store_append (store, &iter);
+	//	gtk_list_store_set (store, &iter,
+	//			COL_NAME, "Jane Doe",
+	//			COL_AGE, 23,
+	//			-1);
+	//
+	//	/* ... and a third row */
+	//	gtk_list_store_append (store, &iter);
+	//	gtk_list_store_set (store, &iter,
+	//			COL_NAME, "Joe Bungop",
+	//			COL_AGE, 91,
+	//			-1);
 
 
 	//	  GtkWidget *view = gtk_tree_view_new ();
 
-//	GtkCellRenderer *renderer;
-//
-//	/* --- Column #1 --- */
-//	renderer = gtk_cell_renderer_text_new ();
-//	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (view),
-//			-1,
-//			"Name",
-//			renderer,
-//			"text", COL_NAME,
-//			NULL);
-//
-//	/* --- Column #2 --- */
-//	renderer = gtk_cell_renderer_text_new ();
-//	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (view),
-//			-1,
-//			"Age",
-//			renderer,
-//			"text", COL_AGE,
-//			NULL);
-//
-//	GtkTreeModel *model = GTK_TREE_MODEL(store);
-//
-//	gtk_tree_view_set_model (GTK_TREE_VIEW (view), model);
-//
-//	/* The tree view has acquired its own reference to the
-//	 *  model, so we can drop ours. That way the model will
-//	 *  be freed automatically when the tree view is destroyed
-//	 */
-//	g_object_unref (model);
+	//	GtkCellRenderer *renderer;
+	//
+	//	/* --- Column #1 --- */
+	//	renderer = gtk_cell_renderer_text_new ();
+	//	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (view),
+	//			-1,
+	//			"Name",
+	//			renderer,
+	//			"text", COL_NAME,
+	//			NULL);
+	//
+	//	/* --- Column #2 --- */
+	//	renderer = gtk_cell_renderer_text_new ();
+	//	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (view),
+	//			-1,
+	//			"Age",
+	//			renderer,
+	//			"text", COL_AGE,
+	//			NULL);
+	//
+	//	GtkTreeModel *model = GTK_TREE_MODEL(store);
+	//
+	//	gtk_tree_view_set_model (GTK_TREE_VIEW (view), model);
+	//
+	//	/* The tree view has acquired its own reference to the
+	//	 *  model, so we can drop ours. That way the model will
+	//	 *  be freed automatically when the tree view is destroyed
+	//	 */
+	//	g_object_unref (model);
 
 
 }
-void task_mutex(GtkButton* button, gpointer data) {
+void task_mutex(GtkListStore* store) {
+	GtkTreeIter iter;
 
+	pthread_mutex_lock(&lock);
+
+	for(int i = 0; i < 20; ++i) {
+		++count;
+		gtk_list_store_append (store, &iter);
+		gtk_list_store_set(store, &iter, 0, count, -1);
+		g_usleep(rand()%500000);
+	}
+	pthread_mutex_unlock(&lock);
+}
+
+
+void thread_mutex(GtkButton* button, gpointer store) {
+	g_thread_new(NULL, (GThreadFunc)task_mutex, store);
 }
 
 void show_tree(GtkButton* button, gpointer view) {
-	GtkTreeModel *model = GTK_TREE_MODEL(store);
-	gtk_tree_view_set_model (GTK_TREE_VIEW (view), model);
+	//	GtkTreeModel *model = GTK_TREE_MODEL(store);
+	//	gtk_tree_view_set_model (GTK_TREE_VIEW (view), model);
 }
 
 void on_threadA_clicked(GtkButton* button, gpointer data) {

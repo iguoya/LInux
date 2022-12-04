@@ -14,13 +14,13 @@
 #include <glib.h>
 
 
-enum {
-
-  LIST_ITEM = 0,
-
-  N_COLUMNS
-
-};
+//enum {
+//
+//  LIST_ITEM = 0,
+//
+//  N_COLUMNS
+//
+//};
 
 
 
@@ -39,7 +39,9 @@ void task_disorder(GtkButton* button, GtkListBox* box);
 
 
 void on_button_mutex_clicked(GtkButton* button, gpointer data);
-void task_mutex(GtkButton* button, gpointer data);
+void task_mutex(GtkListStore* store);
+void thread_mutex(GtkButton* button, gpointer data);
+
 void show_tree(GtkButton* button, gpointer data);
 
 
