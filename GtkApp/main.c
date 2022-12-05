@@ -11,17 +11,17 @@
 //
 void on_system_clicked(GtkButton* button, gpointer data) {
 	g_print("hello");
-//	GtkBox* container = GTK_WIDGET(data);
+	//	GtkBox* container = GTK_WIDGET(data);
 
-//	GtkWidget* buttonA = gtk_button_new_with_label("My button");
-////
-////	//连接信号，让点击按钮后，便调用 print_msg 函数
-////	g_signal_connect(button , "clicked" , G_CALLBACK( print_msg ) , NULL);
-////
-////	//将按钮放入盒容器中
-//	gtk_container_add(GTK_CONTAINER(data) , buttonA);
-//
-//	gtk_widget_show(buttonA);
+	//	GtkWidget* buttonA = gtk_button_new_with_label("My button");
+	////
+	////	//连接信号，让点击按钮后，便调用 print_msg 函数
+	////	g_signal_connect(button , "clicked" , G_CALLBACK( print_msg ) , NULL);
+	////
+	////	//将按钮放入盒容器中
+	//	gtk_container_add(GTK_CONTAINER(data) , buttonA);
+	//
+	//	gtk_widget_show(buttonA);
 }
 
 //static void activate (GtkApplication* app, gpointer user_data)
@@ -122,6 +122,14 @@ void app_exit() {
 	gtk_main_quit();
 }
 
+static void apply_css (GtkWidget *widget, GtkStyleProvider *provider)
+{
+	gtk_style_context_add_provider (gtk_widget_get_style_context (widget), provider, G_MAXUINT);
+	if (GTK_IS_CONTAINER (widget)) {
+		gtk_container_forall (GTK_CONTAINER (widget), (GtkCallback) apply_css, provider);
+	}
+}
+
 int main (int argc, char **argv)
 {
 
@@ -137,7 +145,8 @@ int main (int argc, char **argv)
 
 	//	GtkBuilder* builder = gtk_builder_new ();
 
-	GtkBuilder* builder = gtk_builder_new_from_file("ui/integration.glade");
+	GtkBuilder* builder = gtk_builder_new_from_resource ("/ui/integration.glade");
+	//	GtkBuilder* builder = gtk_builder_new_from_file("ui/integration.glade");
 	//	if (gtk_builder_add_from_file (builder, "ui/window.glade", &error) == 0)
 	//	{
 	//		g_printerr ("Error loading file: %s\n", error->message);
@@ -147,6 +156,12 @@ int main (int argc, char **argv)
 
 	/* Connect signal handlers to the constructed widgets. */
 	GtkWidget* window = GTK_WIDGET(gtk_builder_get_object (builder, "window"));
+
+	GtkStyleProvider* provider = GTK_STYLE_PROVIDER (gtk_css_provider_new ());
+	gtk_css_provider_load_from_resource (GTK_CSS_PROVIDER (provider), "/style/gtk.css");
+
+	apply_css (window, provider);
+
 	g_signal_connect (window, "destroy", G_CALLBACK (app_exit), NULL);
 
 	gtk_builder_connect_signals (builder, NULL);//连接响应事件

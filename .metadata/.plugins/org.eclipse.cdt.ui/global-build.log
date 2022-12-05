@@ -7939,3 +7939,232 @@ make: 对“all”无需做任何事。
 00:23:47 **** Incremental Build of configuration Debug for project GtkApp ****
 make all 
 make: 对“all”无需做任何事。
+22:27:01 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building file: ../resources.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"resources.d" -MT"resources.o" -o "resources.o" "../resources.c"
+Finished building: ../resources.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+22:27:06 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../resources.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"resources.d" -MT"resources.o" -o "resources.o" "../resources.c"
+Finished building: ../resources.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+22:27:18 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+22:27:21 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+22:49:59 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building file: ../resources.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"resources.d" -MT"resources.o" -o "resources.o" "../resources.c"
+Finished building: ../resources.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+22:50:03 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+23:05:33 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../resources.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"resources.d" -MT"resources.o" -o "resources.o" "../resources.c"
+Finished building: ../resources.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+23:05:41 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+23:07:05 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:111:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *start_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+In file included from /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:36,
+                 from /usr/include/gtk-3.0/gdk/gdkpixbuf.h:33,
+                 from /usr/include/gtk-3.0/gdk/gdkcairo.h:29,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:33,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-animation.h:122:79: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+                                                                               const GTimeVal         *current_time);
+                                                                               ^~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/gtk-3.0/gdk/gdkconfig.h:13,
+                 from /usr/include/gtk-3.0/gdk/gdk.h:30,
+                 from /usr/include/gtk-3.0/gtk/gtk.h:30,
+                 from ../main.c:1:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+ struct _GTimeVal
+        ^~~~~~~~~
+Finished building: ../main.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+23:07:08 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+23:12:41 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+23:12:43 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+23:12:57 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../resources.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"resources.d" -MT"resources.o" -o "resources.o" "../resources.c"
+Finished building: ../resources.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+23:13:01 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。
+23:23:30 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+Building file: ../resources.c
+Invoking: GCC C Compiler
+gcc -I/usr/include/gtk-3.0 -I"/home/tiger/Linux/GtkApp/Process" -I"/home/tiger/Linux/GtkApp/Public" -I"/home/tiger/Linux/GtkApp/System" -I"/home/tiger/Linux/GtkApp/Thread" -I/usr/include/glib-2.0/gobject -I/usr/include/glib-2.0/gio -I/usr/include/at-spi2-atk/2.0 -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/loongarch64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/libdrm -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/glib-2.0 -I/usr/lib/loongarch64-linux-gnu/glib-2.0/include -O0 -g3 -Wall -c -fmessage-length=0 -rdynamic -export-dynamic -pthread -MMD -MP -MF"resources.d" -MT"resources.o" -o "resources.o" "../resources.c"
+Finished building: ../resources.c
+ 
+Building target: GtkApp
+Invoking: GCC C Linker
+gcc -export-dynamic -rdynamic -pthread -o "GtkApp"  ./Thread/thread.o  ./System/system.o  ./Public/public.o  ./Process/process.o  ./IPC/ipc.o  ./main.o ./resources.o   -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Finished building target: GtkApp
+ 
+23:23:33 **** Incremental Build of configuration Debug for project GtkApp ****
+make all 
+make: 对“all”无需做任何事。

@@ -1,6 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-    <gresource prefix="/">
-        <!-- text files such as XML can be compressed to save memory -->
-        <file compressed="true">window.glade</file>
-    </gresource>
+  	<gresource prefix="/">
+    	<file compressed="true">ui/integration.glade</file>
+     	<file>style/gtk.css</file>
+    	<file>style/gtk-dark.css</file>
+        <file>style/assets/scale-vert-marks-before-slider-dark.png</file>
+		<file>style/assets/scale-horz-marks-before-slider.png</file>
+		<file>style/assets/row-selected-dark@2.png</file>
+		<file>style/assets/scale-slider-dark@2.png</file>
+		<file>style/assets/row-selected-light@2.png</file>
+		<file>style/assets/row-selected-light.png</file>
+		<file>style/assets/row-selected-blackness-dark.png</file>
+		<file>style/assets/scale-horz-marks-before-slider@2.png</file>
+		<file>style/assets/scale-horz-marks-before-slider-disabled@2.png</file>
+		<file>style/assets/scale-slider.png</file>
+		<file>style/assets/selectionmode-checkbox-unchecked-dark.png</file>
+		<file>style/assets/scale-horz-marks-before-slider-disabled-dark.png</file>
+		<file>style/assets/scale-horz-marks-after-slider-disabled-dark.png</file>
+		<file>style/assets/scale-vert-marks-before-slider@2.png</file>
+		<file>style/assets/scale-vert-marks-after-slider-dark@2.png</file>
+		<file>style/assets/scale-horz-marks-after-slider-disabled@2.png</file>
+		<file>style/assets/scale-vert-marks-before-slider-disabled.png</file>
+		<file>style/assets/row-selected-dark.png</file>
+		<file>style/assets/scale-horz-marks-after-slider-dark.png</file>
+		<file>style/assets/selectionmode-checkbox-checked-dark.png</file>
+		<file>style/assets/scale-slider-disabled-dark.png</file>
+		<file>style/assets/scale-slider-dark.png</file>
+		<file>style/assets/scale-slider-disabled-dark@2.png</file>
+		<file>style/assets/row-selected-blackness-dark@2.png</file>
+		<file>style/assets/scale-slider@2.png</file>
+		<file>style/assets/scale-horz-marks-after-slider-disabled.png</file>
+		<file>style/assets/selectionmode-checkbox-unchecked.png</file>
+		<file>style/assets/row-selected.png</file>
+		<file>style/assets/scale-vert-marks-after-slider.png</file>
+		<file>style/assets/selectionmode-checkbox-unchecked@2.png</file>
+		<file>style/assets/scale-horz-marks-after-slider.png</file>
+		<file>style/assets/scale-vert-marks-before-slider-disabled-dark.png</file>
+		<file>style/assets/scale-slider-disabled@2.png</file>
+		<file>style/assets/scale-horz-marks-before-slider-disabled-dark@2.png</file>
+		<file>style/assets/scale-vert-marks-after-slider@2.png</file>
+		<file>style/assets/scale-vert-marks-after-slider-disabled-dark@2.png</file>
+		<file>style/assets/scale-horz-marks-before-slider-dark@2.png</file>
+		<file>style/assets/row-selected-blackness.png</file>
+		<file>style/assets/scale-slider-disabled.png</file>
+		<file>style/assets/scale-vert-marks-before-slider.png</file>
+		<file>style/assets/selectionmode-checkbox-checked-dark@2.png</file>
+		<file>style/assets/scale-vert-marks-before-slider-disabled-dark@2.png</file>
+		<file>style/assets/scale-horz-marks-before-slider-dark.png</file>
+		<file>style/assets/scale-vert-marks-before-slider-dark@2.png</file>
+		<file>style/assets/scale-vert-marks-after-slider-disabled.png</file>
+		<file>style/assets/row-selected@2.png</file>
+		<file>style/assets/scale-vert-marks-after-slider-disabled@2.png</file>
+		<file>style/assets/row-selected-blackness@2.png</file>
+		<file>style/assets/selectionmode-checkbox-checked@2.png</file>
+		<file>style/assets/selectionmode-checkbox-checked.png</file>
+		<file>style/assets/scale-horz-marks-after-slider-dark@2.png</file>
+		<file>style/assets/scale-horz-marks-after-slider-disabled-dark@2.png</file>
+		<file>style/assets/scale-vert-marks-after-slider-disabled-dark.png</file>
+		<file>style/assets/scale-vert-marks-before-slider-disabled@2.png</file>
+		<file>style/assets/scale-horz-marks-before-slider-disabled.png</file>
+		<file>style/assets/scale-vert-marks-after-slider-dark.png</file>
+		<file>style/assets/selectionmode-checkbox-unchecked-dark@2.png</file>
+		<file>style/assets/scale-horz-marks-after-slider@2.png</file>
+		<file>style/assets/scalable/small-mixed-symbolic.svg</file>
+		<file>style/assets/scalable/small-unchecked-symbolic@2.svg</file>
+		<file>style/assets/scalable/small-unchecked-symbolic.svg</file>
+		<file>style/assets/scalable/small-checkbox-checked-symbolic@2.svg</file>
+		<file>style/assets/scalable/small-checkbox-checked-symbolic.svg</file>
+		<file>style/assets/scalable/mixed-symbolic.svg</file>
+		<file>style/assets/scalable/checkbox-checked-symbolic.svg</file>
+		<file>style/assets/scalable/checkbox-checked-symbolic@2.svg</file>
+		<file>style/assets/scalable/mixed-symbolic@2.svg</file>
+		<file>style/assets/scalable/small-mixed-symbolic@2.svg</file>
+		<file>style/assets/scalable/unchecked-symbolic.svg</file>
+		<file>style/assets/scalable/cursor-handle-symbolic.svg</file>
+		<file>style/assets/scalable/small-radio-checked-symbolic.svg</file>
+		<file>style/assets/scalable/unchecked-symbolic@2.svg</file>
+		<file>style/assets/scalable/radio-checked-symbolic@2.svg</file>
+		<file>style/assets/scalable/radio-checked-symbolic.svg</file>
+		<file>style/assets/scalable/small-radio-checked-symbolic@2.svg</file>
+	</gresource>
 </gresources>
