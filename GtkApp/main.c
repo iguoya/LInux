@@ -6,7 +6,7 @@
 #include "system.h"
 #include "process.h"
 #include "thread.h"
-
+#include "language.h"
 
 //
 void on_system_clicked(GtkButton* button, gpointer data) {
@@ -145,8 +145,9 @@ int main (int argc, char **argv)
 
 	//	GtkBuilder* builder = gtk_builder_new ();
 
-	GtkBuilder* builder = gtk_builder_new_from_resource ("/ui/integration.glade");
-	//	GtkBuilder* builder = gtk_builder_new_from_file("ui/integration.glade");
+	//	GtkBuilder* builder = gtk_builder_new_from_resource ("/ui/integration.glade");
+
+	GtkBuilder* builder = gtk_builder_new_from_file("ui/integration.glade");
 	//	if (gtk_builder_add_from_file (builder, "ui/window.glade", &error) == 0)
 	//	{
 	//		g_printerr ("Error loading file: %s\n", error->message);

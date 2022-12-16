@@ -17,6 +17,8 @@ pthread_mutex_t lock;
 
 void text_view_append(GtkTextView *text_view, GString *content);
 
+void append(GtkTextBuffer* buffer, gchar* content);
+
 void show_dialog(GtkButton *button, GtkWindow* parent);
 
 void show_dialogA(GtkButton *button, GtkWindow* parent);

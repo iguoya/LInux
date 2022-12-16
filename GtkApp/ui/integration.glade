@@ -22,6 +22,7 @@
     <property name="visible">True</property>
     <property name="can-focus">False</property>
   </object>
+  <object class="GtkEntryBuffer" id="entry_flexible"/>
   <object class="GtkListStore" id="list_store">
     <columns>
       <!-- column-name name -->
@@ -57,20 +58,9 @@
       <!-- column-name result -->
       <column type="gchararray"/>
     </columns>
-    <data>
-      <row>
-        <col id="0">0</col>
-        <col id="1" translatable="yes">atoi</col>
-        <col id="2" translatable="yes"/>
-      </row>
-      <row>
-        <col id="0">0</col>
-        <col id="1" translatable="yes">atof</col>
-        <col id="2" translatable="yes"/>
-      </row>
-    </data>
   </object>
   <object class="GtkTextBuffer" id="text_buffer"/>
+  <object class="GtkTextBuffer" id="text_buffer_flexible"/>
   <object class="GtkWindow" id="window">
     <property name="can-focus">False</property>
     <property name="default-width">1920</property>
@@ -565,7 +555,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">VVVV</property>
+                            <property name="name">system</property>
                             <property name="title" translatable="yes">系统调用</property>
                           </packing>
                         </child>
@@ -634,7 +624,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">CCCCC</property>
+                            <property name="name">io</property>
                             <property name="title" translatable="yes">文件I/O</property>
                             <property name="position">1</property>
                           </packing>
@@ -994,7 +984,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">DDDD</property>
+                            <property name="name">thread</property>
                             <property name="title" translatable="yes">线程控制</property>
                             <property name="position">2</property>
                           </packing>
@@ -1106,7 +1096,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">GGGG</property>
+                            <property name="name">graphic</property>
                             <property name="title" translatable="yes">图形编程</property>
                             <property name="position">3</property>
                           </packing>
@@ -1179,9 +1169,188 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="name">SSSS</property>
+                            <property name="name">serialport</property>
                             <property name="title" translatable="yes">串口通信</property>
                             <property name="position">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkNotebook" id="language">
+                            <property name="visible">True</property>
+                            <property name="can-focus">True</property>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="orientation">vertical</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">False</property>
+                                    <property name="homogeneous">True</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">False</property>
+                                        <property name="label" translatable="yes">动态数组长度：</property>
+                                        <property name="justify">right</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkEntry">
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">True</property>
+                                        <property name="buffer">entry_flexible</property>
+                                        <property name="placeholder-text" translatable="yes">请输入数字</property>
+                                        <property name="input-purpose">number</property>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">1</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="button_flexible">
+                                        <property name="label" translatable="yes">运行</property>
+                                        <property name="visible">True</property>
+                                        <property name="can-focus">True</property>
+                                        <property name="receives-default">True</property>
+                                        <signal name="clicked" handler="get_number" object="entry_flexible" swapped="no"/>
+                                        <signal name="clicked" handler="on_button_flexible_clicked" object="text_buffer_flexible" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">2</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkTextView">
+                                    <property name="visible">True</property>
+                                    <property name="can-focus">True</property>
+                                    <property name="buffer">text_buffer_flexible</property>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">True</property>
+                                    <property name="fill">True</property>
+                                    <property name="position">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                            </child>
+                            <child type="tab">
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">灵活数组</property>
+                              </object>
+                              <packing>
+                                <property name="tab-fill">False</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">label</property>
+                              </object>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                            <child type="tab">
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">page 2</property>
+                              </object>
+                              <packing>
+                                <property name="position">1</property>
+                                <property name="tab-fill">False</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkInfoBar">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <child internal-child="action_area">
+                                  <object class="GtkButtonBox">
+                                    <property name="can-focus">False</property>
+                                    <property name="spacing">6</property>
+                                    <property name="layout-style">end</property>
+                                    <child>
+                                      <placeholder/>
+                                    </child>
+                                    <child>
+                                      <placeholder/>
+                                    </child>
+                                    <child>
+                                      <placeholder/>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child internal-child="content_area">
+                                  <object class="GtkBox">
+                                    <property name="can-focus">False</property>
+                                    <property name="spacing">16</property>
+                                    <child>
+                                      <placeholder/>
+                                    </child>
+                                    <child>
+                                      <placeholder/>
+                                    </child>
+                                    <child>
+                                      <placeholder/>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="expand">False</property>
+                                    <property name="fill">False</property>
+                                    <property name="position">0</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <placeholder/>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="position">2</property>
+                              </packing>
+                            </child>
+                            <child type="tab">
+                              <object class="GtkLabel">
+                                <property name="visible">True</property>
+                                <property name="can-focus">False</property>
+                                <property name="label" translatable="yes">page 3</property>
+                              </object>
+                              <packing>
+                                <property name="position">2</property>
+                                <property name="tab-fill">False</property>
+                              </packing>
+                            </child>
+                          </object>
+                          <packing>
+                            <property name="name">c</property>
+                            <property name="title" translatable="yes">C语言知识</property>
+                            <property name="position">5</property>
                           </packing>
                         </child>
                       </object>
