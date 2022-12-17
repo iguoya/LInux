@@ -8,7 +8,7 @@
 
 
 void get_entry_content(GtkButton* button, gpointer data) {
-	entry_number = gtk_entry_get_text(data);
+	entry_number = gtk_entry_buffer_get_text(data);
 }
 
 void on_button_number_clicked(GtkButton* button, gpointer data) {
@@ -19,12 +19,14 @@ void on_button_number_clicked(GtkButton* button, gpointer data) {
 	gtk_list_store_set(store, &iter, 0, "二进制", -1);
 	gtk_list_store_set(store, &iter, 1, to_binary(atoi(entry_number)), -1);
 
-	char result[9] = {0};
-	sprintf(result, "%08X", atoi(entry_number));
 
 	gtk_list_store_append (store, &iter);
 	gtk_list_store_set(store, &iter, 0, "十六进制", -1);
-	gtk_list_store_set(store, &iter, 1, result, -1);
+	gtk_list_store_set(store, &iter, 1, to_hex(atoi(entry_number)), -1);
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set(store, &iter, 0, "IP转换", -1);
+	gtk_list_store_set(store, &iter, 1, to_ip(atoi(entry_number)), -1);
 
 }
 
@@ -49,5 +51,20 @@ char* to_binary(int number) {
 }
 
 char* to_hex(int number) {
+	char* result = calloc(9, 1);
+	sprintf(result, "%08X", number);
+	return result;
+}
 
+
+char* to_ip(int number) {
+	uint8_t* p = &number;
+	char* result = calloc(100, 1);
+	for(int i = 3; i >= 0; --i) {
+//		char tmp[5] = {0};
+		sprintf(result, "%s%u. ", result, *(p+i));
+//		fprintf("%s", result);
+//		strcat(result, tmp);
+	}
+	return result;
 }

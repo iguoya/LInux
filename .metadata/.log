@@ -2360,3 +2360,27 @@ java.io.FileNotFoundException: /home/tiger/Linux/CLanguage/Debug/CLanguage not f
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2022-12-17 11:21:53.783 -----------------------------------------------
+eclipse.buildId=4.10.0.v20220326
+java.version=1.8.0_332
+java.vendor=Loongnix
+BootLoader constants: OS=linux, ARCH=loongarch64, WS=gtk, NL=zh_CN
+Command-line arguments:  -os linux -ws gtk -arch loongarch64
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-12-17 11:21:56.265
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-12-17 11:22:11.917
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-12-17 11:22:11.918
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2022-12-17 11:22:11.918
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core.native 4 0 2022-12-17 11:23:50.592
+!MESSAGE no spawner in java.library.path
+
+!ENTRY org.eclipse.cdt.dsf.gdb 1 0 2022-12-17 11:56:38.178
+!MESSAGE PTY not available, cannot use full GDB console: Cannot create pty

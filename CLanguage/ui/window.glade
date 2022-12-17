@@ -2,7 +2,9 @@
 <!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
-  <object class="GtkEntryBuffer" id="buffer_number"/>
+  <object class="GtkEntryBuffer" id="buffer_number">
+    <property name="text" translatable="yes">65535</property>
+  </object>
   <object class="GtkListStore" id="list_number">
     <columns>
       <!-- column-name name -->
@@ -77,8 +79,8 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">True</property>
                                     <property name="receives-default">True</property>
-                                    <signal name="clicked" handler="get_entry_content" object="entry_number" swapped="no"/>
-                                    <signal name="clicked" handler="on_button_number_clicked" object="list_number" swapped="no"/>
+                                    <signal name="clicked" handler="get_entry_content" object="buffer_number" swapped="no"/>
+                                    <signal name="clicked" handler="on_button_number_clicked" object="list_number" after="yes" swapped="no"/>
                                   </object>
                                   <packing>
                                     <property name="expand">False</property>
@@ -140,6 +142,7 @@
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="label" translatable="yes">进制转换</property>
+                            <signal name="activate-current-link" handler="get_entry_content" object="buffer_number" swapped="no"/>
                           </object>
                           <packing>
                             <property name="tab-fill">False</property>
