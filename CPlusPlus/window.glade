@@ -2,6 +2,7 @@
 <!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
+  <object class="GtkTextBuffer" id="textbuffer"/>
   <object class="GtkWindow" id="window">
     <property name="can-focus">False</property>
     <property name="title" translatable="yes">C++ 程序设计</property>
@@ -20,7 +21,7 @@
             <property name="stack">stack</property>
           </object>
           <packing>
-            <property name="resize">True</property>
+            <property name="resize">False</property>
             <property name="shrink">True</property>
           </packing>
         </child>
@@ -37,6 +38,7 @@
                   <object class="GtkStack" id="stack">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
+                    <property name="interpolate-size">True</property>
                     <child>
                       <object class="GtkNotebook">
                         <property name="visible">True</property>
@@ -116,17 +118,43 @@
                         <property name="scrollable">True</property>
                         <property name="group-name">ssss</property>
                         <child>
-                          <object class="GtkLabel">
+                          <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="label" translatable="yes">label</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkButton" id="button_copy">
+                                <property name="label" translatable="yes">button</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <signal name="clicked" handler="on_button_copy_clicked" object="textbuffer" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkTextView">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="buffer">textbuffer</property>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
                           </object>
                         </child>
                         <child type="tab">
                           <object class="GtkLabel">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="label" translatable="yes">page 1</property>
+                            <property name="label" translatable="yes">复制构造函数</property>
                           </object>
                           <packing>
                             <property name="tab-fill">False</property>

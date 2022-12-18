@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="gtkmm" Database="" Version="10.0.0">
   <Project Name="1-Hello" Path="1-Hello/1-Hello.project" Active="No"/>
-  <Project Name="7-box" Path="7-box/7-box.project" Active="Yes"/>
+  <Project Name="7-box" Path="7-box/7-box.project" Active="No"/>
+  <Project Name="9-gtkmm" Path="9-gtkmm/9-gtkmm.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="1-Hello" ConfigName="Debug"/>
       <Project Name="7-box" ConfigName="Debug"/>
+      <Project Name="9-gtkmm" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="1-Hello" ConfigName="Release"/>
       <Project Name="7-box" ConfigName="Release"/>
+      <Project Name="9-gtkmm" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
