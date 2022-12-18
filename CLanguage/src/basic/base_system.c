@@ -7,6 +7,8 @@
 #include "basic.h"
 
 
+const gchar *entry_number;
+
 void get_entry_content(GtkButton* button, gpointer data) {
 	entry_number = gtk_entry_buffer_get_text(data);
 }

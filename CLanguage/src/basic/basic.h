@@ -9,8 +9,6 @@
 #define BASIC_BASIC_H_
 #include <gtk/gtk.h>
 
-const gchar *entry_number;
-
 void get_entry_content(GtkButton* button, gpointer data);
 void on_button_number_clicked(GtkButton* button, gpointer data);
 
