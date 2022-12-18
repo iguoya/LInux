@@ -30,9 +30,6 @@ void on_button_week_clicked(GtkButton* button, gpointer data) {
 		gtk_list_store_set(store, &iter, 0, i, -1);
 		gtk_list_store_set(store, &iter, 1, weeks[i], -1);
 	}
-
-
-
 }
 
 

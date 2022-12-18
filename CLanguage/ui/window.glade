@@ -2,6 +2,7 @@
 <!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
+  <object class="GtkTextBuffer" id="buffer_function"/>
   <object class="GtkEntryBuffer" id="buffer_number">
     <property name="text" translatable="yes">65535</property>
   </object>
@@ -269,19 +270,47 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkTextView">
+                          <object class="GtkBox">
                             <property name="visible">True</property>
-                            <property name="can-focus">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkButton" id="button_function">
+                                <property name="label" translatable="yes">button</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <signal name="clicked" handler="on_button_function_clicked" object="buffer_function" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkTextView" id="treeview_function">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="buffer">buffer_function</property>
+                                <signal name="show" handler="on_treeview_function_show" object="buffer_function" after="yes" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
                           </object>
                           <packing>
                             <property name="position">1</property>
                           </packing>
                         </child>
                         <child type="tab">
-                          <object class="GtkLabel">
+                          <object class="GtkLabel" id="label_function">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="label" translatable="yes">page 2</property>
+                            <property name="label" translatable="yes">函数指针</property>
                           </object>
                           <packing>
                             <property name="position">1</property>

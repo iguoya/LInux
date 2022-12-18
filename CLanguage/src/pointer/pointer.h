@@ -12,6 +12,6 @@
 void on_treeview_week_show(GtkWidget* label, gpointer data);
 void on_button_week_clicked(GtkButton* button, gpointer data);
 
-
-
+void on_button_function_clicked(GtkWidget* button, gpointer data);
+void on_treeview_function_show(GtkWidget* widget, gpointer data);
 #endif /* POINTER_H_ */
