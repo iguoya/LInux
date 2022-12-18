@@ -199,17 +199,70 @@
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <child>
-                          <object class="GtkLabel">
+                          <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="label" translatable="yes">label</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkButton" id="button_week">
+                                <property name="label" translatable="yes">button</property>
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="receives-default">True</property>
+                                <signal name="clicked" handler="on_button_week_clicked" object="list_week" swapped="no"/>
+                              </object>
+                              <packing>
+                                <property name="expand">False</property>
+                                <property name="fill">True</property>
+                                <property name="position">0</property>
+                              </packing>
+                            </child>
+                            <child>
+                              <object class="GtkTreeView" id="treeview_week">
+                                <property name="visible">True</property>
+                                <property name="can-focus">True</property>
+                                <property name="model">list_week</property>
+                                <property name="search-column">0</property>
+                                <signal name="show" handler="on_treeview_week_show" object="list_week" after="yes" swapped="no"/>
+                                <child internal-child="selection">
+                                  <object class="GtkTreeSelection"/>
+                                </child>
+                                <child>
+                                  <object class="GtkTreeViewColumn">
+                                    <property name="title" translatable="yes">序号</property>
+                                    <child>
+                                      <object class="GtkCellRendererText"/>
+                                      <attributes>
+                                        <attribute name="text">0</attribute>
+                                      </attributes>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkTreeViewColumn">
+                                    <property name="title" translatable="yes">星期</property>
+                                    <child>
+                                      <object class="GtkCellRendererText"/>
+                                      <attributes>
+                                        <attribute name="text">1</attribute>
+                                      </attributes>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                              <packing>
+                                <property name="expand">True</property>
+                                <property name="fill">True</property>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
                           </object>
                         </child>
                         <child type="tab">
-                          <object class="GtkLabel">
+                          <object class="GtkLabel" id="label_week">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="label" translatable="yes">page 1</property>
+                            <property name="label" translatable="yes">字符串数组</property>
                           </object>
                           <packing>
                             <property name="tab-fill">False</property>
@@ -275,5 +328,13 @@
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkListStore" id="list_week">
+    <columns>
+      <!-- column-name id -->
+      <column type="guint"/>
+      <!-- column-name week -->
+      <column type="gchararray"/>
+    </columns>
   </object>
 </interface>

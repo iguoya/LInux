@@ -13,6 +13,7 @@
 #include <gtk/gtk.h>
 
 #include "basic/basic.h"
+#include "pointer/pointer.h"
 
 int main(int argc, char* argv[]) {
 
@@ -30,7 +31,7 @@ int main(int argc, char* argv[]) {
 
 	g_signal_connect (window, "destroy", G_CALLBACK (gtk_main_quit), NULL);
 
-	gtk_builder_connect_signals (builder, NULL);//连接响应事件
+	gtk_builder_connect_signals (builder, builder);//连接响应事件
 	g_object_unref(G_OBJECT(builder));
 
 	gtk_widget_show_all(window);
