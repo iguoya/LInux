@@ -16,56 +16,56 @@ int main (int argc, char **argv)
     auto app = Gtk::Application::create(argc, argv, "de.engelmarkus.example");
     auto builder = Gtk::Builder::create();
 
-    builder->add_from_string(
-        "<interface>"
-        "  <object class='GtkApplicationWindow' id='MainWindow'>"
-        "    <property name='title'>The MainWindow</property>"
-        "  </object>"
-        "</interface>"
-    );
+    //    builder->add_from_string(
+    //        "<interface>"
+    //        "  <object class='GtkApplicationWindow' id='MainWindow'>"
+    //        "    <property name='title'>The MainWindow</property>"
+    //        "  </object>"
+    //        "</interface>"
+    //    );
 
+    builder->add_from_file("../CPlusPlus/window.glade");
     MainWindow* wnd = nullptr;
 
-    builder->get_widget_derived("MainWindow", wnd);
+    builder->get_widget_derived("window", wnd);
 
-    auto r = app->run(*wnd);
+    app->run(*wnd);
 
     delete wnd;
 
-    return r;
 
 
-//    Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "org.gtkmm.example");
+    //    Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "org.gtkmm.example");
 
-//    MainWindow mainwindow;
+    //    MainWindow mainwindow;
 
-//    //Shows the window and returns when it is closed.
-//    return app->run(mainwindow);
+    //    //Shows the window and returns when it is closed.
+    //    return app->run(mainwindow);
 
-//  auto app = Gtk::Application::create(argc, argv, "org.gtkmm.example");
+    //  auto app = Gtk::Application::create(argc, argv, "org.gtkmm.example");
 
-//  //Load the GtkBuilder file and instantiate its widgets:
-//  auto refBuilder = Gtk::Builder::create();
-//  try
-//  {
-//    refBuilder->add_from_file("../CPlusPlus/window.glade");
-//  }
-//  catch(const Glib::FileError& ex)
-//  {
-//    std::cerr << "FileError: " << ex.what() << std::endl;
-//    return 1;
-//  }
+    //  //Load the GtkBuilder file and instantiate its widgets:
+    //  auto refBuilder = Gtk::Builder::create();
+    //  try
+    //  {
+    //    refBuilder->add_from_file("../CPlusPlus/window.glade");
+    //  }
+    //  catch(const Glib::FileError& ex)
+    //  {
+    //    std::cerr << "FileError: " << ex.what() << std::endl;
+    //    return 1;
+    //  }
 
-//  Gtk::Window* window = nullptr;
-//  //Get the GtkBuilder-instantiated Dialog:
-//  refBuilder->get_widget("window", window);
-//  Gtk::Button* pButton = nullptr;
-//  refBuilder->get_widget("button_copy", pButton);
-//  pButton->signal_clicked().connect(sigc::ptr_fun(on_button_clicked));
+    //  Gtk::Window* window = nullptr;
+    //  //Get the GtkBuilder-instantiated Dialog:
+    //  refBuilder->get_widget("window", window);
+    //  Gtk::Button* pButton = nullptr;
+    //  refBuilder->get_widget("button_copy", pButton);
+    //  pButton->signal_clicked().connect(sigc::ptr_fun(on_button_clicked));
 
-//  app->run(*window);
+    //  app->run(*window);
 
-//  delete window;
+    //  delete window;
 
-  return 0;
+    return 0;
 }
