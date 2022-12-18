@@ -73,13 +73,11 @@ Thumbs.db
 *.dll
 *.exe
 
-=======
 .metadata
 build-*
 .codelite
 cmake-build-Debug
 Debug
->>>>>>> linux
 # Prerequisites
 *.d
 
@@ -134,3 +132,14 @@ Mkfile.old
 dkms.conf
 
 *.mk
+node_modules/
+docs/.vuepress/dist/
+yarn-error.log
+cmake-build-debug
+.idea
+.DS_Store
+CMakeFiles
+CMakeCache.txt
+build-*
+Debug
+.codelite
