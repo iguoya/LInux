@@ -14,24 +14,17 @@ int main (int argc, char **argv)
 {
 
     auto app = Gtk::Application::create(argc, argv, "de.engelmarkus.example");
-    auto builder = Gtk::Builder::create();
 
-    //    builder->add_from_string(
-    //        "<interface>"
-    //        "  <object class='GtkApplicationWindow' id='MainWindow'>"
-    //        "    <property name='title'>The MainWindow</property>"
-    //        "  </object>"
-    //        "</interface>"
-    //    );
+    auto builder = Gtk::Builder::create_from_file("../CPlusPlus/window.glade");
+    MainWindow* window = nullptr;
 
-    builder->add_from_file("../CPlusPlus/window.glade");
-    MainWindow* wnd = nullptr;
+    builder->get_widget_derived("window", window);
 
-    builder->get_widget_derived("window", wnd);
+    auto r = app->run(*window);
 
-    app->run(*wnd);
+    delete window;
 
-    delete wnd;
+    return r;
 
 
 
@@ -67,5 +60,5 @@ int main (int argc, char **argv)
 
     //  delete window;
 
-    return 0;
+    //    return 0;
 }
