@@ -9,14 +9,20 @@ MainWindow::MainWindow(Gtk::ApplicationWindow::BaseObjectType *obj, const Glib::
     builder->get_widget("button_copy", button_copy);
     builder->get_widget("button_datatype", button_datatype);
     builder->get_widget("button_array", button_array);
+    builder->get_widget("button_virtual", button_virtual);
     builder->get_widget("textview_copy", textview_copy);
+//      builder->get_widget("textview_copy", textview_copy);
 
     //    button_copy->signal_clicked().connect(sigc::mem_fun(sc, &SampleClass::on_button_copy_clicked));
     button_copy->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_copy_clicked));
     button_datatype->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_datatype_clicked));
     button_array->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_array_clicked));
+    button_virtual->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_virtual_clicked));
 
 
+    textbuffer = Glib::RefPtr<Gtk::TextBuffer>::cast_dynamic(
+                builder->get_object("textbuffer")
+                );
     liststore = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(
                 builder->get_object("liststore")
                 );
@@ -25,8 +31,8 @@ MainWindow::MainWindow(Gtk::ApplicationWindow::BaseObjectType *obj, const Glib::
 
 void MainWindow::on_button_copy_clicked()
 {
-    std::cout<<"hello world!!!!"<<std::endl;
-    auto textbuffer = textview_copy->get_buffer();
+//    std::cout<<"hello world!!!!"<<std::endl;
+//    auto textbuffer = textview_copy->get_buffer();
     auto iter = textbuffer->get_iter_at_offset(0);
     iter = textbuffer->insert(iter, "For example, you can have 中国\n");
     iter = textbuffer->insert(iter, "中国\n");
@@ -48,6 +54,7 @@ void MainWindow::on_button_datatype_clicked()
         long long min;
         long long max;
     } DataType;
+
     vector<DataType> items = {
         {"char", sizeof(char), UCHAR_MAX, CHAR_MIN, CHAR_MAX},
         {"short", sizeof(short), USHRT_MAX, SHRT_MIN, SHRT_MAX},
@@ -105,6 +112,23 @@ void MainWindow::on_button_array_clicked()
 //        line = *(liststore->append());
     }
 
+}
+
+void MainWindow::on_button_virtual_clicked()
+{
+    auto iter = textbuffer->get_iter_at_offset(0);
+    iter = textbuffer->insert(iter, "For example, you can have 中国\n");
+    iter = textbuffer->insert(iter, "中国\n");
+    iter = textbuffer->insert(iter, "中国ss三三四四\n");
+
+    officer *t = new teacher();
+    t->work();
+    t->salary();
+
+
+    officer *d = new doctor();
+    d->work();
+    d->salary();
 }
 
 

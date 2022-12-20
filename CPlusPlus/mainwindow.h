@@ -5,6 +5,11 @@
 #include <gtkmm/application.h>
 #include "class/sampleclass.h"
 #include <iostream>
+
+#include "doctor.h"
+#include "officer.h"
+#include "teacher.h"
+
 using namespace std;
 using namespace Gtk;
 using namespace Glib;
@@ -34,6 +39,7 @@ protected:
     void on_button_copy_clicked();
     void on_button_datatype_clicked();
     void on_button_array_clicked();
+    void on_button_virtual_clicked();
 
 private:
     RefPtr<Builder> builder;
@@ -41,9 +47,10 @@ private:
     Button* button_copy;
     Button* button_datatype;
     Button* button_array;
+    Button* button_virtual;
 
 //    TextBuffer* textbuffer;
-    RefPtr<const TextBuffer> textbuffer;
+    RefPtr<TextBuffer> textbuffer;
     TextView* textview_copy;
     RefPtr<ListStore> liststore;
 
