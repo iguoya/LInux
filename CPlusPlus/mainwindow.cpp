@@ -10,14 +10,10 @@ MainWindow::MainWindow(Gtk::ApplicationWindow::BaseObjectType *obj, const Glib::
     builder->get_widget("button_datatype", button_datatype);
     builder->get_widget("button_array", button_array);
     builder->get_widget("button_virtual", button_virtual);
-    builder->get_widget("textview_copy", textview_copy);
-//      builder->get_widget("textview_copy", textview_copy);
+    builder->get_widget("button_visit_control", button_visit_control);
 
-    //    button_copy->signal_clicked().connect(sigc::mem_fun(sc, &SampleClass::on_button_copy_clicked));
-    button_copy->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_copy_clicked));
-    button_datatype->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_datatype_clicked));
-    button_array->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_array_clicked));
-    button_virtual->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_virtual_clicked));
+
+    //    builder->get_widget("textview_copy", textview_copy);
 
 
     textbuffer = Glib::RefPtr<Gtk::TextBuffer>::cast_dynamic(
@@ -27,18 +23,54 @@ MainWindow::MainWindow(Gtk::ApplicationWindow::BaseObjectType *obj, const Glib::
                 builder->get_object("liststore")
                 );
 
+
+    //      builder->get_widget("textview_copy", textview_copy);
+
+    //    button_copy->signal_clicked().connect(sigc::mem_fun(sc, &SampleClass::on_button_copy_clicked));
+    button_copy->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_copy_clicked));
+    button_datatype->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_datatype_clicked));
+    button_array->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_array_clicked));
+    button_virtual->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_virtual_clicked));
+    button_visit_control->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_visit_control_clicked));
+
+
 }
 
 void MainWindow::on_button_copy_clicked()
 {
-//    std::cout<<"hello world!!!!"<<std::endl;
-//    auto textbuffer = textview_copy->get_buffer();
+    //    std::cout<<"hello world!!!!"<<std::endl;
+    //    auto textbuffer = textview_copy->get_buffer();
     auto iter = textbuffer->get_iter_at_offset(0);
     iter = textbuffer->insert(iter, "For example, you can have 中国\n");
-    iter = textbuffer->insert(iter, "中国\n");
-    iter = textbuffer->insert(iter, "中国ss三三四四\n");
+//    iter = textbuffer->insert(iter, "中国\n");
+//    iter = textbuffer->insert(iter, "中国ss三三四四\n");
     //    textbuffer->set_text("hello world");
     //    textview_copy->set_buffer(*textbuffer);
+
+
+    Point a(35, 38);
+    a.show();
+
+    Point b(a);
+    b.show();
+
+    b.add_point(a);
+
+    b.show();
+
+    Point c = Point::generate_point();
+    c.show();
+
+    Point d;
+    d.show();
+    d = c;
+    d.show();
+
+    Point e(d);
+
+    e.show();
+
+
 }
 
 void MainWindow::on_button_datatype_clicked()
@@ -100,16 +132,16 @@ void MainWindow::on_button_array_clicked()
     }
 
     //三维数组
-//    int space[10][10][10];
+    //    int space[10][10][10];
     for(auto x = 0; x < 10; ++x) {
         for(auto y = 0; y < 10; ++y) {
             for(auto z = 0; z < 10; ++z) {
                 line.set_value(z, rand() % 100);
-//                space[x][y][z] = rand() % 100;
+                //                space[x][y][z] = rand() % 100;
             }
             line = *(liststore->append());
         }
-//        line = *(liststore->append());
+        //        line = *(liststore->append());
     }
 
 }
@@ -129,6 +161,27 @@ void MainWindow::on_button_virtual_clicked()
     officer *d = new doctor();
     d->work();
     d->salary();
+}
+
+void MainWindow::on_button_visit_control_clicked()
+{
+    PublicChild cp;
+    cout<<cp.parent_public_num<<endl;
+    cp.public_method();
+
+
+
+    ProtectedChild cr;
+    //    cout<<cr.parent_public_num<<endl;//保护继承 改变父类公共变量为 保护成员
+    //    cr.parent_protected_num<<endl; ////保护继承 改变父类 保护变量 为 保护成员
+    cr.visit_control();
+
+
+    PrivateChild ci;
+    //    cout<< ci.parent_public_num<<endl;// 私有继承 改变父类公共变量为  私有成员
+    //    cout<< ci.parent_protected_num<<endl;// 私有继承 改变父类保护变量为  私有成员
+    ci.visit_control();
+
 }
 
 

@@ -17,9 +17,9 @@ aux_source_directory(. DIR_SRCS)
 include_directories(./ ./class ./derive)
 #mainwindow.cpp
 add_subdirectory(class)
-#add_subdirectory(derive)
+add_subdirectory(derive)
 
 add_executable(CPlusPlus ${DIR_SRCS})
 
 
-target_link_libraries(CPlusPlus ${GTKMM_LIBRARIES} class)
+target_link_libraries(CPlusPlus ${GTKMM_LIBRARIES} class derive)

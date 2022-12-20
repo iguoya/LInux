@@ -10,6 +10,11 @@
 #include "officer.h"
 #include "teacher.h"
 
+#include "child.h"
+#include "parent.h"
+
+#include "point.h"
+
 using namespace std;
 using namespace Gtk;
 using namespace Glib;
@@ -40,6 +45,7 @@ protected:
     void on_button_datatype_clicked();
     void on_button_array_clicked();
     void on_button_virtual_clicked();
+    void on_button_visit_control_clicked();
 
 private:
     RefPtr<Builder> builder;
@@ -48,8 +54,9 @@ private:
     Button* button_datatype;
     Button* button_array;
     Button* button_virtual;
+    Button* button_visit_control;
 
-//    TextBuffer* textbuffer;
+    //    TextBuffer* textbuffer;
     RefPtr<TextBuffer> textbuffer;
     TextView* textview_copy;
     RefPtr<ListStore> liststore;
