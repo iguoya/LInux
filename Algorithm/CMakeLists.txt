@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.5)
 
 project(Algorithm LANGUAGES CXX)
 
+
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_AUTOUIC ON)
@@ -24,11 +26,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #    endif()
 #endif()
 
+#qt5_add_resources(images ${CMAKE_CURRENT_SOURCE_DIR}/resource.qrc)
+
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
+
+qt5_add_resources(themes ${CMAKE_CURRENT_SOURCE_DIR}/qdarkstyle/dark/darkstyle.qrc)
+qt5_add_resources(images ${CMAKE_CURRENT_SOURCE_DIR}/resource.qrc)
+
 set(PROJECT_SOURCES
         main.cpp
+        ${themes}
+#        ${images}
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
@@ -46,6 +56,8 @@ else()
     else()
         add_executable(Algorithm
             ${PROJECT_SOURCES}
+            ${themes}
+            ${images}
         )
     endif()
 endif()

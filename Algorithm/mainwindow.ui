@@ -13,53 +13,77 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QTabWidget" name="tabWidget">
-      <property name="currentIndex">
-       <number>1</number>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
-      <widget class="QWidget" name="Enumeration">
-       <attribute name="title">
-        <string>枚举法</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="RecursiveMethod">
-       <attribute name="title">
-        <string>递归法</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="tab">
-       <attribute name="title">
-        <string>页</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="Backtracking">
-       <attribute name="title">
-        <string>回溯法</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="DivideConquer">
-       <attribute name="title">
-        <string>分治算法</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="DynamicPlanning">
-       <attribute name="title">
-        <string>动态规划</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="GreedyAlgorithm">
-       <attribute name="title">
-        <string>贪心算法</string>
-       </attribute>
-      </widget>
-      <widget class="QWidget" name="BFS">
-       <attribute name="title">
-        <string>分支界限法</string>
-       </attribute>
-      </widget>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="Enumeration">
+          <attribute name="title">
+           <string>枚举法</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="RecursiveMethod">
+          <attribute name="title">
+           <string>递归法</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>页</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="Backtracking">
+          <attribute name="title">
+           <string>回溯法</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="DivideConquer">
+          <attribute name="title">
+           <string>分治算法</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="DynamicPlanning">
+          <attribute name="title">
+           <string>动态规划</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="GreedyAlgorithm">
+          <attribute name="title">
+           <string>贪心算法</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="BFS">
+          <attribute name="title">
+           <string>分支界限法</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
