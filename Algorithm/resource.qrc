@@ -25,7 +25,6 @@
         <file>images/process5.svg</file>
         <file>images/ipc3.svg</file>
         <file>images/background.jpg</file>
-        <file>images/background1.jpg</file>
         <file>style.css</file>
     </qresource>
 </RCC>

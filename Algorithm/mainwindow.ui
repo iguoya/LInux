@@ -76,7 +76,7 @@
            <string>动态规划</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="GreedyAlgorithm">
+         <widget class="QWidget" name="Greedy">
           <attribute name="title">
            <string>贪心算法</string>
           </attribute>
@@ -84,6 +84,26 @@
          <widget class="QWidget" name="BFS">
           <attribute name="title">
            <string>分支界限法</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="Linear">
+          <attribute name="title">
+           <string>线性表</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="Tree">
+          <attribute name="title">
+           <string>树</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="Graph">
+          <attribute name="title">
+           <string>图</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="Sort">
+          <attribute name="title">
+           <string>排序算法</string>
           </attribute>
          </widget>
         </widget>
