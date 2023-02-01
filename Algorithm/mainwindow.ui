@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>893</width>
-    <height>635</height>
+    <width>935</width>
+    <height>661</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,19 +41,24 @@
          <property name="currentIndex">
           <number>0</number>
          </property>
-         <widget class="QWidget" name="Enumeration">
+         <widget class="QWidget" name="Exhaustion">
           <attribute name="title">
-           <string>枚举法</string>
+           <string>穷举法</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="exhaustionLayout"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="Recursion">
+          <attribute name="title">
+           <string>递推法</string>
           </attribute>
          </widget>
          <widget class="QWidget" name="RecursiveMethod">
           <attribute name="title">
            <string>递归法</string>
-          </attribute>
-         </widget>
-         <widget class="QWidget" name="tab">
-          <attribute name="title">
-           <string>页</string>
           </attribute>
          </widget>
          <widget class="QWidget" name="Backtracking">
@@ -93,7 +98,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>893</width>
+     <width>935</width>
      <height>30</height>
     </rect>
    </property>

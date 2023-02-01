@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QFile>
 #include <QTextStream>
+#include "exhaustion.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,6 +17,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    Exhaustion exhaustion;
 
 private:
     Ui::MainWindow *ui;

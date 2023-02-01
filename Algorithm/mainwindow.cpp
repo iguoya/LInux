@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->exhaustionLayout->addWidget(&exhaustion);
+
 
 //    QFile file(":/style.css");
 //    if (!file.open(QIODevice::ReadOnly))
