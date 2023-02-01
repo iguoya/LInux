@@ -147,3 +147,6 @@ Debug
 *Desktop_x86_darwin_generic_mach_o_64bit-Debug
 CMakeScripts
 build-*
+build/
+node_modules/
+docs/.vuepress/dist/

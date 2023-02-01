@@ -1,0 +1,1 @@
+./Debug/main.cpp.o ./Debug/ConcreteStrategyA.cpp.o ./Debug/Context.cpp.o ./Debug/ConcreteStrategyB.cpp.o ./Debug/Strategy.cpp.o
