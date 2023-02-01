@@ -35,6 +35,10 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 qt5_add_resources(themes ${CMAKE_CURRENT_SOURCE_DIR}/qdarkstyle/dark/darkstyle.qrc)
 qt5_add_resources(images ${CMAKE_CURRENT_SOURCE_DIR}/resource.qrc)
 
+add_subdirectory(recursion)
+include_directories(recursion)
+
+
 set(PROJECT_SOURCES
         main.cpp
         ${themes}
@@ -62,4 +66,4 @@ else()
     endif()
 endif()
 
-target_link_libraries(Algorithm PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(Algorithm PRIVATE Qt${QT_VERSION_MAJOR}::Widgets recursion)

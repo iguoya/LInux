@@ -39,8 +39,13 @@
           <bool>false</bool>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>11</number>
          </property>
+         <widget class="QWidget" name="Recurrence">
+          <attribute name="title">
+           <string>递推法</string>
+          </attribute>
+         </widget>
          <widget class="QWidget" name="Enumeration">
           <attribute name="title">
            <string>枚举法</string>
@@ -51,12 +56,7 @@
            <string>递归法</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="tab">
-          <attribute name="title">
-           <string>页</string>
-          </attribute>
-         </widget>
-         <widget class="QWidget" name="Backtracking">
+         <widget class="QWidget" name="Backtrack">
           <attribute name="title">
            <string>回溯法</string>
           </attribute>
@@ -71,7 +71,7 @@
            <string>动态规划</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="GreedyAlgorithm">
+         <widget class="QWidget" name="Greedy">
           <attribute name="title">
            <string>贪心算法</string>
           </attribute>
@@ -79,6 +79,26 @@
          <widget class="QWidget" name="BFS">
           <attribute name="title">
            <string>分支界限法</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="Linear">
+          <attribute name="title">
+           <string>线性表</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="Tree">
+          <attribute name="title">
+           <string>树</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="Graph">
+          <attribute name="title">
+           <string>图</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="Sort">
+          <attribute name="title">
+           <string>排序算法</string>
           </attribute>
          </widget>
         </widget>
