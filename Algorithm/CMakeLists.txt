@@ -23,8 +23,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #            ${CMAKE_CURRENT_SOURCE_DIR}/path/to/libssl.so)
 #    endif()
 #endif()
-
+include_directories (Abstract)
 include_directories (Exhaustion)
+include_directories (Deduction)
 #add_subdirectory (exhaustion)
 
 #aux_source_directory(exhaustion ${CMAKE_CURRENT_SOURCE_DIR}/exhaustion/)
@@ -45,9 +46,14 @@ qt5_add_resources(themes ${CMAKE_CURRENT_SOURCE_DIR}/qdarkstyle/dark/darkstyle.q
 set(PROJECT_SOURCES
         main.cpp
         ${themes}
-        Exhaustion/exhaustion.h
-        Exhaustion/exhaustion.cpp
-        Exhaustion/exhaustion.ui
+        Abstract/task.h
+        Abstract/task.cpp
+        Deduction/rabbit.h
+        Deduction/rabbit.cpp
+        Deduction/rabbita.h
+        Deduction/rabbita.cpp
+#        Exhaustion/exhaustion.cpp
+#        Exhaustion/exhaustion.ui
 #        ${images}
         mainwindow.cpp
         mainwindow.h

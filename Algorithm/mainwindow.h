@@ -4,8 +4,10 @@
 #include <QMainWindow>
 #include <QFile>
 #include <QTextStream>
-#include "exhaustion.h"
+//#include "exhaustion.h"
 //#include "recursion.h"
+#include "task.h"
+#include "rabbita.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,10 +23,12 @@ public:
     //    Recursion recursion;
 
 
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
-
-    Exhaustion exhaustion;
+//    Rabbit rabbit;
+//    Exhaustion exhaustion;
 };
 #endif // MAINWINDOW_H

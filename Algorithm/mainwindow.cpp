@@ -8,14 +8,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 //    ui->tabWidget->addTab(&recursion, "递归思想");
 
-    ui->exhaustionLayout->addWidget(&exhaustion);
+//    ui->exhaustionLayout->addWidget(&exhaustion);
+    int type = QMetaType::type("RabbitA*");
+//    Task *an = static_cast<Task*>(QMetaType::construct(type));
+    Task *an = qobject_cast<Task*>(QMetaType::metaObjectForType(type)->newInstance());
+    connect(an, &Task::display, ui->textBrowser, &QTextBrowser::append);
+    an->run();
 
 
-//    QFile file(":/style.css");
-//    if (!file.open(QIODevice::ReadOnly))
-//        exit(0);
-//    QTextStream in(&file);
-//    qApp->setStyleSheet(in.readAll());
 
 }
 
@@ -24,3 +24,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_pushButton_clicked()
+{
+
+}

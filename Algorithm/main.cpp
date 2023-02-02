@@ -3,6 +3,7 @@
 #include <QApplication>
 #include <QFile>
 #include <QTextStream>
+//#include "rabbita.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,6 +15,7 @@ int main(int argc, char *argv[])
     QTextStream in(&file);
     qApp->setStyleSheet(in.readAll());
 
+//    qRegisterMetaType<RabbitA>();
 
     MainWindow w;
     w.show();
