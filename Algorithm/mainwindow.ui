@@ -39,9 +39,9 @@
           <bool>false</bool>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>4</number>
          </property>
-         <widget class="QWidget" name="Exhaustion">
+         <widget class="QWidget" name="exhaustion">
           <attribute name="title">
            <string>穷举法</string>
           </attribute>
@@ -51,32 +51,32 @@
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="Recursion">
+         <widget class="QWidget" name="deduction">
           <attribute name="title">
            <string>递推法</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="RecursiveMethod">
+         <widget class="QWidget" name="recursion">
           <attribute name="title">
            <string>递归法</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="Backtracking">
+         <widget class="QWidget" name="backtracking">
           <attribute name="title">
            <string>回溯法</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="DivideConquer">
+         <widget class="QWidget" name="divideConquer">
           <attribute name="title">
            <string>分治算法</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="DynamicPlanning">
+         <widget class="QWidget" name="dynamicPlanning">
           <attribute name="title">
            <string>动态规划</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="Greedy">
+         <widget class="QWidget" name="greedy">
           <attribute name="title">
            <string>贪心算法</string>
           </attribute>
@@ -86,22 +86,22 @@
            <string>分支界限法</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="Linear">
+         <widget class="QWidget" name="linear">
           <attribute name="title">
            <string>线性表</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="Tree">
+         <widget class="QWidget" name="tree">
           <attribute name="title">
            <string>树</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="Graph">
+         <widget class="QWidget" name="graph">
           <attribute name="title">
            <string>图</string>
           </attribute>
          </widget>
-         <widget class="QWidget" name="Sort">
+         <widget class="QWidget" name="sort">
           <attribute name="title">
            <string>排序算法</string>
           </attribute>
