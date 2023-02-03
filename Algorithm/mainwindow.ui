@@ -53,7 +53,7 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="rabbit">
           <property name="text">
            <string>兔子繁殖</string>
           </property>
@@ -75,51 +75,131 @@
        </layout>
       </widget>
       <widget class="QWidget" name="page">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>177</width>
+         <height>165</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>递归法</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="page_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>177</width>
+         <height>165</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>回溯法</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="page_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>177</width>
+         <height>165</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>分治算法</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="page_5">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>177</width>
+         <height>165</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>动态规划</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="page_6">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>177</width>
+         <height>165</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>贪心算法</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="page_7">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>177</width>
+         <height>165</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>分支界限法</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="page_8">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>177</width>
+         <height>165</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>线性表</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="page_9">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>177</width>
+         <height>165</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>树</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="page_10">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>177</width>
+         <height>165</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>图</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="page_11">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>177</width>
+         <height>165</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>排序算法</string>
        </attribute>
@@ -130,6 +210,15 @@
      <layout class="QVBoxLayout" name="verticalLayout" stretch="1,8,3">
       <item>
        <widget class="QSlider" name="horizontalSlider">
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="value">
+         <number>5</number>
+        </property>
+        <property name="sliderPosition">
+         <number>5</number>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -138,15 +227,29 @@
       <item>
        <widget class="QTabWidget" name="tabWidget_2">
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>列表视图</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QListView" name="listView"/>
+          </item>
+         </layout>
+        </widget>
         <widget class="QWidget" name="tab_3">
          <attribute name="title">
           <string>表格视图</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
-           <widget class="QTableView" name="tableView"/>
+           <widget class="QTableView" name="tableView">
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+           </widget>
           </item>
          </layout>
         </widget>

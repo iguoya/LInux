@@ -11,6 +11,9 @@ public:
     static int typeID;
     Q_INVOKABLE RabbitA();
     void run() override;
+
+private:
+
 };
 
 //Q_DECLARE_METATYPE(RabbitA*)

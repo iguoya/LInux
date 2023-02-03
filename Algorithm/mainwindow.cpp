@@ -6,16 +6,23 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-//    ui->tabWidget->addTab(&recursion, "递归思想");
-
-//    ui->exhaustionLayout->addWidget(&exhaustion);
-    int type = QMetaType::type("RabbitA*");
-//    Task *an = static_cast<Task*>(QMetaType::construct(type));
-    Task *an = qobject_cast<Task*>(QMetaType::metaObjectForType(type)->newInstance());
-    connect(an, &Task::display, ui->textBrowser, &QTextBrowser::append);
-    an->run();
+    ui->tableView->setModel(&tableModel);
+    ui->listView->setModel(&listModel);
 
 
+
+    QMap<QPushButton*, QString> items = {
+        {ui->rabbit, "RabbitA*"}
+    };
+
+    for(auto it = items.begin(); it != items.end(); ++it) {
+        signalMapper.setMapping(it.key(), it.value());
+    }
+
+    connect(ui->rabbit, SIGNAL(clicked()), &signalMapper, SLOT(map()));
+    //    connect(ui->rabbit, &QAbstractButton::clicked, signalMapper, &QSignalMapper::map);
+    connect(&signalMapper, SIGNAL(mapped(QString)),this, SLOT(run(QString)));
+    //    connect(signalMapper, &QSignalMapper::mapped, this, &MainWindow::run);
 
 }
 
@@ -24,8 +31,24 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_pushButton_clicked()
+void MainWindow::run(QString name)
 {
+    int type = QMetaType::type(name.toLocal8Bit().data());
+    Task *task = qobject_cast<Task*>(QMetaType::metaObjectForType(type)->newInstance());
+    connect(task, &Task::display, ui->textBrowser, &QTextBrowser::append);
+    connect(task, &Task::displayList, &listModel, &QStringListModel::setStringList);
+    task->run();
+}
 
+
+void MainWindow::displayTable(const QVector<QStringList>& data)
+{
+    for(auto row = 1; row <= data.size(); ++row) {
+        tableModel.setItem(row, 0, new QStandardItem(QString::number(row)));
+         for(auto column = 1; column <= data[row-1].size(); ++column) {
+
+            tableModel.item(row, column)->setTextAlignment(Qt::AlignCenter);
+            tableModel.setItem(row, column,new QStandardItem(data[row-1][column-1]));
+        }
+    }
 }

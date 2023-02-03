@@ -9,7 +9,6 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-
     QFile file(":/qdarkstyle/dark/darkstyle.qss");
     file.open(QIODevice::ReadOnly);
     QTextStream in(&file);

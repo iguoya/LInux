@@ -4,10 +4,10 @@
 #include <QMainWindow>
 #include <QFile>
 #include <QTextStream>
-//#include "exhaustion.h"
-//#include "recursion.h"
+#include <QStringListModel>
+#include <QStandardItemModel>
+#include <QSignalMapper>
 #include "task.h"
-#include "rabbita.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,15 +20,16 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    //    Recursion recursion;
-
 
 private slots:
-    void on_pushButton_clicked();
-
+    void run(QString name);
+    void displayTable(const QVector<QStringList>& data);
 private:
+
     Ui::MainWindow *ui;
-//    Rabbit rabbit;
-//    Exhaustion exhaustion;
+    QSignalMapper signalMapper;
+    QStringListModel listModel;
+    QStandardItemModel tableModel;
+
 };
 #endif // MAINWINDOW_H
