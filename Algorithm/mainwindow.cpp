@@ -37,7 +37,7 @@ void MainWindow::run(QString name)
     Task *task = qobject_cast<Task*>(QMetaType::metaObjectForType(type)->newInstance());
     connect(task, &Task::display, ui->textBrowser, &QTextBrowser::append);
     connect(task, &Task::displayList, &listModel, &QStringListModel::setStringList);
-    task->run();
+    task->run(ui->spinBox->value());
 }
 
 

@@ -8,9 +8,9 @@ class RabbitA : public Task
 {
     Q_OBJECT
 public:
-    static int typeID;
+    static size_t typeID;
     Q_INVOKABLE RabbitA();
-    void run() override;
+    void run(size_t number = 100) override;
 
 private:
 

@@ -17,6 +17,6 @@ int main(int argc, char *argv[])
 //    qRegisterMetaType<RabbitA>();
 
     MainWindow w;
-    w.show();
+    w.showMaximized();
     return a.exec();
 }
