@@ -26,7 +26,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories (Abstract)
 include_directories (Exhaustion)
 include_directories (Deduction)
+include_directories (Recursion)
 #add_subdirectory (exhaustion)
+
 
 #aux_source_directory(exhaustion ${CMAKE_CURRENT_SOURCE_DIR}/exhaustion/)
 
@@ -48,8 +50,12 @@ set(PROJECT_SOURCES
         ${themes}
         Abstract/task.h
         Abstract/task.cpp
-        Deduction/rabbit.h
-        Deduction/rabbit.cpp
+        Recursion/rabbit.h
+        Recursion/rabbit.cpp
+        Recursion/fibonacci.h
+        Recursion/fibonacci.cpp
+        Recursion/numberdigit.h
+        Recursion/numberdigit.cpp
         Deduction/rabbita.h
         Deduction/rabbita.cpp
 #        Exhaustion/exhaustion.cpp

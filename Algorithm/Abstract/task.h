@@ -11,7 +11,9 @@ class Task : public QObject
     Q_OBJECT
 public:
     explicit Task(QObject *parent = nullptr);
-    virtual void run(size_t number) = 0;
+    virtual void run();
+    virtual void run(size_t number);
+    virtual void run(QVector<int> number);
 signals:
     void display(const QString& data);
     void displayList(const QStringList& data);

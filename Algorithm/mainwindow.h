@@ -7,6 +7,7 @@
 #include <QStringListModel>
 #include <QStandardItemModel>
 #include <QSignalMapper>
+#include <QRandomGenerator>
 #include "task.h"
 
 QT_BEGIN_NAMESPACE
@@ -22,14 +23,19 @@ public:
     ~MainWindow();
 
 private slots:
-    void run(QString name);
+    void run(const QString &name);
+    void displayList(const QStringList & data);
     void displayTable(const QVector<QStringList>& data);
+    void on_random_clicked();
+
 private:
 
     Ui::MainWindow *ui;
     QSignalMapper signalMapper;
     QStringListModel listModel;
     QStandardItemModel tableModel;
+
+    QVector<int> seriesNumber;
 
 };
 #endif // MAINWINDOW_H
