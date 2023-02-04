@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->tableView->setModel(&tableModel);
+    ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+
     ui->listView->setModel(&listModel);
 
 
@@ -15,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
         {ui->rabbit, "RabbitA*"},
         {ui->fibonacci, "Rabbit*"},
         {ui->number, "NumberDigit*"},
+        {ui->hanoi, "HanoiTower*"},
     };
 
     for(auto it = items.begin(); it != items.end(); ++it) {
@@ -38,6 +41,8 @@ void MainWindow::run(const QString& name)
 //    connect(task, &Task::display, ui->tabWidget, &QTabWidget::setCurrentIndex(2));
     connect(task, &Task::display, ui->textBrowser, &QTextBrowser::append);
     connect(task, &Task::displayList, this, &MainWindow::displayList);
+    connect(task, &Task::setTableHeader, &tableModel, &QStandardItemModel::setHorizontalHeaderLabels);
+    connect(task, &Task::displayTable, this, &MainWindow::displayTable);
     task->run();
     task->run(ui->spinBox->value());
     //    task->run(ui->spinBox->value());
@@ -52,13 +57,12 @@ void MainWindow::displayList(const QStringList &data)
 
 void MainWindow::displayTable(const QVector<QStringList>& data)
 {
-    ui->tabWidget->setCurrentIndex(1);
-    for(auto row = 1; row <= data.size(); ++row) {
-        tableModel.setItem(row, 0, new QStandardItem(QString::number(row)));
-        for(auto column = 1; column <= data[row-1].size(); ++column) {
 
-            tableModel.item(row, column)->setTextAlignment(Qt::AlignCenter);
-            tableModel.setItem(row, column,new QStandardItem(data[row-1][column-1]));
+    ui->tabWidget->setCurrentIndex(1);
+    for(auto row = 0; row < data.size(); ++row) {
+        for(auto column = 0; column < data[row].size(); ++column) {
+//            tableModel.item(row, column)->setTextAlignment(Qt::AlignCenter);
+            tableModel.setItem(row, column, new QStandardItem(data[row][column]));
         }
     }
 }

@@ -11,8 +11,10 @@ public:
     void run(size_t number) override;
     static size_t typeID;
 
-    size_t digit(size_t number);
+
 private:
+    size_t digit(size_t number);
+
     QStack<size_t> result;
     QStringList content;
 };

@@ -12,11 +12,12 @@ public:
     Q_INVOKABLE explicit Rabbit();
     void run(size_t number) override;
 
-    size_t fibonacci(size_t number);
+
 
 signals:
 
 private:
+    size_t fibonacci(size_t number);
     QStringList result;
 };
 
