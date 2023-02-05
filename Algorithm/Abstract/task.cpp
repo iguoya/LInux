@@ -25,3 +25,8 @@ void Task::setSeries(QVector<int> &series)
     m_series = series;
 }
 
+void Task::setParent(QStandardItem *parent)
+{
+    m_parent = parent;
+}
+

@@ -35,9 +35,11 @@ private:
 
     Ui::MainWindow *ui;
     QSignalMapper signalMapper;
+
     QStringListModel listModel;
     QStandardItemModel model;
-//    QStandardItemModel model;
+
+    QStandardItem *m_parent;
 
     QVector<int> series;//一组数据
 

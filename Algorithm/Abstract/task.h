@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QVariant>
+#include <QStandardItemModel>
 //using Vector2D = QVector<QStringList>;
 
 
@@ -15,18 +16,28 @@ public:
 
     void setNumber(size_t number);
     void setSeries(QVector<int>& series);
+
+    void setParent(QStandardItem* parent);
+
+
 signals:
     void display(const QString& data);
     void displayList(const QStringList& data);
-    void setTableHeader(const QStringList& data);
+    void setHeader(const QStringList& data);
     void displayTable(const QVector<QStringList>& data);
     void displayTree();//const QVector<QStringList>& data
+
+
+
+
 protected:
 
     QString vectorToString(QVector<int>& series);
 
     size_t m_number;
     QVector<int> m_series;
+
+    QStandardItem* m_parent;
 
     QStringList series_result;
     QVector<QStringList> table_result;

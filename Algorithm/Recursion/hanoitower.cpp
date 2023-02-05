@@ -8,7 +8,7 @@ HanoiTower::HanoiTower()
 
 void HanoiTower::run()
 {
-    setTableHeader({"当前操作", "起始柱 A", "中转柱 B", "目的柱 C"});
+    setHeader({"当前操作", "起始柱 A", "中转柱 B", "目的柱 C"});
     display("将A柱1-n编号（小到大，从上到下--圆锥型) 圆盘组 借助C柱 放入B柱");
     display("一次只能移动一个圆盘，移动过程要求： 大盘不能压小盘");
     //初始化A柱圆盘

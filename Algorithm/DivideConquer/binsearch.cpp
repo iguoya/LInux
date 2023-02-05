@@ -9,7 +9,7 @@ BinSearch::BinSearch()
 
 void BinSearch::run()
 {
-    setTableHeader({"查找key", "起始范围 index", "终止范围 index", "中间分割 index"});
+    setHeader({"查找key", "起始范围 index", "终止范围 index", "中间分割 index"});
 
     display(QString("原始序列: ")+vectorToString(m_series));
 

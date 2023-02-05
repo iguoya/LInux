@@ -6,10 +6,16 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->listView->setModel(&listModel);
+//    ui->listView->setModel(&model);
+//    ui->listView->setModel(&model);
     ui->tableView->setModel(&model);
     //    ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->treeView->setModel(&model);
+
+    QList<QStandardItem *> row;
+    m_parent = new QStandardItem("root");
+    row.append(m_parent);
+    model.appendRow(row);
 
 
     QMap<QPushButton*, QString> items = {
@@ -24,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     for(auto it = items.begin(); it != items.end(); ++it) {
         signalMapper.setMapping(it.key(), it.value());
         connect(it.key(), &QPushButton::clicked, &signalMapper,static_cast<void(QSignalMapper::*)()>(&QSignalMapper::map));
+
     }
 
     connect(&signalMapper, &QSignalMapper::mappedString, this, &MainWindow::run);
@@ -42,20 +49,23 @@ void MainWindow::run(const QString& name)
     //    connect(task, &Task::display, ui->tabWidget, &QTabWidget::setCurrentIndex(2));
     connect(task, &Task::display, ui->textBrowser, &QTextBrowser::append);
     connect(task, &Task::displayList, this, &MainWindow::displayList);
-    connect(task, &Task::setTableHeader, &model, &QStandardItemModel::setHorizontalHeaderLabels);
+    connect(task, &Task::setHeader, &model, &QStandardItemModel::setHorizontalHeaderLabels);
     connect(task, &Task::displayTable, this, &MainWindow::displayTable);
     connect(task, &Task::displayTree, this, &MainWindow::displayTree);
 
+    task->setParent(m_parent);
     task->setNumber(ui->spinBox->value());
     task->setSeries(series);
 
     task->run();
+
+    ui->treeView->expandAll();
 }
 
 void MainWindow::displayList(const QStringList &data)
 {
-    ui->tabWidget->setCurrentIndex(0);
-    listModel.setStringList(data);
+//    ui->tabWidget->setCurrentIndex(0);
+//    listModel.setStringList(data);
 }
 
 
