@@ -13,7 +13,7 @@ void BinSearch::run()
 
     display(QString("原始序列: ")+vectorToString(m_series));
 
-    key = m_series.at(m_number);
+    key = m_number;
     display(QString("设置待查找Key值: %1").arg(key));
 
     std::sort(m_series.begin(), m_series.end());
@@ -31,6 +31,9 @@ void BinSearch::run()
 
 int BinSearch::binSearch(int start, int end, int key)
 {
+    if((start == end) && (m_series.at(start) != key)) {
+        return -1;//找不到
+    }
     int middle = (start+end) / 2;
     series_result.clear();
     series_result<< QString::number(key)
@@ -46,5 +49,4 @@ int BinSearch::binSearch(int start, int end, int key)
     } else if(m_series.at(middle) == key) {
         return middle+1;//现实位置+1
     }
-    return -1;
 }
