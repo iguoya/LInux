@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
         {ui->fibonacci, "Rabbit*"},
         {ui->number, "NumberDigit*"},
         {ui->hanoi, "HanoiTower*"},
+        {ui->binsearch, "BinSearch*"},
     };
 
     for(auto it = items.begin(); it != items.end(); ++it) {
@@ -26,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     }
 
     connect(&signalMapper, &QSignalMapper::mappedString, this, &MainWindow::run);
-
+    on_random_clicked();
 }
 
 MainWindow::~MainWindow()
@@ -38,14 +39,14 @@ void MainWindow::run(const QString& name)
 {
     int type = QMetaType::type(name.toLocal8Bit().data());
     Task *task = qobject_cast<Task*>(QMetaType::metaObjectForType(type)->newInstance());
-//    connect(task, &Task::display, ui->tabWidget, &QTabWidget::setCurrentIndex(2));
+    //    connect(task, &Task::display, ui->tabWidget, &QTabWidget::setCurrentIndex(2));
     connect(task, &Task::display, ui->textBrowser, &QTextBrowser::append);
     connect(task, &Task::displayList, this, &MainWindow::displayList);
     connect(task, &Task::setTableHeader, &tableModel, &QStandardItemModel::setHorizontalHeaderLabels);
     connect(task, &Task::displayTable, this, &MainWindow::displayTable);
     task->run();
     task->run(ui->spinBox->value());
-    //    task->run(ui->spinBox->value());
+    task->run(series);
 }
 
 void MainWindow::displayList(const QStringList &data)
@@ -61,7 +62,7 @@ void MainWindow::displayTable(const QVector<QStringList>& data)
     ui->tabWidget->setCurrentIndex(1);
     for(auto row = 0; row < data.size(); ++row) {
         for(auto column = 0; column < data[row].size(); ++column) {
-//            tableModel.item(row, column)->setTextAlignment(Qt::AlignCenter);
+            //            tableModel.item(row, column)->setTextAlignment(Qt::AlignCenter);
             tableModel.setItem(row, column, new QStandardItem(data[row][column]));
         }
     }
@@ -73,7 +74,7 @@ void MainWindow::on_random_clicked()
     for(int i = 0; i < ui->spinBox_random->value(); ++i) {
         auto number = QRandomGenerator::global()->bounded(100);
         numbers<<QString::number(number);
-        seriesNumber.append(number);
+        series.append(number);
     }
     ui->lineEdit->setText(numbers.join(", "));
 }

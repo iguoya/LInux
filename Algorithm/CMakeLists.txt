@@ -27,12 +27,12 @@ include_directories (Abstract)
 include_directories (Exhaustion)
 include_directories (Deduction)
 include_directories (Recursion)
-
+include_directories (DivideConquer)
 aux_source_directory(Abstract Abstract)
 aux_source_directory(Exhaustion Exhaustion)
 aux_source_directory(Deduction Deduction)
 aux_source_directory(Recursion Recursion)
-
+aux_source_directory(DivideConquer DivideConquer)
 
 #qt5_add_resources(images ${CMAKE_CURRENT_SOURCE_DIR}/resource.qrc)
 
@@ -55,6 +55,7 @@ set(PROJECT_SOURCES
         ${Exhaustion}
         ${Recursion}
         ${Deduction}
+        ${DivideConquer}
 #        ${images}
 
 )

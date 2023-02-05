@@ -8,6 +8,7 @@
 #include <QStandardItemModel>
 #include <QSignalMapper>
 #include <QRandomGenerator>
+#include <algorithm>
 #include "task.h"
 
 QT_BEGIN_NAMESPACE
@@ -35,7 +36,7 @@ private:
     QStringListModel listModel;
     QStandardItemModel tableModel;
 
-    QVector<int> seriesNumber;
+    QVector<int> series;//一组数据
 
 };
 #endif // MAINWINDOW_H
