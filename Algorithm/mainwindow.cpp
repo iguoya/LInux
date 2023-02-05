@@ -44,9 +44,11 @@ void MainWindow::run(const QString& name)
     connect(task, &Task::displayList, this, &MainWindow::displayList);
     connect(task, &Task::setTableHeader, &tableModel, &QStandardItemModel::setHorizontalHeaderLabels);
     connect(task, &Task::displayTable, this, &MainWindow::displayTable);
+
+    task->setNumber(ui->spinBox->value());
+    task->setSeries(series);
+
     task->run();
-    task->run(ui->spinBox->value());
-    task->run(series);
 }
 
 void MainWindow::displayList(const QStringList &data)
@@ -70,6 +72,7 @@ void MainWindow::displayTable(const QVector<QStringList>& data)
 
 void MainWindow::on_random_clicked()
 {
+    series.clear();
     QStringList numbers;
     for(int i = 0; i < ui->spinBox_random->value(); ++i) {
         auto number = QRandomGenerator::global()->bounded(100);

@@ -7,13 +7,12 @@ Rabbit::Rabbit()
 
 }
 
-void Rabbit::run(size_t number)
+void Rabbit::run()
 {
-
-    for(size_t i = 1; i < number; ++i) {
-        result<<QString::number(fibonacci(i));
+    for(size_t i = 1; i < m_number; ++i) {
+        series_result<<QString::number(fibonacci(i));
     }
-    displayList(result);
+    displayList(series_result);
 }
 
 size_t Rabbit::fibonacci(size_t number)

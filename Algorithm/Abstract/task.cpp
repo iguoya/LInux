@@ -15,17 +15,13 @@ QString Task::vectorToString(QVector<int> &series)
 }
 
 
-void Task::run()
+void Task::setNumber(size_t number)
 {
-
+    m_number = number;
 }
 
-void Task::run(size_t number)
+void Task::setSeries(QVector<int> &series)
 {
-
+    m_series = series;
 }
 
-void Task::run(QVector<int> &series)
-{
-
-}

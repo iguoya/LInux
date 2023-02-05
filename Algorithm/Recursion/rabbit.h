@@ -10,7 +10,7 @@ class Rabbit : public Task
 public:
     static size_t typeID;
     Q_INVOKABLE explicit Rabbit();
-    void run(size_t number) override;
+    void run() override;
 
 
 

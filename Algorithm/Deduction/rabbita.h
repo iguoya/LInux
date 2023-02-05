@@ -10,7 +10,7 @@ class RabbitA : public Task
 public:
     static size_t typeID;
     Q_INVOKABLE RabbitA();
-    void run(size_t number = 100) override;
+    void run() override;
 
 private:
 

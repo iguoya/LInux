@@ -6,19 +6,16 @@ NumberDigit::NumberDigit()
 
 }
 
-void NumberDigit::run(size_t number)
+void NumberDigit::run()
 {
-    digit(number);
+    digit(m_number);
 
-    while(!result.isEmpty()) {
-        content<<QString::number(result.pop());
-    }
-    displayList(content);
+    displayList(series_result);
 }
 
 size_t NumberDigit::digit(size_t number)
 {
-    result.push(number % 10);
+    series_result.insert(0, QString::number(number % 10));
     if(number / 10 == 0) {
         return number;
     } else {

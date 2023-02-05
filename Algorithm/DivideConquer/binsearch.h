@@ -10,13 +10,13 @@ class BinSearch : public Task
 public:
     Q_INVOKABLE BinSearch();
 
-    void run(QVector<int>& series) override;
+    void run() override;
 
 
 
 private:
 
-    void binSearch();
+    int binSearch(int start, int end, int key);
     int key;
 
     static size_t typeID;

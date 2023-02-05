@@ -11,9 +11,10 @@ class Task : public QObject
     Q_OBJECT
 public:
     explicit Task(QObject *parent = nullptr);
-    virtual void run();
-    virtual void run(size_t number);
-    virtual void run(QVector<int>& series);
+    virtual void run() = 0;
+
+    void setNumber(size_t number);
+    void setSeries(QVector<int>& series);
 signals:
     void display(const QString& data);
     void displayList(const QStringList& data);
@@ -23,8 +24,12 @@ protected:
 
     QString vectorToString(QVector<int>& series);
 
-    QVector<QStringList> m_array2D;
-    QStringList m_series;
+    size_t m_number;
+    QVector<int> m_series;
+
+    QStringList series_result;
+    QVector<QStringList> table_result;
+
 };
 
 

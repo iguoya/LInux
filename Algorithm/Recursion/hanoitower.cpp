@@ -6,7 +6,7 @@ HanoiTower::HanoiTower()
 
 }
 
-void HanoiTower::run(size_t number)
+void HanoiTower::run()
 {
     setTableHeader({"当前操作", "起始柱 A", "中转柱 B", "目的柱 C"});
     display("将A柱1-n编号（小到大，从上到下--圆锥型) 圆盘组 借助C柱 放入B柱");
@@ -14,16 +14,16 @@ void HanoiTower::run(size_t number)
     //初始化A柱圆盘
 
     QStringList originalValue;
-    for(size_t i = 1; i <= number; ++i) {
+    for(size_t i = 1; i <= m_number; ++i) {
         originalValue.push_back(QString::number(i));
     }
     original = {"A", originalValue};
     transmit = {"B", {}};
     destination = {"C", {}};
 
-    operate(original, transmit, destination, number);
+    operate(original, transmit, destination, m_number);
 
-    displayTable(result);
+    displayTable(table_result);
 
 }
 
@@ -57,5 +57,5 @@ void HanoiTower::move(QPair<QString, QStringList> &from, QPair<QString, QStringL
     record<<destination.second.join(" ");
 
 
-    result.append(record);
+    table_result.append(record);
 }

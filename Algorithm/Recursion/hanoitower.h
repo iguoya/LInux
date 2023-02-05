@@ -11,7 +11,7 @@ class HanoiTower : public Task
 public:
     Q_INVOKABLE HanoiTower();
     static size_t typeID;
-    void run(size_t number) override;
+    void run() override;
 private:
     void operate(QPair<QString, QStringList>& from, QPair<QString, QStringList>& middle, QPair<QString, QStringList>& to, size_t n);
     void move(QPair<QString, QStringList>& from, QPair<QString, QStringList>& to);
@@ -20,7 +20,7 @@ private:
     QPair<QString, QStringList> transmit;
     QPair<QString, QStringList> destination;
 
-    QVector<QStringList> result;
+
 };
 
 #endif // HANOITOWER_H
