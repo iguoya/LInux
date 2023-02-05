@@ -49,4 +49,5 @@ int BinSearch::binSearch(int start, int end, int key)
     } else if(m_series.at(middle) == key) {
         return middle+1;//现实位置+1
     }
+    return -1;
 }

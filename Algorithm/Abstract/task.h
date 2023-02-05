@@ -20,6 +20,7 @@ signals:
     void displayList(const QStringList& data);
     void setTableHeader(const QStringList& data);
     void displayTable(const QVector<QStringList>& data);
+    void displayTree();//const QVector<QStringList>& data
 protected:
 
     QString vectorToString(QVector<int>& series);

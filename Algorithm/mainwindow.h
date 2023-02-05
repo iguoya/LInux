@@ -27,6 +27,8 @@ private slots:
     void run(const QString &name);
     void displayList(const QStringList & data);
     void displayTable(const QVector<QStringList>& data);
+    void displayTree();//const QVector<QStringList>& data
+
     void on_random_clicked();
 
 private:
@@ -34,7 +36,8 @@ private:
     Ui::MainWindow *ui;
     QSignalMapper signalMapper;
     QStringListModel listModel;
-    QStandardItemModel tableModel;
+    QStandardItemModel model;
+//    QStandardItemModel model;
 
     QVector<int> series;//一组数据
 
