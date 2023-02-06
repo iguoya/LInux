@@ -3,7 +3,7 @@
 
 #include <gtkmm.h>
 #include <gtkmm/application.h>
-#include "class/sampleclass.h"
+#include "sampleclass.h"
 #include <iostream>
 
 #include "doctor.h"

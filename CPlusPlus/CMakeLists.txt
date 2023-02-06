@@ -4,9 +4,11 @@ project(CPlusPlus LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+#set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
+set(CMAKE_CXX_FLAGS "-Wno-error=deprecated-declarations -Wno-deprecated-declarations ")
 
-find_package(PkgConfig)
+find_package(PkgConfig REQUIRED)
 
 pkg_check_modules(GTKMM REQUIRED gtkmm-3.0) # look into FindPkgConfig.cmake,
 
@@ -14,13 +16,21 @@ include_directories(${GTKMM_INCLUDE_DIRS})
 link_directories(${GTKMM_LIBRARY_DIRS})
 
 
-aux_source_directory(. DIR_SRCS)
-include_directories(./ ./class ./derive)
-#mainwindow.cpp
-add_subdirectory(class)
-add_subdirectory(derive)
+include_directories (Class Derive)
 
-add_executable(CPlusPlus ${DIR_SRCS})
+aux_source_directory(Class Class)
+aux_source_directory(Derive Derive)
 
 
-target_link_libraries(CPlusPlus ${GTKMM_LIBRARIES} class derive)
+set(PROJECT_SOURCES
+        main.cpp
+        mainwindow.cpp
+        mainwindow.h
+#        mainwindow.ui
+        ${Class}
+        ${Derive}
+)
+
+add_executable(CPlusPlus ${PROJECT_SOURCES})
+
+target_link_libraries(CPlusPlus ${GTKMM_LIBRARIES})

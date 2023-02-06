@@ -6,32 +6,32 @@ MainWindow::MainWindow(Gtk::ApplicationWindow::BaseObjectType *obj, const Glib::
 {
 
 
-    builder->get_widget("button_copy", button_copy);
-    builder->get_widget("button_datatype", button_datatype);
-    builder->get_widget("button_array", button_array);
-    builder->get_widget("button_virtual", button_virtual);
-    builder->get_widget("button_visit_control", button_visit_control);
+//    builder->get_widget("button_copy", button_copy);
+//    builder->get_widget("button_datatype", button_datatype);
+//    builder->get_widget("button_array", button_array);
+//    builder->get_widget("button_virtual", button_virtual);
+//    builder->get_widget("button_visit_control", button_visit_control);
 
 
-    //    builder->get_widget("textview_copy", textview_copy);
+//    //    builder->get_widget("textview_copy", textview_copy);
 
 
-    textbuffer = Glib::RefPtr<Gtk::TextBuffer>::cast_dynamic(
-                builder->get_object("textbuffer")
-                );
-    liststore = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(
-                builder->get_object("liststore")
-                );
+//    textbuffer = Glib::RefPtr<Gtk::TextBuffer>::cast_dynamic(
+//                builder->get_object("textbuffer")
+//                );
+//    liststore = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(
+//                builder->get_object("liststore")
+//                );
 
 
-    //      builder->get_widget("textview_copy", textview_copy);
+//    //      builder->get_widget("textview_copy", textview_copy);
 
-    //    button_copy->signal_clicked().connect(sigc::mem_fun(sc, &SampleClass::on_button_copy_clicked));
-    button_copy->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_copy_clicked));
-    button_datatype->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_datatype_clicked));
-    button_array->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_array_clicked));
-    button_virtual->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_virtual_clicked));
-    button_visit_control->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_visit_control_clicked));
+//    //    button_copy->signal_clicked().connect(sigc::mem_fun(sc, &SampleClass::on_button_copy_clicked));
+//    button_copy->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_copy_clicked));
+//    button_datatype->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_datatype_clicked));
+//    button_array->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_array_clicked));
+//    button_virtual->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_virtual_clicked));
+//    button_visit_control->signal_clicked().connect(sigc::mem_fun(*this, &MainWindow::on_button_visit_control_clicked));
 
 
 }
