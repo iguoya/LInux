@@ -37,7 +37,7 @@ using namespace Glib;
 
 class MainWindow : public ApplicationWindow {
 public:
-    MainWindow(BaseObjectType* obj, RefPtr<Builder> const& builder);
+    MainWindow();
 
     virtual ~MainWindow() = default;
 protected:
@@ -62,6 +62,23 @@ private:
     RefPtr<ListStore> liststore;
 
     SampleClass sc;
+
+
+private:
+    Paned container;
+    Notebook notebook;
+    Frame leftFrame;
+    Frame rightFrame;
+
+    Fixed fixed;
+    ScrolledWindow scrolledWindow;
+    Button button1;
+    Button button2;
+    Button button3;
+    Label label1;
+    Label label2;
+    int button1Clicked = 0;
+    int button2Clicked = 0;
 };
 
 #endif // MAINWINDOW_H

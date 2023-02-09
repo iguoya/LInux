@@ -3,6 +3,9 @@
 #include "mainwindow.h"
 
 using namespace std;
+using namespace Glib;
+using namespace Gtk;
+
 
 //static void on_button_clicked()
 //{
@@ -13,32 +16,33 @@ using namespace std;
 int main (int argc, char **argv)
 {
 
-    auto app = Gtk::Application::create(argc, argv, "de.engelmarkus.example");
+    auto app = Application::create("cn.yatiger.gtkmm");
 
-    auto builder = Gtk::Builder::create_from_file("../CPlusPlus/mainwindow.glade");
-    MainWindow* window = nullptr;
+//    auto builder = Builder::create_from_file("../CPlusPlus/mainwindow.glade");
+//    MainWindow window;// = nullptr;
+    return app->make_window_and_run<MainWindow>(argc, argv);
 
-    builder->get_widget_derived("window", window);
+//    builder->get_widget_derived("window", window);
 
-    auto r = app->run(*window);
+//    auto r = app->run(*window);
 
-    delete window;
+//    delete window;
 
-    return r;
+//    return r;
 
 
 
-    //    Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "org.gtkmm.example");
+    //    Glib::RefPtr<Application> app = Application::create(argc, argv, "org.gtkmm.example");
 
     //    MainWindow mainwindow;
 
     //    //Shows the window and returns when it is closed.
     //    return app->run(mainwindow);
 
-    //  auto app = Gtk::Application::create(argc, argv, "org.gtkmm.example");
+    //  auto app = Application::create(argc, argv, "org.gtkmm.example");
 
     //  //Load the GtkBuilder file and instantiate its widgets:
-    //  auto refBuilder = Gtk::Builder::create();
+    //  auto refBuilder = Builder::create();
     //  try
     //  {
     //    refBuilder->add_from_file("../CPlusPlus/window.glade");
@@ -49,10 +53,10 @@ int main (int argc, char **argv)
     //    return 1;
     //  }
 
-    //  Gtk::Window* window = nullptr;
+    //  Window* window = nullptr;
     //  //Get the GtkBuilder-instantiated Dialog:
     //  refBuilder->get_widget("window", window);
-    //  Gtk::Button* pButton = nullptr;
+    //  Button* pButton = nullptr;
     //  refBuilder->get_widget("button_copy", pButton);
     //  pButton->signal_clicked().connect(sigc::ptr_fun(on_button_clicked));
 

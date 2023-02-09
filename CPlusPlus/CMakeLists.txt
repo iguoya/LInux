@@ -10,7 +10,7 @@ set(CMAKE_CXX_FLAGS "-Wno-error=deprecated-declarations -Wno-deprecated-declarat
 
 find_package(PkgConfig REQUIRED)
 
-pkg_check_modules(GTKMM REQUIRED gtkmm-3.0) # look into FindPkgConfig.cmake,
+pkg_check_modules(GTKMM REQUIRED gtkmm-4.0) # look into FindPkgConfig.cmake,
 
 include_directories(${GTKMM_INCLUDE_DIRS})
 link_directories(${GTKMM_LIBRARY_DIRS})

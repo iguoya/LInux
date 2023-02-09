@@ -1,9 +1,52 @@
 #include "mainwindow.h"
 #include <iostream>
 
-MainWindow::MainWindow(Gtk::ApplicationWindow::BaseObjectType *obj, const Glib::RefPtr<Gtk::Builder> &builder)
-    : Gtk::ApplicationWindow(obj), builder{builder}
+//MainWindow::MainWindow(Gtk::ApplicationWindow::BaseObjectType *obj, const Glib::RefPtr<Gtk::Builder> &builder)
+//    : Gtk::ApplicationWindow(obj)
+//    , builder{builder}
+MainWindow::MainWindow():container(Orientation::HORIZONTAL)
 {
+    set_title("C++ 程序设计实践");
+    set_default_size(1200, 1600);
+
+    set_child(container);
+
+    container.set_start_child(leftFrame);
+    container.set_end_child(rightFrame);
+
+    leftFrame.set_child(notebook);
+
+//    panel.add(scrolledWindow);
+//    panel.add(button3);
+////    add(scrolledWindow);
+//      scrolledWindow.add(fixed);
+
+//      button1.set_label("button1");
+//      button1.signal_button_release_event().connect([&](GdkEventButton*) {
+//        label1.set_text(ustring::compose("button1 clicked %1 times", ++button1Clicked));
+//        return true;
+//      });
+//      fixed.add(button1);
+//      fixed.move(button1, 50, 50);
+
+//      button2.set_label("button2");
+//      button2.set_size_request(200, 75);
+//      button2.signal_button_release_event().connect([&](GdkEventButton*) {
+//        label2.set_text(ustring::compose("button2 clicked %1 times", ++button2Clicked));
+//        return true;
+//      });
+//      fixed.add(button2);
+//      fixed.move(button2, 50, 100);
+
+//      label1.set_text(ustring::compose("button1 clicked %1 times", button1Clicked));
+//      fixed.add(label1);
+//      fixed.move(label1, 50, 200);
+
+//      label2.set_text(ustring::compose("button2 clicked %1 times", button2Clicked));
+//      fixed.add(label2);
+//      fixed.move(label2, 50, 230);
+
+
 
 
 //    builder->get_widget("button_copy", button_copy);
@@ -75,45 +118,45 @@ void MainWindow::on_button_copy_clicked()
 
 void MainWindow::on_button_datatype_clicked()
 {
-    auto liststore = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(
-                builder->get_object("liststore_datatype")
-                );
-    auto row = *(liststore->append());
-    typedef struct {
-        ustring name;
-        size_t size;
-        size_t umax;
-        long long min;
-        long long max;
-    } DataType;
+//    auto liststore = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(
+//                builder->get_object("liststore_datatype")
+//                );
+//    auto row = *(liststore->append());
+//    typedef struct {
+//        ustring name;
+//        size_t size;
+//        size_t umax;
+//        long long min;
+//        long long max;
+//    } DataType;
 
-    vector<DataType> items = {
-        {"char", sizeof(char), UCHAR_MAX, CHAR_MIN, CHAR_MAX},
-        {"short", sizeof(short), USHRT_MAX, SHRT_MIN, SHRT_MAX},
-        {"int", sizeof(int), UINT_MAX, INT_MIN, INT_MAX},
-        {"long", sizeof(long), ULONG_MAX, LONG_MIN, LONG_MAX},
-        {"long long", sizeof(long long), ULLONG_MAX, LLONG_MIN, LLONG_MAX},
-        //        {"long int", sizeof(long int)},
-        {"float", sizeof(float), 0, -1, -1},
-        {"double", sizeof(double), 0, -1, -1},
-        {"string", sizeof(string), 0, -1, -1},
-        {"vector<int>", sizeof(vector<int>), 0, -1, -1},
-        {"list<int>", sizeof(list<int>), 0, -1, -1},
-        {"map<int,int>", sizeof(std::map<int,int>), 0, -1, -1},
-    };
-    size_t index = 1;
-    for(auto item : items) {
-        row.set_value(0, index);
-        row.set_value(1, item.name);
-        row.set_value(2, item.size);
-        row.set_value(3, item.umax);
-        row.set_value(4, item.min);
-        row.set_value(5, item.max);
-        if(index != items.size()) {
-            row = *(liststore->append());
-        }
-        ++index;
-    }
+//    vector<DataType> items = {
+//        {"char", sizeof(char), UCHAR_MAX, CHAR_MIN, CHAR_MAX},
+//        {"short", sizeof(short), USHRT_MAX, SHRT_MIN, SHRT_MAX},
+//        {"int", sizeof(int), UINT_MAX, INT_MIN, INT_MAX},
+//        {"long", sizeof(long), ULONG_MAX, LONG_MIN, LONG_MAX},
+//        {"long long", sizeof(long long), ULLONG_MAX, LLONG_MIN, LLONG_MAX},
+//        //        {"long int", sizeof(long int)},
+//        {"float", sizeof(float), 0, -1, -1},
+//        {"double", sizeof(double), 0, -1, -1},
+//        {"string", sizeof(string), 0, -1, -1},
+//        {"vector<int>", sizeof(vector<int>), 0, -1, -1},
+//        {"list<int>", sizeof(list<int>), 0, -1, -1},
+//        {"map<int,int>", sizeof(std::map<int,int>), 0, -1, -1},
+//    };
+//    size_t index = 1;
+//    for(auto item : items) {
+//        row.set_value(0, index);
+//        row.set_value(1, item.name);
+//        row.set_value(2, item.size);
+//        row.set_value(3, item.umax);
+//        row.set_value(4, item.min);
+//        row.set_value(5, item.max);
+//        if(index != items.size()) {
+//            row = *(liststore->append());
+//        }
+//        ++index;
+//    }
 
 }
 
