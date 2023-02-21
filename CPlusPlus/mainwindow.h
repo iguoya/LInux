@@ -4,7 +4,12 @@
 #include <gtkmm.h>
 #include <gtkmm/application.h>
 #include "sampleclass.h"
+
+
 #include <iostream>
+#include <string>
+#include <vector>
+#include <map>
 
 #include "doctor.h"
 #include "officer.h"
@@ -19,7 +24,7 @@ using namespace std;
 using namespace Gtk;
 using namespace Glib;
 
-//class Cols: public Gtk::TreeModel::ColumnRecord {
+//class Cols: public TreeModel::ColumnRecord {
 //    public:
 //        Cols() {
 //            // This order must match the column order in the .glade file
@@ -29,9 +34,9 @@ using namespace Glib;
 //        }
 
 //        // These types must match those for the model in the .glade file
-//        Gtk::TreeModelColumn<int> id;
-//        Gtk::TreeModelColumn<ustring> name;
-//        Gtk::TreeModelColumn<int> size;
+//        TreeModelColumn<int> id;
+//        TreeModelColumn<ustring> name;
+//        TreeModelColumn<int> size;
 //};
 
 
@@ -47,6 +52,22 @@ protected:
     void on_button_virtual_clicked();
     void on_button_visit_control_clicked();
 
+    void on_treeview_row_activated(const Gtk::TreeModel::Path& path, Gtk::TreeViewColumn* column);
+    //Tree model columns:
+    class ModelColumns : public TreeModel::ColumnRecord
+    {
+    public:
+
+      ModelColumns()
+      { add(item); }
+
+//      TreeModelColumn<int> m_col_id;
+      TreeModelColumn<Glib::ustring> item;
+    };
+
+    ModelColumns m_Columns;
+private:
+    void set_menu();
 private:
     RefPtr<Builder> builder;
 
@@ -66,19 +87,22 @@ private:
 
 private:
     Paned container;
-    Notebook notebook;
     Frame leftFrame;
     Frame rightFrame;
+    Notebook notebook;
+    TreeView treeView;
+    RefPtr<TreeStore> treeModel;
 
-    Fixed fixed;
+    Box basicPanel;
+    Box classPanel;
+    Box rightLayout;
+
+    vector<Button> basicButtons;
     ScrolledWindow scrolledWindow;
-    Button button1;
-    Button button2;
-    Button button3;
-    Label label1;
-    Label label2;
-    int button1Clicked = 0;
-    int button2Clicked = 0;
+
+    Label label;
+    TreeView view;
+    TextView text;
 };
 
 #endif // MAINWINDOW_H

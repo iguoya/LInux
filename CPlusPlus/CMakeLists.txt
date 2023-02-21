@@ -5,8 +5,8 @@ project(CPlusPlus LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
-set(CMAKE_CXX_FLAGS "-Wno-error=deprecated-declarations -Wno-deprecated-declarations ")
+#-std=c++2a
+set(CMAKE_CXX_FLAGS " -Wno-error=deprecated-declarations -Wno-deprecated-declarations ")
 
 find_package(PkgConfig REQUIRED)
 
