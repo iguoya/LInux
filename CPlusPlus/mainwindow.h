@@ -20,6 +20,9 @@
 
 #include "point.h"
 
+//#include "product.h"
+#include "factory.h"
+
 using namespace std;
 using namespace Gtk;
 using namespace Glib;
@@ -43,11 +46,11 @@ class MenuColumn : public TreeModel::ColumnRecord
 {
 public:
 
-    MenuColumn()
-    { add(item); }
+    MenuColumn() { add(name); add(type);}
 
     //      TreeModelColumn<int> m_col_id;
-    TreeModelColumn<Glib::ustring> item;
+    TreeModelColumn<Glib::ustring> name;
+    TreeModelColumn<ProductType> type;
 };
 
 //Tree model columns:

@@ -5,7 +5,7 @@ FeatureFactory::FeatureFactory()
 
 }
 
-FeatureFactory *FeatureFactory::create(FeatureType e)
-{
+//FeatureFactory *FeatureFactory::create(FeatureType e)
+//{
 
-}
+//}

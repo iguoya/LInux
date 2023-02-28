@@ -4,7 +4,7 @@
 MainWindow::MainWindow()
 {
     set_title("C++ 程序设计实践");
-    set_default_size(1200, 800);
+    set_default_size(1600, 1000);
     //    set_position(Gtk::WIN_POS_CENTER);
     set_child(container);
     //    container.set_hexpand(false);
@@ -154,14 +154,14 @@ MainWindow::MainWindow()
 void MainWindow::on_treeview_row_activated(const Gtk::TreeModel::Path& path,
                                            Gtk::TreeViewColumn* /* column */)
 {
-    const auto iter = menuModel->get_iter(path);
-    if(iter)
-    {
-        const auto row = *iter;
-        buffer->set_text(row[m_menuColumns.item]);
-        std::cout << "Row activated: ID= none, AAAA Name="
-            << row[m_menuColumns.item] << std::endl;
-    }
+//    const auto iter = menuModel->get_iter(path);
+//    if(iter)
+//    {
+//        const auto row = *iter;
+//        buffer->set_text(row[m_menuColumns.item]);
+//        std::cout << "Row activated: ID= none, AAAA Name="
+//            << row[m_menuColumns.item] << std::endl;
+//    }
 }
 
 void MainWindow::on_selection_changed()
@@ -171,8 +171,11 @@ void MainWindow::on_selection_changed()
     {
       auto row = *iter;
       std::cout << "Row activated: ID= none, Name="
-          << row[m_menuColumns.item] << std::endl;
+          << row[m_menuColumns.name] << std::endl;
       //Do something with the row.
+      Factory factory;
+      Product* product = factory.create(row[m_menuColumns.type]);
+      product->run();
     }
 }
 
@@ -182,32 +185,37 @@ void MainWindow::set_menu()
     menu.set_model(menuModel);
     //    treeView.set_reorderable();
 
-    vector<pair<string, vector<string>>> catalogue {
-        {"语言特性", {"const", "define", "函数指针"}},
-        {"标准模板库", {"const", "函数指针"}},
-        {"算法与迭代器", {"const", "函数指针"}},
-        {"类和对象", {"const", "函数指针"}},
-        {"继承和派生", {"const", "函数指针"}},
-        {"模板与泛型", {"const", "函数指针"}},
-        {"智能指针", {"const", "函数指针"}},
-        {"并发与多线程", {"const", "函数指针"}},
-        {"内存管理", {"const", "函数指针"}},
-        {"高级话题/新标准", {"const", "函数指针"}},
+    vector<pair<string, vector<pair<ProductType, string>>>> catalogue {
+        {
+            "语言特性", {
+                {kConst, "const"},  {kFunctionPointer, "函数指针"}
+            }
+        }
+//        {"标准模板库", {"const", "函数指针"}},
+//        {"算法与迭代器", {"const", "函数指针"}},
+//        {"类和对象", {"const", "函数指针"}},
+//        {"继承和派生", {"const", "函数指针"}},
+//        {"模板与泛型", {"const", "函数指针"}},
+//        {"智能指针", {"const", "函数指针"}},
+//        {"并发与多线程", {"const", "函数指针"}},
+//        {"内存管理", {"const", "函数指针"}},
+//        {"高级话题/新标准", {"const", "函数指针"}},
     };
 
     for(auto chapter : catalogue) {
         auto row = *(menuModel->append());
-        row[m_menuColumns.item] = chapter.first;
+        row[m_menuColumns.name] = chapter.first;
         for(auto item : chapter.second) {
             auto childrow = *(menuModel->append(row.children()));
-            childrow[m_menuColumns.item] = item;
+            childrow[m_menuColumns.type] = item.first;
+            childrow[m_menuColumns.name] = item.second;
         }
     }
 
 
     //Add the TreeView's view columns:
     //    treeView.append_column("ID", m_Columns.m_col_id);
-    menu.append_column("Name", m_menuColumns.item);
+    menu.append_column("Name", m_menuColumns.name);
 
     menuSelection = menu.get_selection();
 
