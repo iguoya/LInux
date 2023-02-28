@@ -38,6 +38,29 @@ using namespace Glib;
 //        TreeModelColumn<ustring> name;
 //        TreeModelColumn<int> size;
 //};
+//Tree model columns:
+class MenuColumn : public TreeModel::ColumnRecord
+{
+public:
+
+    MenuColumn()
+    { add(item); }
+
+    //      TreeModelColumn<int> m_col_id;
+    TreeModelColumn<Glib::ustring> item;
+};
+
+//Tree model columns:
+class ModelColumns : public Gtk::TreeModel::ColumnRecord
+{
+public:
+
+    ModelColumns()
+    { add(m_col_id); add(m_col_name); }
+
+    Gtk::TreeModelColumn<int> m_col_id;
+    Gtk::TreeModelColumn<Glib::ustring> m_col_name;
+};
 
 
 class MainWindow : public ApplicationWindow {
@@ -53,22 +76,13 @@ protected:
     void on_button_visit_control_clicked();
 
     void on_treeview_row_activated(const Gtk::TreeModel::Path& path, Gtk::TreeViewColumn* column);
-    //Tree model columns:
-    class ModelColumns : public TreeModel::ColumnRecord
-    {
-    public:
+    void on_selection_changed();
 
-      ModelColumns()
-      { add(item); }
 
-//      TreeModelColumn<int> m_col_id;
-      TreeModelColumn<Glib::ustring> item;
-    };
-
-    ModelColumns m_Columns;
 private:
     void set_menu();
 private:
+
     RefPtr<Builder> builder;
 
     Button* button_copy;
@@ -89,20 +103,29 @@ private:
     Paned container;
     Frame leftFrame;
     Frame rightFrame;
+
+
+    Grid rightLayout;
+
     Notebook notebook;
-    TreeView treeView;
-    RefPtr<TreeStore> treeModel;
+    TreeView menu;
+    RefPtr<TreeStore> menuModel;
+    RefPtr<TreeSelection> menuSelection;
 
-    Box basicPanel;
-    Box classPanel;
-    Box rightLayout;
+    MenuColumn m_menuColumns;
 
-    vector<Button> basicButtons;
+
     ScrolledWindow scrolledWindow;
 
     Label label;
-    TreeView view;
-    TextView text;
+    TreeView result;
+    RefPtr<TreeStore> resultModel;
+    ModelColumns m_Columns;
+    //    RefPtr<TreeSelection> menuSelection;
+
+
+    TextView message;
+    RefPtr<TextBuffer> buffer;
 };
 
 #endif // MAINWINDOW_H

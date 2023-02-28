@@ -1,60 +1,42 @@
 #include "mainwindow.h"
 
 
-MainWindow::MainWindow():
-    basicPanel(Orientation::VERTICAL),
-    classPanel(Orientation::VERTICAL),
-    rightLayout(Orientation::VERTICAL),
-    label("hello")
+MainWindow::MainWindow()
 {
     set_title("C++ 程序设计实践");
-    set_default_size(1200, 1600);
-
+    set_default_size(1200, 800);
+    //    set_position(Gtk::WIN_POS_CENTER);
     set_child(container);
-
+    //    container.set_hexpand(false);
     container.set_start_child(leftFrame);
-    container.set_end_child(rightFrame);
-    //    container.set_
+    leftFrame.set_margin(10);
+    container.set_resize_start_child(false);
 
-    leftFrame.set_child(treeView);
+
+    container.set_end_child(rightFrame);
+    rightFrame.set_margin(10);
+
+    leftFrame.set_child(menu);
 
     rightFrame.set_child(rightLayout);
-
-    rightLayout.append(label);
-    rightLayout.append(view);
-    //    scrolledWindow.set_child(view);
-    rightLayout.append(text);
-
-    //scrolledWindow.set_child(view)
+    rightLayout.set_margin(10);
 
 
-    notebook.append_page(basicPanel, "基本功能");
-    notebook.append_page(classPanel, "类与对象");
 
-    vector<string> basicNames {
-        "功能A",
-        "功能A",
-        "功能A",
-    };
+    rightLayout.set_row_homogeneous(true);
+    rightLayout.set_column_homogeneous(true);
 
-    for(auto m : basicNames) {
-        basicPanel.append(*(new Button(m)));
-    }
+    message.set_margin(10);
+    rightLayout.attach(message, 0, 0, 1, 1);
+    buffer = TextBuffer::create();
+    message.set_buffer(buffer);
 
-    vector<string> classNames {
-        "功能BBB",
-        "功能BBB",
-        "功能BBB",
-    };
-
-    for(auto m : classNames) {
-        classPanel.append(*(new Button(m)));
-    }
+    scrolledWindow.set_child(result);
+    scrolledWindow.set_margin(10);
+    rightLayout.attach(scrolledWindow, 0, 1, 1, 5);
 
 
-    // static Glib::RefPtr<TreeStore> create(const TreeModelColumnRecord& columns);
-    //Create the Tree model:
-    //treeModel = TreeStore::create(m_Columns);
+
 
 
     set_menu();
@@ -62,8 +44,50 @@ MainWindow::MainWindow():
 
 
     //Connect signal:
-    treeView.signal_row_activated().connect(sigc::mem_fun(*this,
-                                                          &MainWindow::on_treeview_row_activated) );
+    menu.signal_row_activated().connect(sigc::mem_fun(*this,
+                                                      &MainWindow::on_treeview_row_activated) );
+
+
+
+    //Create the Tree model:
+      resultModel = Gtk::TreeStore::create(m_Columns);
+      result.set_model(resultModel);
+
+      //All the items to be reordered with drag-and-drop:
+      result.set_reorderable();
+
+      //Fill the TreeView's model
+      auto row = *(resultModel->append());
+      row[m_Columns.m_col_id] = 1;
+      row[m_Columns.m_col_name] = "Billy Bob";
+
+      auto childrow = *(resultModel->append(row.children()));
+      childrow[m_Columns.m_col_id] = 11;
+      childrow[m_Columns.m_col_name] = "Billy Bob Junior";
+
+      childrow = *(resultModel->append(row.children()));
+      childrow[m_Columns.m_col_id] = 12;
+      childrow[m_Columns.m_col_name] = "Sue Bob";
+
+      row = *(resultModel->append());
+      row[m_Columns.m_col_id] = 2;
+      row[m_Columns.m_col_name] = "Joey Jojo";
+
+
+      row = *(resultModel->append());
+      row[m_Columns.m_col_id] = 3;
+      row[m_Columns.m_col_name] = "Rob McRoberts";
+
+      childrow = *(resultModel->append(row.children()));
+      childrow[m_Columns.m_col_id] = 31;
+      childrow[m_Columns.m_col_name] = "Xavier McRoberts";
+
+      //Add the TreeView's view columns:
+      result.append_column("ID", m_Columns.m_col_id);
+      result.append_column("Name", m_Columns.m_col_name);
+
+
+
     //    panel.add(scrolledWindow);
     //    panel.add(button3);
     ////    add(scrolledWindow);
@@ -130,23 +154,36 @@ MainWindow::MainWindow():
 void MainWindow::on_treeview_row_activated(const Gtk::TreeModel::Path& path,
                                            Gtk::TreeViewColumn* /* column */)
 {
-    const auto iter = treeModel->get_iter(path);
-    //  if(iter)
-    //  {
-    //    const auto row = *iter;
-    //    std::cout << "Row activated: ID=" << row[m_Columns.m_col_id] << ", Name="
-    //        << row[m_Columns.item] << std::endl;
-    //  }
+    const auto iter = menuModel->get_iter(path);
+    if(iter)
+    {
+        const auto row = *iter;
+        buffer->set_text(row[m_menuColumns.item]);
+        std::cout << "Row activated: ID= none, AAAA Name="
+            << row[m_menuColumns.item] << std::endl;
+    }
+}
+
+void MainWindow::on_selection_changed()
+{
+    auto iter = menuSelection->get_selected();
+    if(iter) //If anything is selected
+    {
+      auto row = *iter;
+      std::cout << "Row activated: ID= none, Name="
+          << row[m_menuColumns.item] << std::endl;
+      //Do something with the row.
+    }
 }
 
 void MainWindow::set_menu()
 {
-    treeModel = TreeStore::create(m_Columns);
-    treeView.set_model(treeModel);
+    menuModel = TreeStore::create(m_menuColumns);
+    menu.set_model(menuModel);
     //    treeView.set_reorderable();
 
     vector<pair<string, vector<string>>> catalogue {
-        {"程序设计基础", {"const", "函数指针"}},
+        {"语言特性", {"const", "define", "函数指针"}},
         {"标准模板库", {"const", "函数指针"}},
         {"算法与迭代器", {"const", "函数指针"}},
         {"类和对象", {"const", "函数指针"}},
@@ -159,18 +196,24 @@ void MainWindow::set_menu()
     };
 
     for(auto chapter : catalogue) {
-        auto row = *(treeModel->append());
-        row[m_Columns.item] = chapter.first;
+        auto row = *(menuModel->append());
+        row[m_menuColumns.item] = chapter.first;
         for(auto item : chapter.second) {
-            auto childrow = *(treeModel->append(row.children()));
-            childrow[m_Columns.item] = item;
+            auto childrow = *(menuModel->append(row.children()));
+            childrow[m_menuColumns.item] = item;
         }
     }
 
 
     //Add the TreeView's view columns:
     //    treeView.append_column("ID", m_Columns.m_col_id);
-    treeView.append_column("Name", m_Columns.item);
+    menu.append_column("Name", m_menuColumns.item);
+
+    menuSelection = menu.get_selection();
+
+    menuSelection->signal_changed().connect(
+                sigc::mem_fun(*this, &MainWindow::on_selection_changed)
+                );
 
 }
 

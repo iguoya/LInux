@@ -16,8 +16,9 @@ include_directories(${GTKMM_INCLUDE_DIRS})
 link_directories(${GTKMM_LIBRARY_DIRS})
 
 
-include_directories (Class Derive)
+include_directories (Class Derive Feature)
 
+aux_source_directory(Feature Feature)
 aux_source_directory(Class Class)
 aux_source_directory(Derive Derive)
 
@@ -27,6 +28,7 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
 #        mainwindow.ui
+        ${Feature}
         ${Class}
         ${Derive}
 )
