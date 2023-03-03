@@ -46,7 +46,9 @@ class MenuColumn : public TreeModel::ColumnRecord
 {
 public:
 
-    MenuColumn() { add(name); add(type);}
+    MenuColumn() {
+        add(name); add(type);
+    }
 
     //      TreeModelColumn<int> m_col_id;
     TreeModelColumn<Glib::ustring> name;
@@ -54,15 +56,18 @@ public:
 };
 
 //Tree model columns:
-class ModelColumns : public Gtk::TreeModel::ColumnRecord
+class ContentColumns : public TreeModel::ColumnRecord
 {
 public:
 
-    ModelColumns()
-    { add(m_col_id); add(m_col_name); }
+    ContentColumns() {
+        add(id); add(name); add(input); add(result);
+    }
 
-    Gtk::TreeModelColumn<int> m_col_id;
-    Gtk::TreeModelColumn<Glib::ustring> m_col_name;
+    TreeModelColumn<size_t> id;
+    TreeModelColumn<Glib::ustring> name;
+    TreeModelColumn<Glib::ustring> input;
+    TreeModelColumn<Glib::ustring> result;
 };
 
 
@@ -78,13 +83,15 @@ protected:
     void on_button_virtual_clicked();
     void on_button_visit_control_clicked();
 
-    void on_treeview_row_activated(const Gtk::TreeModel::Path& path, Gtk::TreeViewColumn* column);
+    void on_treeview_row_activated(const TreeModel::Path& path, TreeViewColumn* column);
     void on_selection_changed();
 
+    void notice(string msg);
+    void display(vector<Row> result);
 
 private:
     void set_menu();
-private:
+
 
     RefPtr<Builder> builder;
 
@@ -118,17 +125,19 @@ private:
     MenuColumn m_menuColumns;
 
 
-    ScrolledWindow scrolledWindow;
+    ScrolledWindow scrolledTextView;
+    ScrolledWindow scrolledTreeView;
 
     Label label;
-    TreeView result;
+    TreeView treeView;
     RefPtr<TreeStore> resultModel;
-    ModelColumns m_Columns;
+    ContentColumns m_Columns;
     //    RefPtr<TreeSelection> menuSelection;
 
 
-    TextView message;
-    RefPtr<TextBuffer> buffer;
+    TextView textView;
+    RefPtr<TextBuffer> textBuffer;
+    RefPtr<TextBuffer::Mark> m_endMark;
 };
 
 #endif // MAINWINDOW_H

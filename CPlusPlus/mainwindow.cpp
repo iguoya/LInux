@@ -5,7 +5,7 @@ MainWindow::MainWindow()
 {
     set_title("C++ 程序设计实践");
     set_default_size(1600, 1000);
-    //    set_position(Gtk::WIN_POS_CENTER);
+    //    set_position(WIN_POS_CENTER);
     set_child(container);
     //    container.set_hexpand(false);
     container.set_start_child(leftFrame);
@@ -21,22 +21,26 @@ MainWindow::MainWindow()
     rightFrame.set_child(rightLayout);
     rightLayout.set_margin(10);
 
-
-
     rightLayout.set_row_homogeneous(true);
     rightLayout.set_column_homogeneous(true);
+    rightLayout.attach(scrolledTextView, 0, 0, 1, 1);
 
-    message.set_margin(10);
-    rightLayout.attach(message, 0, 0, 1, 1);
-    buffer = TextBuffer::create();
-    message.set_buffer(buffer);
+    scrolledTextView.set_margin(10);
+    scrolledTextView.set_policy(Gtk::PolicyType::AUTOMATIC, Gtk::PolicyType::ALWAYS);
+    scrolledTextView.set_expand();
+    scrolledTextView.set_child(textView);
 
-    scrolledWindow.set_child(result);
-    scrolledWindow.set_margin(10);
-    rightLayout.attach(scrolledWindow, 0, 1, 1, 5);
+    textBuffer = TextBuffer::create();
+    textView.set_buffer(textBuffer);
+    m_endMark = textView.get_buffer()->create_mark(textView.get_buffer()->end(), false);
 
 
 
+    rightLayout.attach(scrolledTreeView, 0, 1, 1, 5);
+    scrolledTreeView.set_margin(10);
+    scrolledTreeView.set_policy(Gtk::PolicyType::AUTOMATIC, Gtk::PolicyType::ALWAYS);
+    scrolledTreeView.set_expand();
+    scrolledTreeView.set_child(treeView);
 
 
     set_menu();
@@ -50,42 +54,43 @@ MainWindow::MainWindow()
 
 
     //Create the Tree model:
-      resultModel = Gtk::TreeStore::create(m_Columns);
-      result.set_model(resultModel);
+    resultModel = TreeStore::create(m_Columns);
+    treeView.set_model(resultModel);
 
-      //All the items to be reordered with drag-and-drop:
-      result.set_reorderable();
+    //All the items to be reordered with drag-and-drop:
+//    treeView.set_reorderable();
 
-      //Fill the TreeView's model
-      auto row = *(resultModel->append());
-      row[m_Columns.m_col_id] = 1;
-      row[m_Columns.m_col_name] = "Billy Bob";
+    //      //Fill the TreeView's model
+    //      auto row = *(resultModel->append());
+    //      row[m_Columns.id] = 1;
+    //      row[m_Columns.name] = "Billy Bob";
 
-      auto childrow = *(resultModel->append(row.children()));
-      childrow[m_Columns.m_col_id] = 11;
-      childrow[m_Columns.m_col_name] = "Billy Bob Junior";
+    //      auto childrow = *(resultModel->append(row.children()));
+    //      childrow[m_Columns.id] = 11;
+    //      childrow[m_Columns.name] = "Billy Bob Junior";
 
-      childrow = *(resultModel->append(row.children()));
-      childrow[m_Columns.m_col_id] = 12;
-      childrow[m_Columns.m_col_name] = "Sue Bob";
+    //      childrow = *(resultModel->append(row.children()));
+    //      childrow[m_Columns.id] = 12;
+    //      childrow[m_Columns.name] = "Sue Bob";
 
-      row = *(resultModel->append());
-      row[m_Columns.m_col_id] = 2;
-      row[m_Columns.m_col_name] = "Joey Jojo";
+    //      row = *(resultModel->append());
+    //      row[m_Columns.id] = 2;
+    //      row[m_Columns.name] = "Joey Jojo";
 
 
-      row = *(resultModel->append());
-      row[m_Columns.m_col_id] = 3;
-      row[m_Columns.m_col_name] = "Rob McRoberts";
+    //      row = *(resultModel->append());
+    //      row[m_Columns.id] = 3;
+    //      row[m_Columns.name] = "Rob McRoberts";
 
-      childrow = *(resultModel->append(row.children()));
-      childrow[m_Columns.m_col_id] = 31;
-      childrow[m_Columns.m_col_name] = "Xavier McRoberts";
+    //      childrow = *(resultModel->append(row.children()));
+    //      childrow[m_Columns.id] = 31;
+    //      childrow[m_Columns.name] = "Xavier McRoberts";
 
-      //Add the TreeView's view columns:
-      result.append_column("ID", m_Columns.m_col_id);
-      result.append_column("Name", m_Columns.m_col_name);
-
+    //Add the TreeView's view columns:
+    treeView.append_column("序号", m_Columns.id);
+    treeView.append_column("名称", m_Columns.name);
+    treeView.append_column("输入", m_Columns.input);
+    treeView.append_column("结果", m_Columns.result);
 
 
     //    panel.add(scrolledWindow);
@@ -131,10 +136,10 @@ MainWindow::MainWindow()
     //    //    builder->get_widget("textview_copy", textview_copy);
 
 
-    //    textbuffer = Glib::RefPtr<Gtk::TextBuffer>::cast_dynamic(
+    //    textbuffer = Glib::RefPtr<TextBuffer>::cast_dynamic(
     //                builder->get_object("textbuffer")
     //                );
-    //    liststore = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(
+    //    liststore = Glib::RefPtr<ListStore>::cast_dynamic(
     //                builder->get_object("liststore")
     //                );
 
@@ -151,17 +156,16 @@ MainWindow::MainWindow()
 
 }
 
-void MainWindow::on_treeview_row_activated(const Gtk::TreeModel::Path& path,
-                                           Gtk::TreeViewColumn* /* column */)
+void MainWindow::on_treeview_row_activated(const TreeModel::Path& path, TreeViewColumn* /* column */)
 {
-//    const auto iter = menuModel->get_iter(path);
-//    if(iter)
-//    {
-//        const auto row = *iter;
-//        buffer->set_text(row[m_menuColumns.item]);
-//        std::cout << "Row activated: ID= none, AAAA Name="
-//            << row[m_menuColumns.item] << std::endl;
-//    }
+    //    const auto iter = menuModel->get_iter(path);
+    //    if(iter)
+    //    {
+    //        const auto row = *iter;
+    //        buffer->set_text(row[m_menuColumns.item]);
+    //        std::cout << "Row activated: ID= none, AAAA Name="
+    //            << row[m_menuColumns.item] << std::endl;
+    //    }
 }
 
 void MainWindow::on_selection_changed()
@@ -169,14 +173,42 @@ void MainWindow::on_selection_changed()
     auto iter = menuSelection->get_selected();
     if(iter) //If anything is selected
     {
-      auto row = *iter;
-      std::cout << "Row activated: ID= none, Name="
+        auto row = *iter;
+        std::cout << "Row activated: ID= none, Name="
           << row[m_menuColumns.name] << std::endl;
-      //Do something with the row.
-      Factory factory;
-      Product* product = factory.create(row[m_menuColumns.type]);
-      product->run();
+        //Do something with the row.
+        Factory factory;
+        Product* product = factory.create(row[m_menuColumns.type]);
+
+        product->signal_notice().connect(sigc::mem_fun(*this, &MainWindow::notice));
+        product->signal_display().connect(sigc::mem_fun(*this, &MainWindow::display) );
+
+        product->run();
     }
+}
+
+void MainWindow::display(vector<Row> result)
+{
+    for(const auto &m : result) {
+        auto row = *(resultModel->append());
+        row[m_Columns.id] = m.id;
+        row[m_Columns.name] = m.name;
+        row[m_Columns.input] = m.input;
+        row[m_Columns.result] = m.result;
+    }
+    //      //Fill the TreeView's model
+    //      auto row = *(resultModel->append());
+    //      row[m_Columns.id] = 1;
+    //      row[m_Columns.name] = "Billy Bob";
+}
+
+void MainWindow::notice(string msg)
+{
+//    auto iter_end = textBuffer->get_iter_at_offset(textBuffer->get_char_count());
+//    textBuffer->insert(iter_end, ustring(msg+"\n"));
+    textBuffer->insert_at_cursor(ustring(msg+"\n"));
+    textView.scroll_to(m_endMark);
+//    buffer->set_text(ustring(msg));
 }
 
 void MainWindow::set_menu()
@@ -191,15 +223,15 @@ void MainWindow::set_menu()
                 {kConst, "const"},  {kFunctionPointer, "函数指针"}
             }
         }
-//        {"标准模板库", {"const", "函数指针"}},
-//        {"算法与迭代器", {"const", "函数指针"}},
-//        {"类和对象", {"const", "函数指针"}},
-//        {"继承和派生", {"const", "函数指针"}},
-//        {"模板与泛型", {"const", "函数指针"}},
-//        {"智能指针", {"const", "函数指针"}},
-//        {"并发与多线程", {"const", "函数指针"}},
-//        {"内存管理", {"const", "函数指针"}},
-//        {"高级话题/新标准", {"const", "函数指针"}},
+        //        {"标准模板库", {"const", "函数指针"}},
+        //        {"算法与迭代器", {"const", "函数指针"}},
+        //        {"类和对象", {"const", "函数指针"}},
+        //        {"继承和派生", {"const", "函数指针"}},
+        //        {"模板与泛型", {"const", "函数指针"}},
+        //        {"智能指针", {"const", "函数指针"}},
+        //        {"并发与多线程", {"const", "函数指针"}},
+        //        {"内存管理", {"const", "函数指针"}},
+        //        {"高级话题/新标准", {"const", "函数指针"}},
     };
 
     for(auto chapter : catalogue) {
@@ -265,7 +297,7 @@ void MainWindow::on_button_copy_clicked()
 
 void MainWindow::on_button_datatype_clicked()
 {
-    //    auto liststore = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(
+    //    auto liststore = Glib::RefPtr<ListStore>::cast_dynamic(
     //                builder->get_object("liststore_datatype")
     //                );
     //    auto row = *(liststore->append());
