@@ -4,10 +4,13 @@
 
 #include <iostream>
 #include <string>
+#include <boost/format.hpp>
 
 using namespace std;
 
 enum ProductType {
+    kHelloWorld,
+    kAuto,
     kConst,
     kStatic,
     kFunctionPointer
@@ -19,6 +22,8 @@ typedef struct {
     string input;
     string result;
 } Row;
+
+
 
 class Product
 {
@@ -40,6 +45,8 @@ public:
 protected:
     type_signal_notice m_notice;
     type_signal_display m_display;
+
+    vector<Row> result;
 };
 
 #endif // PRODUCT_H

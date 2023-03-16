@@ -1,8 +1,13 @@
 #include "mainwindow.h"
-
+#include <boost/type_index.hpp>
 
 MainWindow::MainWindow()
 {
+
+
+
+
+
     set_title("C++ 程序设计实践");
     set_default_size(1600, 1000);
     //    set_position(WIN_POS_CENTER);
@@ -23,7 +28,7 @@ MainWindow::MainWindow()
 
     rightLayout.set_row_homogeneous(true);
     rightLayout.set_column_homogeneous(true);
-    rightLayout.attach(scrolledTextView, 0, 0, 1, 1);
+    rightLayout.attach(scrolledTextView, 0, 0, 1, 2);
 
     scrolledTextView.set_margin(10);
     scrolledTextView.set_policy(Gtk::PolicyType::AUTOMATIC, Gtk::PolicyType::ALWAYS);
@@ -36,7 +41,7 @@ MainWindow::MainWindow()
 
 
 
-    rightLayout.attach(scrolledTreeView, 0, 1, 1, 5);
+    rightLayout.attach(scrolledTreeView, 0, 2, 1, 5);
     scrolledTreeView.set_margin(10);
     scrolledTreeView.set_policy(Gtk::PolicyType::AUTOMATIC, Gtk::PolicyType::ALWAYS);
     scrolledTreeView.set_expand();
@@ -56,6 +61,11 @@ MainWindow::MainWindow()
     //Create the Tree model:
     resultModel = TreeStore::create(m_Columns);
     treeView.set_model(resultModel);
+    //Add the TreeView's view columns:
+    treeView.append_column("序号", m_Columns.id);
+    treeView.append_column("名称", m_Columns.name);
+    treeView.append_column("输入", m_Columns.input);
+    treeView.append_column("结果", m_Columns.result);
 
     //All the items to be reordered with drag-and-drop:
 //    treeView.set_reorderable();
@@ -86,11 +96,7 @@ MainWindow::MainWindow()
     //      childrow[m_Columns.id] = 31;
     //      childrow[m_Columns.name] = "Xavier McRoberts";
 
-    //Add the TreeView's view columns:
-    treeView.append_column("序号", m_Columns.id);
-    treeView.append_column("名称", m_Columns.name);
-    treeView.append_column("输入", m_Columns.input);
-    treeView.append_column("结果", m_Columns.result);
+
 
 
     //    panel.add(scrolledWindow);
@@ -177,13 +183,18 @@ void MainWindow::on_selection_changed()
         std::cout << "Row activated: ID= none, Name="
           << row[m_menuColumns.name] << std::endl;
         //Do something with the row.
-        Factory factory;
-        Product* product = factory.create(row[m_menuColumns.type]);
 
-        product->signal_notice().connect(sigc::mem_fun(*this, &MainWindow::notice));
-        product->signal_display().connect(sigc::mem_fun(*this, &MainWindow::display) );
+//        cout<<boost::typeindex::type_id_with_cvr<decltype(row[m_menuColumns.name]>().pretty_name()<<endl;
+        auto product = (Product*)Factory::GetInstance()->CreateObject(row[m_menuColumns.className]);
 
-        product->run();
+//        Factory factory;
+//        Product* product = factory.create(row[m_menuColumns.type]);
+        if(product != nullptr) {
+            product->signal_notice().connect(sigc::mem_fun(*this, &MainWindow::notice));
+            product->signal_display().connect(sigc::mem_fun(*this, &MainWindow::display) );
+            product->run();
+        }
+
     }
 }
 
@@ -216,11 +227,15 @@ void MainWindow::set_menu()
     menuModel = TreeStore::create(m_menuColumns);
     menu.set_model(menuModel);
     //    treeView.set_reorderable();
-
-    vector<pair<string, vector<pair<ProductType, string>>>> catalogue {
+    vector<pair<string, vector<pair<string, string>>>> catalogue {
+        {
+            "基本功能", {
+                {"HelloWorld", "HelloWorld"}
+            },
+        },
         {
             "语言特性", {
-                {kConst, "const"},  {kFunctionPointer, "函数指针"}
+                {"Auto", "auto"}, {"Const", "const"},  {"FunctionPointer", "函数指针"}
             }
         }
         //        {"标准模板库", {"const", "函数指针"}},
@@ -239,7 +254,7 @@ void MainWindow::set_menu()
         row[m_menuColumns.name] = chapter.first;
         for(auto item : chapter.second) {
             auto childrow = *(menuModel->append(row.children()));
-            childrow[m_menuColumns.type] = item.first;
+            childrow[m_menuColumns.className] = item.first;
             childrow[m_menuColumns.name] = item.second;
         }
     }

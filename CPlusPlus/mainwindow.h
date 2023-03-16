@@ -3,14 +3,16 @@
 
 #include <gtkmm.h>
 #include <gtkmm/application.h>
-#include "sampleclass.h"
 
+#include <boost/type_index.hpp>
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <map>
 
+
+#include "sampleclass.h"
 #include "doctor.h"
 #include "officer.h"
 #include "teacher.h"
@@ -21,6 +23,12 @@
 #include "point.h"
 
 //#include "product.h"
+
+#include "helloworld.h"
+#include "auto.h"
+#include "const.h"
+#include "functionpointer.h"
+
 #include "factory.h"
 
 using namespace std;
@@ -47,12 +55,12 @@ class MenuColumn : public TreeModel::ColumnRecord
 public:
 
     MenuColumn() {
-        add(name); add(type);
+        add(name); add(className);
     }
 
     //      TreeModelColumn<int> m_col_id;
     TreeModelColumn<Glib::ustring> name;
-    TreeModelColumn<ProductType> type;
+    TreeModelColumn<string> className;
 };
 
 //Tree model columns:

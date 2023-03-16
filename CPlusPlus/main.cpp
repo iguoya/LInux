@@ -1,6 +1,7 @@
 #include <gtkmm.h>
 #include <iostream>
 #include "mainwindow.h"
+//#include "factory.h"
 
 using namespace std;
 using namespace Glib;
@@ -15,6 +16,11 @@ using namespace Gtk;
 //}
 int main (int argc, char **argv)
 {
+
+    REGISTERCLASS(HelloWorld);
+    REGISTERCLASS(Auto);
+    REGISTERCLASS(Const);
+    REGISTERCLASS(FunctionPointer);
 
     auto app = Application::create("cn.yatiger.gtkmm");
 
