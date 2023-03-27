@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE cambalache-project SYSTEM "cambalache-project.dtd">
+<cambalache-project version="0.10.3" target_tk="gtk-4.0">
+  <ui>
+	(1,None,"mainwindow.ui","mainwindow.ui",None,None,None,None,None,None)
+  </ui>
+  <object>
+	(1,1,"GtkApplicationWindow","window",None,None,None,None,None),
+	(1,2,"GtkPaned",None,1,None,None,None,-1),
+	(1,4,"GtkBox",None,2,None,None,None,None),
+	(1,5,"GtkFrame",None,4,None,None,None,None),
+	(1,6,"GtkTreeView",None,5,None,None,None,None),
+	(1,7,"GtkNotebook",None,2,None,None,None,1),
+	(1,8,"GtkTextView",None,7,None,None,None,-1),
+	(1,9,"GtkTreeView",None,7,None,None,None,None),
+	(1,10,"GtkButton","quit",4,None,None,None,2)
+  </object>
+  <object_property>
+	(1,4,"GtkBox","homogeneous","True",None,None,None,None,None),
+	(1,4,"GtkOrientable","orientation","vertical",None,None,None,None,None),
+	(1,7,"GtkNotebook","page","4",None,None,None,None,None),
+	(1,7,"GtkNotebook","scrollable","True",None,None,None,None,None)
+  </object_property>
+</cambalache-project>
