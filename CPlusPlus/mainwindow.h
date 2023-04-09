@@ -11,25 +11,19 @@
 #include <vector>
 #include <map>
 
-
-#include "sampleclass.h"
-#include "doctor.h"
-#include "officer.h"
-#include "teacher.h"
-
-#include "child.h"
-#include "parent.h"
-
-#include "point.h"
-
-//#include "product.h"
-
-#include "helloworld.h"
-#include "auto.h"
-#include "const.h"
-#include "functionpointer.h"
-
 #include "factory.h"
+//#include "sampleclass.h"
+//#include "doctor.h"
+//#include "officer.h"
+//#include "teacher.h"
+
+//#include "child.h"
+//#include "parent.h"
+
+//#include "point.h"
+
+#include "product.h"
+
 
 using namespace std;
 using namespace Gtk;
@@ -114,7 +108,7 @@ private:
     TextView* textview_copy;
     RefPtr<ListStore> liststore;
 
-    SampleClass sc;
+//    SampleClass sc;
 
 
 private:

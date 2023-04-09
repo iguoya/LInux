@@ -4,10 +4,6 @@
 MainWindow::MainWindow()
 {
 
-
-
-
-
     set_title("C++ 程序设计实践");
     set_default_size(1600, 1000);
     //    set_position(WIN_POS_CENTER);
@@ -68,7 +64,7 @@ MainWindow::MainWindow()
     treeView.append_column("结果", m_Columns.result);
 
     //All the items to be reordered with drag-and-drop:
-//    treeView.set_reorderable();
+    //    treeView.set_reorderable();
 
     //      //Fill the TreeView's model
     //      auto row = *(resultModel->append());
@@ -181,17 +177,17 @@ void MainWindow::on_selection_changed()
     {
         auto row = *iter;
         std::cout << "Row activated: ID= none, Name="
-          << row[m_menuColumns.name] << std::endl;
+                  << row[m_menuColumns.name] << std::endl;
         //Do something with the row.
 
-//        cout<<boost::typeindex::type_id_with_cvr<decltype(row[m_menuColumns.name]>().pretty_name()<<endl;
+        //        cout<<boost::typeindex::type_id_with_cvr<decltype(row[m_menuColumns.name]>().pretty_name()<<endl;
         auto product = (Product*)Factory::GetInstance()->CreateObject(row[m_menuColumns.className]);
 
-//        Factory factory;
-//        Product* product = factory.create(row[m_menuColumns.type]);
+        //        Factory factory;
+        //        Product* product = factory.create(row[m_menuColumns.type]);
         if(product != nullptr) {
             product->signal_notice().connect(sigc::mem_fun(*this, &MainWindow::notice));
-            product->signal_display().connect(sigc::mem_fun(*this, &MainWindow::display) );
+            product->signal_display().connect(sigc::mem_fun(*this, &MainWindow::display));
             product->run();
         }
 
@@ -215,11 +211,11 @@ void MainWindow::display(vector<Row> result)
 
 void MainWindow::notice(string msg)
 {
-//    auto iter_end = textBuffer->get_iter_at_offset(textBuffer->get_char_count());
-//    textBuffer->insert(iter_end, ustring(msg+"\n"));
+    //    auto iter_end = textBuffer->get_iter_at_offset(textBuffer->get_char_count());
+    //    textBuffer->insert(iter_end, ustring(msg+"\n"));
     textBuffer->insert_at_cursor(ustring(msg+"\n"));
     textView.scroll_to(m_endMark);
-//    buffer->set_text(ustring(msg));
+    //    buffer->set_text(ustring(msg));
 }
 
 void MainWindow::set_menu()
@@ -275,37 +271,37 @@ void MainWindow::set_menu()
 
 void MainWindow::on_button_copy_clicked()
 {
-    //    std::cout<<"hello world!!!!"<<std::endl;
-    //    auto textbuffer = textview_copy->get_buffer();
-    auto iter = textbuffer->get_iter_at_offset(0);
-    iter = textbuffer->insert(iter, "For example, you can have 中国\n");
-    //    iter = textbuffer->insert(iter, "中国\n");
-    //    iter = textbuffer->insert(iter, "中国ss三三四四\n");
-    //    textbuffer->set_text("hello world");
-    //    textview_copy->set_buffer(*textbuffer);
+//    //    std::cout<<"hello world!!!!"<<std::endl;
+//    //    auto textbuffer = textview_copy->get_buffer();
+//    auto iter = textbuffer->get_iter_at_offset(0);
+//    iter = textbuffer->insert(iter, "For example, you can have 中国\n");
+//    //    iter = textbuffer->insert(iter, "中国\n");
+//    //    iter = textbuffer->insert(iter, "中国ss三三四四\n");
+//    //    textbuffer->set_text("hello world");
+//    //    textview_copy->set_buffer(*textbuffer);
 
 
-    Point a(35, 38);
-    a.show();
+//    Point a(35, 38);
+//    a.show();
 
-    Point b(a);
-    b.show();
+//    Point b(a);
+//    b.show();
 
-    b.add_point(a);
+//    b.add_point(a);
 
-    b.show();
+//    b.show();
 
-    Point c = Point::generate_point();
-    c.show();
+//    Point c = Point::generate_point();
+//    c.show();
 
-    Point d;
-    d.show();
-    d = c;
-    d.show();
+//    Point d;
+//    d.show();
+//    d = c;
+//    d.show();
 
-    Point e(d);
+//    Point e(d);
 
-    e.show();
+//    e.show();
 
 
 }
@@ -385,39 +381,39 @@ void MainWindow::on_button_array_clicked()
 
 void MainWindow::on_button_virtual_clicked()
 {
-    auto iter = textbuffer->get_iter_at_offset(0);
-    iter = textbuffer->insert(iter, "For example, you can have 中国\n");
-    iter = textbuffer->insert(iter, "中国\n");
-    iter = textbuffer->insert(iter, "中国ss三三四四\n");
+//    auto iter = textbuffer->get_iter_at_offset(0);
+//    iter = textbuffer->insert(iter, "For example, you can have 中国\n");
+//    iter = textbuffer->insert(iter, "中国\n");
+//    iter = textbuffer->insert(iter, "中国ss三三四四\n");
 
-    officer *t = new teacher();
-    t->work();
-    t->salary();
+//    officer *t = new teacher();
+//    t->work();
+//    t->salary();
 
 
-    officer *d = new doctor();
-    d->work();
-    d->salary();
+//    officer *d = new doctor();
+//    d->work();
+//    d->salary();
 }
 
 void MainWindow::on_button_visit_control_clicked()
 {
-    PublicChild cp;
-    cout<<cp.parent_public_num<<endl;
-    cp.public_method();
+//    PublicChild cp;
+//    cout<<cp.parent_public_num<<endl;
+//    cp.public_method();
 
 
 
-    ProtectedChild cr;
-    //    cout<<cr.parent_public_num<<endl;//保护继承 改变父类公共变量为 保护成员
-    //    cr.parent_protected_num<<endl; ////保护继承 改变父类 保护变量 为 保护成员
-    cr.visit_control();
+//    ProtectedChild cr;
+//    //    cout<<cr.parent_public_num<<endl;//保护继承 改变父类公共变量为 保护成员
+//    //    cr.parent_protected_num<<endl; ////保护继承 改变父类 保护变量 为 保护成员
+//    cr.visit_control();
 
 
-    PrivateChild ci;
-    //    cout<< ci.parent_public_num<<endl;// 私有继承 改变父类公共变量为  私有成员
-    //    cout<< ci.parent_protected_num<<endl;// 私有继承 改变父类保护变量为  私有成员
-    ci.visit_control();
+//    PrivateChild ci;
+//    //    cout<< ci.parent_public_num<<endl;// 私有继承 改变父类公共变量为  私有成员
+//    //    cout<< ci.parent_protected_num<<endl;// 私有继承 改变父类保护变量为  私有成员
+//    ci.visit_control();
 
 }
 

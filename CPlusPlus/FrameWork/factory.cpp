@@ -1,6 +1,5 @@
 #include "factory.h"
 
-
 //void *Factory::CreateProduct(const string &name)
 //{
 //    Address address = nullptr;

@@ -14,13 +14,12 @@ using namespace Gtk;
 ////  if(pDialog)
 ////    pDialog->hide(); //hide() will cause main::run() to end.
 //}
+
+
 int main (int argc, char **argv)
 {
 
-    REGISTERCLASS(HelloWorld);
-    REGISTERCLASS(Auto);
-    REGISTERCLASS(Const);
-    REGISTERCLASS(FunctionPointer);
+
 
     auto app = Application::create("cn.yatiger.gtkmm");
 

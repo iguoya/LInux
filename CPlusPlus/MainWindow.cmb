@@ -2,7 +2,8 @@
 <!DOCTYPE cambalache-project SYSTEM "cambalache-project.dtd">
 <cambalache-project version="0.10.3" target_tk="gtk-4.0">
   <ui>
-	(1,None,"mainwindow.ui","mainwindow.ui",None,None,None,None,None,None)
+	(1,None,"mainwindow.ui","mainwindow.ui",None,None,None,None,None,None),
+	(2,None,None,None,None,None,None,None,None,None)
   </ui>
   <object>
 	(1,1,"GtkApplicationWindow","window",None,None,None,None,None),

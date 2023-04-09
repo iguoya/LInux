@@ -4,9 +4,9 @@
 #include <unordered_map>
 #include <functional>
 #include <vector>
-
+#include <string>
 #include "singleton.h"
-#include "product.h"
+//#include "product.h"
 using namespace std;
 
 
@@ -81,6 +81,8 @@ public: \
     } \
 }; \
 className##Helper g_##className##_helper;// 初始化一个helper的全局变量，执行构造函数中的RegisterObject执行。
+
+
 
 
 #endif // FACTORY_H

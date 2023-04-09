@@ -27,4 +27,7 @@ public:
     void run() override;
 };
 
+
+REGISTERCLASS(Auto);
+
 #endif // AUTO_H

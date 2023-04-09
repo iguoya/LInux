@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <boost/format.hpp>
+#include "factory.h"
 
 using namespace std;
 

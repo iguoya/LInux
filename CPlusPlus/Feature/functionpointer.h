@@ -10,4 +10,6 @@ public:
     void run() override;
 };
 
+REGISTERCLASS(FunctionPointer);
+
 #endif // FUNCTIONPOINTER_H

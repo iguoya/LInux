@@ -9,4 +9,6 @@ public:
     void run() override;
 };
 
+REGISTERCLASS(Const);
+
 #endif // CONST_H
