@@ -18,6 +18,6 @@ Auto::Auto()
 
 void Auto::run()
 {
-    notice(func<AutoA>());
-    notice(func<AutoB>());
+    s_notice(func<AutoA>());
+    s_notice(func<AutoB>());
 }

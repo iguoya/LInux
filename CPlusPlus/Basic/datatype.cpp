@@ -7,5 +7,5 @@ DataType::DataType()
 
 void DataType::run()
 {
-    notice("Hello World !!!!AAAA");
+    s_notice("Hello World !!!!AAAA");
 }

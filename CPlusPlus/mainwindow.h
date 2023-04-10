@@ -63,13 +63,25 @@ class ContentColumns : public TreeModel::ColumnRecord
 public:
 
     ContentColumns() {
-        add(id); add(name); add(input); add(result);
+//        add(id); add(name); add(input); add(result);
     }
 
-    TreeModelColumn<size_t> id;
-    TreeModelColumn<Glib::ustring> name;
-    TreeModelColumn<Glib::ustring> input;
-    TreeModelColumn<Glib::ustring> result;
+    void setColumnSize(size_t size) {
+        columns.resize(size);
+        for(auto i = 0; i < size; ++i) {
+            add(columns[i]);
+        }
+    }
+
+    vector<TreeModelColumn<Glib::ustring>> columns;
+
+
+
+
+//    TreeModelColumn<size_t> id;
+//    TreeModelColumn<Glib::ustring> name;
+//    TreeModelColumn<Glib::ustring> input;
+//    TreeModelColumn<Glib::ustring> result;
 };
 
 
@@ -91,8 +103,11 @@ protected:
     void notice(string msg);
     void display(vector<Row> result);
 
+    void setTableColumns(vector<string> columns);
+    void displayTable(vector<vector<string>> result);
+
 private:
-    void set_menu();
+    void setMenu();
 
 
     RefPtr<Builder> builder;

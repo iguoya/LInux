@@ -35,18 +35,29 @@ public:
 
 //    virtual ~Product() = 0;
     using type_signal_notice = sigc::signal<void(const string&)>;
-    type_signal_notice signal_notice();
-    void notice(const string& msg);
+//    type_signal_notice signal_notice();
+//    void notice(const string& msg);
 
     using type_signal_display = sigc::signal<void(const vector<Row>&)>;
-    type_signal_display signal_display();
-    void display(const vector<Row>& result);
+//    type_signal_display signal_display();
+//    void display(const vector<Row>& result);
 
+    using type_signal_display_table = sigc::signal<void(const vector<vector<string>>&)>;
+    type_signal_display_table signal_display_table();
+//    void display_table(const vector<vector<string>>& result);
+
+
+    using type_signal_set_columns = sigc::signal<void(const vector<string>&)>;
+//    type_signal_set_columns signal_set_columns();
+//    void set_columns(const vector<Row>& result);
+
+
+    type_signal_notice s_notice;
+    type_signal_display s_display;
+    type_signal_set_columns s_set_columns;
+    type_signal_display_table s_display_table;
 
 protected:
-    type_signal_notice m_notice;
-    type_signal_display m_display;
-
     vector<Row> result;
 };
 
